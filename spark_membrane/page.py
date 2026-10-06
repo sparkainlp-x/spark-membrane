@@ -421,7 +421,7 @@ independent deterministic checks, not a vote, and the two OES-32 formulas (norma
 
 <section aria-labelledby="cite-h">
 <h2 id="cite-h">How to cite</h2>
-<p>Concept DOI (all versions): <a href="https://doi.org/10.5281/zenodo.23175490">10.5281/zenodo.23175490</a>; v0.1.0 version DOI: <a href="https://doi.org/10.5281/zenodo.23175491">10.5281/zenodo.23175491</a>. See <a href="{REPO}/blob/main/CITATION.cff">CITATION.cff</a>.</p>
+<p>Concept DOI (all versions): <a href="https://doi.org/10.5281/zenodo.23175490">10.5281/zenodo.23175490</a>; v0.2.0 version DOI: <a href="https://doi.org/10.5281/zenodo.23186985">10.5281/zenodo.23186985</a>; v0.1.0 version DOI: <a href="https://doi.org/10.5281/zenodo.23175491">10.5281/zenodo.23175491</a>. See <a href="{REPO}/blob/main/CITATION.cff">CITATION.cff</a>.</p>
 <pre class="cite">Brisson, J.-F. (2026). spark-membrane: a fail-closed console over pinned OES repositories
 (SYNTHETIC research prototype, version {__version__}) [Computer software]. Spark AI NLP.
 https://doi.org/10.5281/zenodo.23175490</pre>

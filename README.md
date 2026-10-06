@@ -236,7 +236,7 @@ tools/                 fixture generator, upstream harness, overclaim scan
 
 ## How to cite
 
-The current version is 0.2.0 (tag `v0.2.0`, 2026-10-06). Concept DOI (all versions): [10.5281/zenodo.23175490](https://doi.org/10.5281/zenodo.23175490); version DOI for v0.1.0 (2026-10-05): [10.5281/zenodo.23175491](https://doi.org/10.5281/zenodo.23175491). Cite:
+The current version is 0.2.0 (tag `v0.2.0`, 2026-10-06). Concept DOI (all versions): [10.5281/zenodo.23175490](https://doi.org/10.5281/zenodo.23175490); version DOIs: v0.2.0 [10.5281/zenodo.23186985](https://doi.org/10.5281/zenodo.23186985), v0.1.0 [10.5281/zenodo.23175491](https://doi.org/10.5281/zenodo.23175491). Cite:
 
 > Brisson, J.-F. (2026). *spark-membrane: a fail-closed console over pinned OES repositories* (SYNTHETIC research prototype, version 0.2.0) [Computer software]. Spark AI NLP. https://doi.org/10.5281/zenodo.23175490
 

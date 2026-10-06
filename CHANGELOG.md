@@ -4,7 +4,7 @@ All notable changes to this project. Everything spark-membrane computes is SYNTH
 
 ## Unreleased
 
-Nothing yet.
+- Added the v0.2.0 version DOI [10.5281/zenodo.23186985](https://doi.org/10.5281/zenodo.23186985) (concept DOI 10.5281/zenodo.23175490) to the README, `CITATION.cff` and the page. The `v0.2.0` tag was not moved.
 
 ## 0.2.0 (2026-10-06)
 
