@@ -6,7 +6,7 @@
 [![Pages](https://img.shields.io/badge/Pages-live-2ea44f.svg)](https://sparkainlp-x.github.io/spark-membrane/)
 [![Evidence: SYNTHETIC](https://img.shields.io/badge/evidence-SYNTHETIC-orange.svg)](#evidence-and-limitations)
 [![Thresholds: UNCALIBRATED](https://img.shields.io/badge/thresholds-UNCALIBRATED-orange.svg)](docs/PROTOCOL.md)
-[![DOI: pending](https://img.shields.io/badge/DOI-pending%20Zenodo%20archive-lightgrey.svg)](#how-to-cite)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23175490.svg)](https://doi.org/10.5281/zenodo.23175490)
 
 > **SYNTHETIC: classical software simulation on generated numbers.**
 > Not a medical device, not control software, not sensor fusion, not field evidence.
@@ -231,9 +231,9 @@ tools/                 fixture generator, upstream harness, overclaim scan
 
 ## How to cite
 
-Version 0.1.0 was released on 2026-10-05 (tag `v0.1.0`). The Zenodo DOI will be added here once Zenodo archives the release. Until then, cite the release:
+Version 0.1.0 was released on 2026-10-05 (tag `v0.1.0`). Concept DOI (all versions): [10.5281/zenodo.23175490](https://doi.org/10.5281/zenodo.23175490); version DOI for v0.1.0: [10.5281/zenodo.23175491](https://doi.org/10.5281/zenodo.23175491). Cite:
 
-> Brisson, J.-F. (2026). *spark-membrane: a fail-closed console over pinned OES repositories* (SYNTHETIC research prototype, version 0.1.0) [Computer software]. Spark AI NLP. https://github.com/sparkainlp-x/spark-membrane/releases/tag/v0.1.0
+> Brisson, J.-F. (2026). *spark-membrane: a fail-closed console over pinned OES repositories* (SYNTHETIC research prototype, version 0.1.0) [Computer software]. Spark AI NLP. https://doi.org/10.5281/zenodo.23175490
 
 ## Contributing, security, license
 
