@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, Sequence
+from typing import Any, Protocol, Sequence
 
 from . import __version__
 from .audit import AuditResult, audit_frame, fit_temporal
@@ -16,6 +16,18 @@ from .shield import authorize
 from .trail import Trail
 
 ACTOR = f"spark-membrane/{__version__}"
+# Keys FrameOutcome.to_dict adds on top of AuditResult.to_dict; the audit payload digest covers
+# the audit part only, so verify.py strips these keys to recompute it from the results JSON.
+OUTCOME_EXTRA_KEYS = ("event_label", "event_id", "explorer", "shield_commit")
+
+
+class EventSink(Protocol):
+    def append(self, event: dict[str, Any], /) -> Any: ...
+
+
+def audit_digest(channels: Sequence[float], audit: dict[str, Any]) -> str:
+    """payload_digest of an ``audit`` trail event: SHA-256 of canonical {channels, audit}."""
+    return sha256_json({"channels": list(channels), "audit": audit})
 
 
 @dataclass
@@ -53,7 +65,7 @@ class StreamRun:
 
 
 def run_stream(stream: Stream, protocol: LockedProtocol, expected_sha256: str, *, seed: int,
-               block: int | None = None, trail: Trail | None = None, trail_prefix: str = "",
+               block: int | None = None, trail: Trail | EventSink | None = None, trail_prefix: str = "",
                calibration: Stream | None = None) -> StreamRun:
     values = [f.channels for f in stream.frames]
     cal = None if calibration is None else [f.channels for f in calibration.frames]
@@ -76,7 +88,7 @@ def run_stream(stream: Stream, protocol: LockedProtocol, expected_sha256: str, *
     return run
 
 
-def _trail_events(trail: Trail, o: FrameOutcome, channels: Sequence[float], prefix: str) -> None:
+def _trail_events(trail: Trail | EventSink, o: FrameOutcome, channels: Sequence[float], prefix: str) -> None:
     a = o.audit
     tag = f"{prefix}t{a.frame_index:03d}"
     failed = ",".join(f"{c.name}@{c.index}" if c.index is not None else c.name for c in a.failed_gating) or "none"
@@ -85,7 +97,7 @@ def _trail_events(trail: Trail, o: FrameOutcome, channels: Sequence[float], pref
         "metadata": {"verdict": a.verdict, "failed_gating": failed,
                      "engine_disagreement": "yes" if a.disagreement else "no",
                      "evidence_class": "SYNTHETIC"},
-        "payload_digest": sha256_json({"channels": list(channels), "audit": a.to_dict()}),
+        "payload_digest": audit_digest(channels, a.to_dict()),
     })
     if o.explorer is not None:
         e = o.explorer
@@ -99,4 +111,4 @@ def _trail_events(trail: Trail, o: FrameOutcome, channels: Sequence[float], pref
                       "metadata": md, "payload_digest": sha256_json(e.to_dict())})
 
 
-__all__ = ["ACTOR", "FrameOutcome", "StreamRun", "run_stream"]
+__all__ = ["ACTOR", "OUTCOME_EXTRA_KEYS", "EventSink", "FrameOutcome", "StreamRun", "audit_digest", "run_stream"]

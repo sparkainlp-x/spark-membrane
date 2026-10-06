@@ -2,7 +2,7 @@
   SYNTHETIC - classical software simulation on generated numbers.
   Not a medical device, not control software, not sensor fusion, not field evidence.
 ==============================================================================
-spark-membrane 0.1.0  |  python3 -m spark_membrane demo --seed 42
+spark-membrane 0.2.0  |  python3 -m spark_membrane demo --seed 42
 protocol spark-membrane-demo-v2  sha256 69efc39ab63b4b11...  locked hash: MATCH
 PLACEHOLDERS: every threshold and cap is UNCALIBRATED (upstream defaults or author choices; docs/PROTOCOL.md).
 
@@ -55,7 +55,7 @@ FAIL-CLOSED: protocol tolerance edited from 0.08 to 0.5 after the lock -> sha256
   other 15 blocks: ACCEPT
 
 SUMMARY: 36 ACCEPT, 4 LATCH, 7 frames with engine disagreement, 1 REPAIRED_IN_SIM, 3 LATCH_HELD (explorer evidence class SYNTHETIC).
-EVIDENCE: trail 97 records (measurement-trail v1), head 0ae93dcc90935ce0...; claims gate: 9 ledger claims admitted, 10/10 probe overclaims refused.
+EVIDENCE: trail 98 records (measurement-trail v1), head 2d2998ff451d73c1...; claims gate: 9 ledger claims admitted, 26/26 probe overclaims refused, 6/6 honest denials admitted.
 ==============================================================================
   SYNTHETIC - classical software simulation on generated numbers.
   Not a medical device, not control software, not sensor fusion, not field evidence.

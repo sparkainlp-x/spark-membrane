@@ -26,9 +26,9 @@
     {
       "name": "oes32-membrane-shield",
       "url": "https://github.com/sparkainlp-x/oes32-membrane-shield",
-      "commit": "f1ca680fa83b369ee4e62acc7394d6dc51bac1e8",
+      "commit": "95bb63a1c3e781e68f627eb7367c4ebbeed25a04",
       "plane": "contract_spine",
-      "role": "Capability gate (Ed25519, v2). spark_membrane/shield.py mirrors its role table only; signatures are not re-implemented.",
+      "role": "Capability gate (Ed25519, v2; this commit adds the weak-key fix). spark_membrane/shield.py re-implements its capability format and role table, verifies signatures with the optional cryptography extra and ports its small-order/non-canonical key and R checks; checked against the upstream library in CI.",
       "doi": "10.5281/zenodo.22999276",
       "doi_note": "concept DOI (all versions), from the repository's CITATION.cff"
     },

@@ -8,6 +8,7 @@
 - Locked SHA-256: `69efc39ab63b4b1157ddcaf42a3c3f5398cd0e1937de2633b1e67c47dde28f3b`, recorded in `SHA256SUMS`. The audit compares the protocol bytes with this digest. If they differ, every frame latches on `protocol_hash` and the explorer is disabled.
 - The lock time in the file (`locked_at`) is self-declared. The hash identifies the bytes; it does not prove when they were frozen.
 - This protocol supersedes `spark-membrane-demo-v1` (sha256 `c1d9d9e7…`, in git history at `ad849ad`, never released). v2 adds the separate EWMA/CUSUM calibration stream, the restart-after-alarm rule, and the machine-readable `calibration_status` and `provenance` fields.
+- spark-membrane 0.2.0 still uses this protocol, byte for byte (same SHA-256): the v0.2.0 changes are in the claims gate, the trail and the capability gate, not in any threshold, cap or rule, so no protocol version bump was needed and the seed-42 verdict counts are unchanged.
 
 ## What "upstream default" means here
 

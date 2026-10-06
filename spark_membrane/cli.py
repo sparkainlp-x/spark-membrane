@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
-"""Command line: demo, audit, verify-trail, claims, pins, shield-selftest, build-docs."""
+"""Command line: demo, audit, verify-trail, verify-run, claims, pins, shield-selftest, build-docs."""
 from __future__ import annotations
 
 import argparse
@@ -72,8 +72,19 @@ def _cmd_shield_selftest(args: argparse.Namespace) -> int:
 
 def _cmd_verify_trail(args: argparse.Namespace) -> int:
     from .trail import verify_path
-    n, head = verify_path(args.path)
-    print(f"trail OK: {n} records, head {head}")
+    n, head = verify_path(args.path, expect_records=args.expect_records, expect_head=args.expect_head,
+                          allow_empty=args.allow_empty)
+    anchored = args.expect_records is not None or args.expect_head is not None
+    print(f"trail OK: {n} records, head {head}" + ("" if anchored else
+          " (chain only: pass --expect-records/--expect-head to detect truncation)"))
+    return 0
+
+
+def _cmd_verify_run(args: argparse.Namespace) -> int:
+    from .verify import verify_run
+    s = verify_run(args.passport)
+    print(f"run OK: {s['artifacts']} artifacts match the manifest; trail {s['records']} records anchored to the results "
+          f"(head {s['head']}); {s['digests_recomputed']} payload digests recomputed from the published files")
     return 0
 
 
@@ -122,7 +133,13 @@ def build_parser() -> argparse.ArgumentParser:
     a.set_defaults(fn=_cmd_audit)
     v = sub.add_parser("verify-trail", help="verify a hash-chained trail (measurement-trail format)")
     v.add_argument("path")
+    v.add_argument("--expect-records", type=int, help="required record count (detects truncation)")
+    v.add_argument("--expect-head", help="required head record_hash (detects truncation and extension)")
+    v.add_argument("--allow-empty", action="store_true", help="accept an empty trail (rejected by default)")
     v.set_defaults(fn=_cmd_verify_trail)
+    vr = sub.add_parser("verify-run", help="cross-check a passport directory: manifest digests, anchored trail, payload digests")
+    vr.add_argument("passport", nargs="?", default="docs/passport")
+    vr.set_defaults(fn=_cmd_verify_run)
     sub.add_parser("claims", help="print the claim ledger").set_defaults(fn=_cmd_claims)
     sub.add_parser("pins", help="print the pinned upstream commits").set_defaults(fn=_cmd_pins)
     sh = sub.add_parser("shield-selftest", help="exercise the capability gate (Ed25519 needs the [shield] extra)")

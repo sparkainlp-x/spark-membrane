@@ -6,7 +6,7 @@ Everything this package computes is a SYNTHETIC, classical software simulation.
 It is not a medical device, not control software and not sensor fusion.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 EVIDENCE_CLASS = "SYNTHETIC"
 BANNER_LINES = (
     "SYNTHETIC - classical software simulation on generated numbers.",

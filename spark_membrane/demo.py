@@ -15,9 +15,10 @@ from .canonical import canonical_json, sha256_bytes, sha256_json
 from .explorer import explore
 from .frames import BLOCKS_512, CHANNEL_COUNT, dump_stream, frame_record, global_index, parse_stream_bytes
 from .pins import load_pins
+from .resources import data_bytes
 from .protocol import LockedProtocol, expected_sha256, load_protocol, parse_protocol
 from .run import ACTOR, run_stream
-from .trail import Trail
+from .trail import Trail, event_time
 
 CHANNEL_IDS = tuple(f"ch_{i:02d}" for i in range(CHANNEL_COUNT))
 START = datetime(2026, 10, 5, 12, 0, 0, tzinfo=timezone.utc)
@@ -106,43 +107,64 @@ class DemoRun:
 
 
 def run_demo(seed: int = 42) -> DemoRun:
+    """Run every plane and chain the evidence.
+
+    Trail ordering rule: event timestamps never go backwards. Events are collected first and then
+    appended in a stable sort by timestamp, so the 16 bus blocks interleave frame by frame and a
+    check run after a stream carries a timestamp no earlier than the data it read."""
     protocol = load_protocol()
     locked = expected_sha256()
-    trail = Trail()
+    events: list[dict[str, Any]] = []
     raw = synthetic_stream(seed, protocol)
     stream = parse_stream_bytes(raw, "synthetic-stream")
     cal_raw = synthetic_calibration(seed, protocol)
     cal_stream = parse_stream_bytes(cal_raw, "calibration-stream")
-    trail.append({"timestamp": stream.frames[0].timestamp_text, "step": "protocol-lock", "actor": ACTOR,
-                  "event_id": "protocol-lock",
-                  "metadata": {"protocol_id": protocol.protocol_id, "match": "yes" if protocol.sha256 == locked else "no",
-                               "evidence_class": "SYNTHETIC"},
-                  "payload_digest": protocol.sha256})
-    trail.append({"timestamp": cal_stream.frames[-1].timestamp_text, "step": "baseline-calibration", "actor": ACTOR,
-                  "event_id": "baseline-calibration",
-                  "metadata": {"frames": str(len(cal_stream.frames)), "audited": "no",
-                               "role": "EWMA/CUSUM mean and scale only", "evidence_class": "SYNTHETIC"},
-                  "payload_digest": cal_stream.sha256})
-    main = run_stream(stream, protocol, locked, seed=seed, trail=trail, calibration=cal_stream)
+    pins = load_pins()
+    pins_raw = data_bytes("PINS.json")
+    first_ts = cal_stream.frames[0].timestamp_text
+    shield_pin = next((p["commit"] for p in pins["repositories"] if p["name"] == "oes32-membrane-shield"), "none")
+    events.append({"timestamp": first_ts, "step": "pins", "actor": ACTOR, "event_id": "pins",
+                   "metadata": {"repositories": str(len(pins["repositories"])), "shield_commit": shield_pin,
+                                "digest_of": "PINS.json bytes", "evidence_class": "SYNTHETIC"},
+                   "payload_digest": sha256_bytes(pins_raw)})
+    events.append({"timestamp": first_ts, "step": "protocol-lock", "actor": ACTOR,
+                   "event_id": "protocol-lock",
+                   "metadata": {"protocol_id": protocol.protocol_id, "match": "yes" if protocol.sha256 == locked else "no",
+                                "evidence_class": "SYNTHETIC"},
+                   "payload_digest": protocol.sha256})
+    events.append({"timestamp": cal_stream.frames[-1].timestamp_text, "step": "baseline-calibration", "actor": ACTOR,
+                   "event_id": "baseline-calibration",
+                   "metadata": {"frames": str(len(cal_stream.frames)), "audited": "no",
+                                "role": "EWMA/CUSUM mean and scale only", "evidence_class": "SYNTHETIC"},
+                   "payload_digest": cal_stream.sha256})
+    main = run_stream(stream, protocol, locked, seed=seed, trail=events, calibration=cal_stream)
 
-    # Fail-closed check: a protocol whose tolerance was edited after the lock.
+    # Fail-closed check: a protocol whose tolerance was edited after the lock. It replays frame 20
+    # after the stream has been read, so it is stamped with the last stream timestamp.
     tampered = parse_protocol(protocol.raw.replace(b'"tolerance": 0.08', b'"tolerance": 0.5'), "tampered")
     t_frame = stream.frames[20]
     t_audit = audit_frame(t_frame.channels, tampered, locked, frame_index=20, timestamp=t_frame.timestamp_text)
     t_expl = explore(t_frame.channels, t_audit, tampered, locked, lambda c: t_audit, seed=seed)
-    trail.append({"timestamp": t_frame.timestamp_text, "step": "tamper-check", "actor": ACTOR, "event_id": "tamper-check",
-                  "metadata": {"verdict": t_audit.verdict, "failed_gating": ",".join(c.name for c in t_audit.failed_gating),
-                               "explorer": t_expl.verdict, "evidence_class": "SYNTHETIC"},
-                  "payload_digest": sha256_json(t_audit.to_dict())})
+    events.append({"timestamp": stream.frames[-1].timestamp_text, "step": "tamper-check", "actor": ACTOR,
+                   "event_id": "tamper-check",
+                   "metadata": {"verdict": t_audit.verdict, "failed_gating": ",".join(c.name for c in t_audit.failed_gating),
+                                "explorer": t_expl.verdict, "replayed_frame": "20",
+                                "replayed_frame_timestamp": t_frame.timestamp_text, "evidence_class": "SYNTHETIC"},
+                   "payload_digest": sha256_json(t_audit.to_dict())})
 
     # 512 channels = 16 native-32 blocks, audited block by block, no resampling.
     bus_raw = synthetic_bus(seed, protocol)
     bus_cal = [synthetic_calibration(seed, protocol, f"b{b:02d}") for b in range(BLOCKS_512)]
     bus_rows = []
+    bus_outcomes = []
+    last_bus_ts = first_ts
     for b, braw in enumerate(bus_raw):
-        brun = run_stream(parse_stream_bytes(braw, f"bus-block-{b:02d}"), protocol, locked, seed=seed, block=b,
-                          trail=trail, trail_prefix=f"bus-b{b:02d}-",
+        bstream = parse_stream_bytes(braw, f"bus-block-{b:02d}")
+        brun = run_stream(bstream, protocol, locked, seed=seed, block=b,
+                          trail=events, trail_prefix=f"bus-b{b:02d}-",
                           calibration=parse_stream_bytes(bus_cal[b], f"bus-calibration-{b:02d}"))
+        last_bus_ts = max(last_bus_ts, bstream.frames[-1].timestamp_text)
+        bus_outcomes.append([o.to_dict() for o in brun.outcomes])
         last = brun.outcomes[-1]
         fails = [{"check": c.name, "channel": c.index,
                   "global_channel": None if c.index is None else global_index(b, c.index)} for c in last.audit.failed_gating]
@@ -151,15 +173,23 @@ def run_demo(seed: int = 42) -> DemoRun:
                          "explorer": None if last.explorer is None else last.explorer.verdict})
     bus_verdict = "ACCEPT" if all(r["verdict"] == "ACCEPT" for r in bus_rows) else "LATCH"
 
-    # Claims gate.
+    # Claims gate, run after every stream has been read.
     ledger = claims_gate.load_ledger()
     probes = claims_gate.load_probes()
+    denials = claims_gate.load_denials()
     admitted, refused = claims_gate.probe(probes)
-    trail.append({"timestamp": stream.frames[-1].timestamp_text, "step": "claims-gate", "actor": ACTOR,
-                  "event_id": "claims-gate",
-                  "metadata": {"ledger_claims": str(len(ledger["claims"])), "probe_overclaims_refused": str(refused),
-                               "probe_overclaims_admitted": str(admitted), "evidence_class": "SYNTHETIC"},
-                  "payload_digest": sha256_json(ledger)})
+    denials_admitted = sum(1 for d in denials if claims_gate.classify(d, "boundary") == "boundary")
+    events.append({"timestamp": last_bus_ts, "step": "claims-gate", "actor": ACTOR,
+                   "event_id": "claims-gate",
+                   "metadata": {"ledger_claims": str(len(ledger["claims"])), "probe_overclaims_refused": str(refused),
+                                "probe_overclaims_admitted": str(admitted),
+                                "honest_denials_admitted": f"{denials_admitted}/{len(denials)}",
+                                "digest_of": "CLAIMS.json (canonical JSON)", "evidence_class": "SYNTHETIC"},
+                   "payload_digest": sha256_json(ledger)})
+
+    trail = Trail()
+    for event in sorted(events, key=event_time):
+        trail.append(event)
 
     pins = load_pins()
     results = {
@@ -184,10 +214,14 @@ def run_demo(seed: int = 42) -> DemoRun:
                    "verdict": bus_verdict, "frame": f"last frame of each {BUS_FRAMES}-frame block stream",
                    "block_sha256": [sha256_bytes(b) for b in bus_raw],
                    "calibration": f"one separate {protocol.calibration_frames}-frame calibration stream per block, regenerated from the seed",
-                   "calibration_sha256": [sha256_bytes(b) for b in bus_cal], "rows": bus_rows},
+                   "calibration_sha256": [sha256_bytes(b) for b in bus_cal], "rows": bus_rows,
+                   "outcomes": bus_outcomes},
         "claims_gate": {"ledger_claims": len(ledger["claims"]), "probe_overclaims": len(probes),
-                        "probe_refused": refused, "probe_admitted": admitted},
-        "trail": {"records": len(trail.records), "head": trail.head, "format": "measurement-trail v1"},
+                        "probe_refused": refused, "probe_admitted": admitted,
+                        "honest_denials": len(denials), "honest_denials_admitted": denials_admitted},
+        "trail": {"records": len(trail.records), "head": trail.head, "format": "measurement-trail v1",
+                  "ordering": "event timestamps never go backwards (equal timestamps keep generation order)",
+                  "pins_sha256": sha256_bytes(pins_raw)},
         "pins": {p["name"]: p["commit"] for p in pins["repositories"]},
     }
     return DemoRun(seed, results, raw, bus_raw, trail.dumps(), protocol.raw, cal_raw)

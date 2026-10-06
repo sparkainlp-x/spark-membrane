@@ -401,7 +401,7 @@ every step is chained by 5. The thresholds in plane 3 are listed with their sour
 <li><a href="passport/trail-seed{seed}.jsonl">Run trail</a>: {results["trail"]["records"]} hash-chained records (measurement-trail format), head <code>{results["trail"]["head"][:16]}&hellip;</code></li>
 <li><a href="passport/demo-seed{seed}.json">Full results JSON</a> &middot; <a href="passport/frames-seed{seed}.jsonl">input frames</a> &middot;
 <a href="passport/{e(cal["artifact"])}">calibration frames</a> &middot; <a href="demo-seed{seed}.txt">console output</a></li>
-<li>Claims gate: {results["claims_gate"]["ledger_claims"]} ledger claims admitted; {results["claims_gate"]["probe_refused"]}/{results["claims_gate"]["probe_overclaims"]} probe overclaims refused.</li>
+<li>Claims gate: {results["claims_gate"]["ledger_claims"]} ledger claims admitted; {results["claims_gate"]["probe_refused"]}/{results["claims_gate"]["probe_overclaims"]} probe overclaims refused; {results["claims_gate"]["honest_denials_admitted"]}/{results["claims_gate"]["honest_denials"]} honest denials admitted.</li>
 </ul>
 <h3>What this is, and is not</h3>
 <p>A classical software simulation on generated numbers. It is not a medical device, not control software, not sensor fusion and

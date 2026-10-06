@@ -144,7 +144,8 @@ def render(results: dict[str, Any]) -> str:
       f"{c['repaired_in_sim']} REPAIRED_IN_SIM, {c['latch_held']} LATCH_HELD (explorer evidence class SYNTHETIC).")
     g = results["claims_gate"]
     w(f"EVIDENCE: trail {results['trail']['records']} records ({results['trail']['format']}), head {results['trail']['head'][:16]}...; "
-      f"claims gate: {g['ledger_claims']} ledger claims admitted, {g['probe_refused']}/{g['probe_overclaims']} probe overclaims refused.")
+      f"claims gate: {g['ledger_claims']} ledger claims admitted, {g['probe_refused']}/{g['probe_overclaims']} probe overclaims refused, "
+      f"{g['honest_denials_admitted']}/{g['honest_denials']} honest denials admitted.")
     _banner(w)
     return "\n".join(out) + "\n"
 

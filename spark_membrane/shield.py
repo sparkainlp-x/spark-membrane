@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
-"""Capability gate modelled on sparkainlp-x/oes32-membrane-shield (pinned @ f1ca680, v2).
+"""Capability gate modelled on sparkainlp-x/oes32-membrane-shield (pinned @ 95bb63a, v2 + weak-key fix).
 
 Two layers, both fail-closed:
 
@@ -15,6 +15,12 @@ Two layers, both fail-closed:
    ``cryptography`` every signed capability is REFUSED with reason ``signature backend
    unavailable``; there is no silent pass and no fallback to policy-only admission.
 
+   Weak keys: OpenSSL's Ed25519 verify accepts the universal forgery R = identity, S = 0 for a
+   small-order public key (identity, all-zero, order-2/4/8 points). ``AuthorityKey`` therefore
+   rejects non-canonical and small-order public keys at construction, and every signature must
+   have S < L and a canonical, non-small-order R before OpenSSL is asked (``_ed25519.py``, the
+   same checks as upstream 95bb63a; found by the 2026-10-06 audit).
+
 This is a small compatible re-implementation for the console, tested against the upstream
 library in CI. Use the upstream package for any real authorization.
 """
@@ -28,7 +34,12 @@ import time
 from dataclasses import dataclass, field
 from typing import Callable, Mapping
 
-UPSTREAM = "sparkainlp-x/oes32-membrane-shield@f1ca680fa83b369ee4e62acc7394d6dc51bac1e8"
+from ._ed25519 import has_acceptable_r, is_acceptable_public_key
+
+UPSTREAM = "sparkainlp-x/oes32-membrane-shield@95bb63a1c3e781e68f627eb7367c4ebbeed25a04"
+# RFC 8032 section 7.1 TEST 1 public key: a valid, prime-order point used where a key is needed
+# but no backend exists to verify anything (the self-test refusal path).
+RFC8032_TEST1_PUBLIC_KEY = bytes.fromhex("d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a")
 EXTRA_HINT = 'pip install "spark-membrane[shield]"'
 WRITE_ROLES = frozenset({"DECODEUR", "GARDIEN"})
 CALIBRATION_ROLES = frozenset({"CALIBRATEUR", "GARDIEN"})
@@ -141,6 +152,11 @@ class AuthorityKey:
     role: str  # upper-case role name
     public_key: bytes  # raw 32-byte Ed25519 public key
 
+    def __post_init__(self) -> None:
+        if not isinstance(self.public_key, bytes) or not is_acceptable_public_key(self.public_key):
+            raise ValueError("authority public key rejected: must be a canonical 32-byte Ed25519 point "
+                             "that is not of small order")
+
 
 @dataclass
 class CapabilityVerifier:
@@ -178,6 +194,10 @@ class CapabilityVerifier:
             return None, self._refuse(cap.role, action, SIG_INVALID, "capability expired")
         if cap.request_id in self._used:
             return None, self._refuse(cap.role, action, SIG_INVALID, "capability replayed")
+        if not is_acceptable_public_key(authority.public_key):
+            return None, self._refuse(cap.role, action, SIG_INVALID, "authority public key rejected (weak key)")
+        if not has_acceptable_r(cap.signature):
+            return None, self._refuse(cap.role, action, SIG_INVALID, "invalid capability signature")
         from cryptography.exceptions import InvalidSignature
         from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
         try:
@@ -237,7 +257,7 @@ def self_test(now: int = 1_800_000_000) -> tuple[str | None, list[tuple[str, boo
         ("policy only: DECODEUR WRITE without a capability", False, authorize("WRITE", ("DECODEUR",))),
     ]
     if backend is None:
-        v = CapabilityVerifier({"k": AuthorityKey("k", "DECODEUR", b"\0" * 32)}, clock=lambda: now)
+        v = CapabilityVerifier({"k": AuthorityKey("k", "DECODEUR", RFC8032_TEST1_PUBLIC_KEY)}, clock=lambda: now)
         cases.append(("signed WRITE without the Ed25519 backend", False, v.verify(b"{}", action="WRITE")))
         return None, cases
     from cryptography.hazmat.primitives import serialization

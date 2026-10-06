@@ -4,6 +4,36 @@ All notable changes to this project. Everything spark-membrane computes is SYNTH
 
 ## Unreleased
 
+Nothing yet.
+
+## 0.2.0 (2026-10-06)
+
+Hardening release after an internal audit of v0.1.0 by the author (2026-10-06). Each finding below was reproduced with a probe before the fix, and each probe is now a regression test (`tests/test_hardening.py`). Locked protocol v2 is unchanged (sha256 `69efc39a…`), and so are the seed-42 verdict counts (36 ACCEPT, 4 LATCH, 7 frames with engine disagreement, 1 REPAIRED_IN_SIM, 3 LATCH_HELD). Everything is still SYNTHETIC with UNCALIBRATED thresholds.
+
+### Security
+
+- **Capability gate: universal forgery under weak keys.** `AuthorityKey` accepted any 32 bytes. With a small-order public key (identity `01 00..00`, all-zero, or an order-2 point), OpenSSL's Ed25519 verify (`cryptography` 43 and 50) accepted R = identity, S = 0 for every message, so a forged DECODEUR WRITE capability was ADMITTED. Public keys must now be canonical and not of small order when an `AuthorityKey` is created. Signatures need S < L and a canonical, non-small-order R before OpenSSL is asked (`spark_membrane/_ed25519.py`). The no-backend self-test path now uses the RFC 8032 test-1 public key instead of `00..00`. The same flaw existed in oes32-membrane-shield; it is fixed there in `95bb63a` (regression tests, CI green), and spark-membrane now pins that commit. A live CI test checks that both make the same weak-key decisions.
+
+### Claims gate
+
+- Before: labels were bound by substring (`NONSYNTHETIC` satisfied the SYNTHETIC tag, and a negated UNRUN tag still counted), and honest denials of the fenced topics were refused. Synonym and paraphrase superiority wording, a Cyrillic look-alike letter, a zero-width space and a line break inside a fenced phrase all got through, and `source` was free text. The exact probe sentences are in `spark_membrane/data/refused_probes.json` (probes 11-26); the repository scan excludes that file because it holds overclaims on purpose.
+- Now: NFKC normalisation, invisible-character removal and Cyrillic/Greek look-alike folding happen before matching, and mixed-script words are reported. Adjacent lines are also scanned joined. Patterns were added for synonym superiority verbs, success-criterion and target paraphrases, superlatives, claims about real or production data, and deployment counts.
+- Label tags must be whole, un-negated words, and negative or boundary labels need a negative or denial statement. `source` must be a pinned `sparkainlp-x/<repo>@<40-hex> <path>` that matches `PINS.json`, an existing repository path, or `external: …` (external inspiration only). MEM-06's source is now `external: …`.
+- `refused_probes.json` grew from 10 to 26 probes, all refused, and gained an allowlist of 6 honest denials that must be admitted. The demo, results JSON and trail record both numbers.
+- Limit: this is still a deny-list; it cannot understand every paraphrase.
+
+### Trail and run evidence
+
+- Truncation: a trail cut to its first record still passed `verify-trail`. `verify-trail` now takes `--expect-records`/`--expect-head`, and the new `verify-run` (also run by `build-docs --check`) anchors the trail to the results JSON's record count and head.
+- `seq`/`schema_version` given as `true` or `1.0` were accepted; they must now be real integers (upstream measurement-trail already rejected them). Invalid UTF-8 now raises a clean MembraneError instead of a traceback. An empty trail is rejected unless `--allow-empty`. Duplicate `event_id`s are rejected. Building and verifying use one `record_hash` function.
+- The first trail event now binds the SHA-256 of `PINS.json`, and `PINS.json` and `CLAIMS.json` ship in the passport.
+- Payload digests are recomputable: `verify-run` recomputes every trail event's digest from the published frames, calibration stream, bus blocks, results JSON (which now includes the per-frame outcomes of all 16 bus blocks), protocol, `PINS.json` and `CLAIMS.json`, and checks each audit/explore verdict against the results.
+- Timestamps: the v0.1.0 demo trail went backwards 18 times (the calibration event after the stream start, the tamper check stamped with frame 20, each bus block restarting at 12:10:00). Events are now emitted in timestamp order, with ties in generation order and the bus blocks interleaved frame by frame; the tamper check carries the last stream timestamp plus a `replayed_frame` field. `Trail.append` and verification reject any backwards step. The demo trail has 98 records (97 before, plus the `pins` event).
+
+### Other
+
+- oes32-membrane-shield re-pinned from `f1ca680` to `95bb63a` (the weak-key fix).
+- Tests: 106 → 144 (37 new regression tests plus one live upstream test).
 - oes-telemetry-bench now has concept DOI [10.5281/zenodo.23175492](https://doi.org/10.5281/zenodo.23175492). It is recorded in `PINS.json`, the README related-work table, the page, `CITATION.cff` and `.zenodo.json` (isDerivedFrom). The pin moves from `48fc4d9` to `d49472b` because DOIs are read from the pinned `CITATION.cff`; the diff is metadata only, so the upstream fixtures are unchanged apart from the commit and the locked protocol v2 text still cites `48fc4d9`.
 - Added the Zenodo concept DOI [10.5281/zenodo.23175490](https://doi.org/10.5281/zenodo.23175490) (v0.1.0 version DOI [10.5281/zenodo.23175491](https://doi.org/10.5281/zenodo.23175491)) to the README and `CITATION.cff`. The `v0.1.0` tag was not moved.
 

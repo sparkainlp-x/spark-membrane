@@ -44,8 +44,9 @@ There is no NASA-beat claim here. The dual-engine split (an exploratory proposer
 - **The gate misses slow drift in its own demo.** On seed 42, frames t=30–33 carry a slow common drift of 0.025. The gate ACCEPTs them and only the advisory EWMA/CUSUM fire. The console reports this rather than hiding it.
 - **Engine disagreement.** It counts frames where the six engine families do not all agree. It is information, not a vote. For seed 42 it is **7 frames**: all event frames, none on clean frames. The v1 demo reported 19, because EWMA/CUSUM were standardized on a very quiet in-stream warm-up and never restarted, so one large event kept them alarmed for the rest of the stream. v2 standardizes them on a separate event-free calibration stream and restarts them after an alarm. The restart is an author choice; upstream oes-resilience defines no reset.
 - **Re-implementations, not the upstream packages.** The engines are small labelled re-implementations, checked against outputs of the pinned upstream code (see [How the re-implementations are checked](#how-the-re-implementations-are-checked)).
-- **The capability gate admits nothing on role policy alone.** With the optional `[shield]` extra it verifies upstream-format Ed25519 capabilities. Without it, every signed capability is refused. It is a compatible re-implementation for the console, not the upstream library.
-- **Evidence limits.** A matching SHA-256 shows byte consistency only. `locked_at` is self-declared. The trail detects edits but not trailing truncation or a full rewrite.
+- **The capability gate admits nothing on role policy alone.** With the optional `[shield]` extra it verifies upstream-format Ed25519 capabilities. Without it, every signed capability is refused. It is a compatible re-implementation for the console, not the upstream library. Up to v0.1.0 a small-order authority key (for example the identity point) let one fixed signature verify for every message; v0.2.0 rejects such keys and small-order signature R values, as upstream does since `95bb63a`.
+- **The claims gate is a deny-list, not an understanding of language.** v0.2.0 adds Unicode normalisation, look-alike folding, paraphrase patterns and a whole-text scan, and binds labels and sources, but a determined writer can still phrase an overclaim it does not know. It is a guard rail for this repository's own text.
+- **Evidence limits.** A matching SHA-256 shows byte consistency only. `locked_at` is self-declared. On its own, a hash chain cannot see trailing truncation, so `verify-trail` takes `--expect-records`/`--expect-head` and `verify-run` anchors the trail to the results JSON; anyone who can rewrite every file can still regenerate a consistent set.
 
 ### What it is NOT
 
@@ -77,7 +78,7 @@ flowchart TB
 
 | Plane | What runs | Pinned upstream | New code? |
 |---|---|---|---|
-| 1 · Contract spine | Normative residual `R = max_i \|y_i − x_i\|`, latch iff `R > τ`; Profile A sidecar `SAFE = A ∧ C0 ∧ C1 ∧ Cfold`, `LATCH = ¬SAFE`; capability gate | oes32-residual @ `b77b612` (ADR-001 normative), oes32_engine @ `d66025f`, oes32-membrane-shield @ `f1ca680` | No: labelled re-implementations in [`spark_membrane/engines/`](spark_membrane/engines/) and [`shield.py`](spark_membrane/shield.py), tested against the pins |
+| 1 · Contract spine | Normative residual `R = max_i \|y_i − x_i\|`, latch iff `R > τ`; Profile A sidecar `SAFE = A ∧ C0 ∧ C1 ∧ Cfold`, `LATCH = ¬SAFE`; capability gate | oes32-residual @ `b77b612` (ADR-001 normative), oes32_engine @ `d66025f`, oes32-membrane-shield @ `95bb63a` | No: labelled re-implementations in [`spark_membrane/engines/`](spark_membrane/engines/) and [`shield.py`](spark_membrane/shield.py), tested against the pins |
 | 2 · Frame bus | Native 32-channel JSONL frame contract; 512 channels = 16 native-32 blocks; no interpolation, resampling, padding or imputation | oes-telemetry-bench @ `d49472b` | No: re-implemented parser ([`frames.py`](spark_membrane/frames.py)) |
 | 3 · Audit side (T=0) | Gate: protocol hash ∧ residual ∧ sidecar (A, C0, C1, Cfold) ∧ weighted score `0.45·max\|x\| + 0.35·RMS + 0.20·mean\|x\| < 0.50`. Advisory: max-abs, EWMA, CUSUM | oes-resilience @ `1ee533c`, oes-telemetry-bench @ `d49472b` | Conjunction logic only ([`audit.py`](spark_membrane/audit.py)) |
 | 4 · Explorer | Seeded one-index delta, `\|δ\| ≤ 0.25` from the locked protocol, re-audited; `REPAIRED_IN_SIM` or `LATCH_HELD`, evidence class SYNTHETIC | none | **Yes** ([`explorer.py`](spark_membrane/explorer.py)) |
@@ -110,7 +111,8 @@ python3 -m unittest discover -s tests -v
 | `demo [--seed N] [--json]` | Seeded SYNTHETIC walk through every plane. |
 | `audit --frames F.jsonl [--calibration C.jsonl]` | Audits your own native-32 stream. Exits 3 if any frame latched and 2 on invalid input. Without `--calibration`, EWMA/CUSUM fall back to the upstream 16-frame in-stream warm-up. |
 | `shield-selftest [--require-backend]` | Exercises the capability gate. Exits 4 with `--require-backend` if `cryptography` is missing. |
-| `verify-trail F.jsonl` | Verifies a hash-chained trail. |
+| `verify-trail F.jsonl [--expect-records N] [--expect-head H] [--allow-empty]` | Verifies a hash-chained trail. Without an anchor it checks the chain only and cannot see truncation; an empty trail is rejected unless `--allow-empty`. |
+| `verify-run [docs/passport]` | Cross-checks a passport: artifact digests, the trail anchored to the results JSON, and every payload digest recomputed from the published files. `build-docs --check` runs it too. |
 | `pins` / `claims` | Print the pinned commits and the claim ledger. |
 | `build-docs [--check]` | Regenerates `docs/` and the root data mirrors. Needs a clone. |
 
@@ -175,9 +177,9 @@ The original frame digest and the protocol digest are checked before and after, 
 
 ## Evidence membrane
 
-- **Trail.** [`docs/passport/trail-seed42.jsonl`](docs/passport/trail-seed42.jsonl) uses the [measurement-trail](https://github.com/sparkainlp-x/measurement-trail) record format, and CI verifies it with the upstream verifier. It checks integrity only: anyone who can rewrite the file can recompute the hashes, and trailing truncation is not detectable.
+- **Trail.** [`docs/passport/trail-seed42.jsonl`](docs/passport/trail-seed42.jsonl) uses the [measurement-trail](https://github.com/sparkainlp-x/measurement-trail) record format, and CI verifies it with the upstream verifier. The first event binds the SHA-256 of `PINS.json`; event timestamps never go backwards (equal timestamps keep generation order, and the 16 bus blocks are interleaved frame by frame); `seq` and `schema_version` must be real integers. Every `payload_digest` can be recomputed from the published frames, calibration stream, bus blocks, results JSON, protocol, `PINS.json` and `CLAIMS.json` (`verify-run`). It checks integrity only: anyone who can rewrite every file can recompute every hash.
 - **Passport.** [`docs/passport/manifest.json`](docs/passport/manifest.json) is an [evidence-passport](https://github.com/sparkainlp-x/evidence-passport) schema-v1 manifest; CI validates it with the upstream validator. It is rendered at [`docs/passport/index.html`](docs/passport/index.html). A matching hash shows byte consistency only.
-- **Claims gate.** [`CLAIMS.json`](CLAIMS.json) gives every claim a label: a classification, not a score. Statements that touch fenced topics are classified `unsupported_inference` and refused, in the spirit of [quantum-claims-passport](https://github.com/sparkainlp-x/quantum-claims-passport). The page, passport and console output all pass through the gate, and in CI [`tools/forbidden_terms.py`](tools/forbidden_terms.py) scans every tracked file.
+- **Claims gate.** [`CLAIMS.json`](CLAIMS.json) gives every claim a label: a classification, not a score. Statements that touch fenced topics are classified `unsupported_inference` and refused, in the spirit of [quantum-claims-passport](https://github.com/sparkainlp-x/quantum-claims-passport). Text is NFKC-normalised, invisible characters are removed and Cyrillic/Greek look-alikes are folded before matching; mixed-script words are reported; adjacent lines are also scanned joined, so a line break cannot split a phrase. Honest denials (for example "spark-membrane is not quantum code." or "This console performs no QEC.") are allowlisted and tested. Each ledger entry must carry its label's tag as a whole, un-negated word, and its `source` must be a pinned `sparkainlp-x/<repo>@<commit> <path>`, an existing repository path, or `external: ...` for external inspiration. The page, passport and console output all pass through the gate, and in CI [`tools/forbidden_terms.py`](tools/forbidden_terms.py) scans every tracked file.
 
 ## How the re-implementations are checked
 
@@ -186,7 +188,8 @@ The original frame digest and the protocol digest are checked before and after, 
   - oes32-residual's own 12 contract tests **against this repository's re-implementation**;
   - the oes32-residual and oes32_engine test suites at their pins;
   - the upstream loaders and validators on the demo frames, trail and manifest;
-  - a capability exchange with the upstream oes32-membrane-shield library in both directions: capabilities signed upstream verify here, and capabilities signed here verify upstream.
+  - a capability exchange with the upstream oes32-membrane-shield library in both directions: capabilities signed upstream verify here, and capabilities signed here verify upstream;
+  - the same weak-key decisions as the pinned upstream shield on small-order, non-canonical and valid keys.
 - **Package CI job.** It installs the wheel into a clean virtual environment, runs the console script outside the checkout, compares the output with the committed demo, and checks the shield behaviour with and without the `[shield]` extra.
 
 ## Differences between the design chat and the repositories
@@ -222,6 +225,8 @@ spark_membrane/        console (stdlib only)
   audit.py             T=0 check-conjunction
   explorer.py          the only new algorithm
   shield.py            capability gate (role policy + optional Ed25519)
+  _ed25519.py          canonical-point and small-order checks (ported from oes32-membrane-shield 95bb63a)
+  verify.py            verify-run: passport cross-check
   trail.py passport.py claims.py page.py report.py build.py cli.py resources.py
 protocols/ PINS.json CLAIMS.json   byte-identical root mirrors of spark_membrane/data (checked in CI)
 docs/                  GitHub Pages: index.html, passport/, PROTOCOL.md, DIFFERENCES.md
@@ -231,9 +236,9 @@ tools/                 fixture generator, upstream harness, overclaim scan
 
 ## How to cite
 
-Version 0.1.0 was released on 2026-10-05 (tag `v0.1.0`). Concept DOI (all versions): [10.5281/zenodo.23175490](https://doi.org/10.5281/zenodo.23175490); version DOI for v0.1.0: [10.5281/zenodo.23175491](https://doi.org/10.5281/zenodo.23175491). Cite:
+The current version is 0.2.0 (tag `v0.2.0`, 2026-10-06). Concept DOI (all versions): [10.5281/zenodo.23175490](https://doi.org/10.5281/zenodo.23175490); version DOI for v0.1.0 (2026-10-05): [10.5281/zenodo.23175491](https://doi.org/10.5281/zenodo.23175491). Cite:
 
-> Brisson, J.-F. (2026). *spark-membrane: a fail-closed console over pinned OES repositories* (SYNTHETIC research prototype, version 0.1.0) [Computer software]. Spark AI NLP. https://doi.org/10.5281/zenodo.23175490
+> Brisson, J.-F. (2026). *spark-membrane: a fail-closed console over pinned OES repositories* (SYNTHETIC research prototype, version 0.2.0) [Computer software]. Spark AI NLP. https://doi.org/10.5281/zenodo.23175490
 
 ## Contributing, security, license
 

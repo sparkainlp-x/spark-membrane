@@ -36,7 +36,7 @@
       "id": "MEM-06",
       "label": "external_inspiration",
       "statement": "The split into an exploratory proposer and a zero-entropy auditor is an external dual-engine inspiration. The pinned OES repositories do not implement it; the explorer in this repository is new code.",
-      "source": "Design conversation (Grok chat) shared by the author; oes32-residual and oes32_engine contain no proposer"
+      "source": "external: design conversation (Grok chat) shared by the author; oes32-residual and oes32_engine contain no proposer"
     },
     {
       "id": "MEM-07",

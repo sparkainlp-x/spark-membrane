@@ -118,5 +118,25 @@ class LiveUpstream(unittest.TestCase):
         self.assertEqual(verified.request_id, "s1")
 
 
+    def test_weak_key_rules_match_the_pinned_upstream(self):
+        """Pinned upstream (95bb63a) and spark_membrane reject the same weak keys and accept the same good ones."""
+        sys.path.insert(0, str(self.up / "oes32-membrane-shield/src"))
+        from oes32_membrane_shield import _ed25519 as up_ed
+        from spark_membrane import _ed25519 as our_ed
+        from spark_membrane import shield
+        samples = [bytes.fromhex(h) for h in (
+            "0100000000000000000000000000000000000000000000000000000000000000",
+            "0000000000000000000000000000000000000000000000000000000000000000",
+            "ecffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f",
+            "edffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7f",
+            "26e8958fc2b227b045c3f489f2ef98f0d5dfac05d3c63339b13802886d53fc05",
+            "c7176a703d4dd84fba3c0b760d10670f2a2053fa2c39ccc64ec7fd7792ac037a",
+        )] + [shield.RFC8032_TEST1_PUBLIC_KEY]
+        for pk in samples:
+            self.assertEqual(our_ed.is_acceptable_public_key(pk), up_ed.is_acceptable_public_key(pk), pk.hex())
+            sig = pk + bytes(32)
+            self.assertEqual(our_ed.has_acceptable_r(sig), up_ed.has_acceptable_r(sig), pk.hex())
+        self.assertTrue(up_ed.is_acceptable_public_key(shield.RFC8032_TEST1_PUBLIC_KEY))
+
 if __name__ == "__main__":
     unittest.main()

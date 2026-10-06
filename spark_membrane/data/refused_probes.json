@@ -1,5 +1,5 @@
 {
-  "note": "Probe overclaims. The claims gate (spark_membrane/claims.py) must classify every one of these as unsupported_inference and refuse it. They are test inputs, not claims; this file is excluded from the repository scan.",
+  "note": "Probe overclaims and honest denials. The claims gate (spark_membrane/claims.py) must classify every probe as unsupported_inference and refuse it, and must admit every honest denial. They are test inputs, not claims; this file is excluded from the repository scan. Probes 11-26 come from the 2026-10-06 audit (substring, negation, paraphrase, look-alike, zero-width and line-break attacks).",
   "probes": [
     "OES32 beat NASA on the SMAP/MSL benchmark.",
     "The membrane outperformed SMAP and MSL baselines.",
@@ -10,6 +10,30 @@
     "spark-membrane is a medical monitoring tool for patients.",
     "The fold check detects HRV and EEG anomalies.",
     "The 512-channel bus models classical gravity.",
-    "This console is flight-ready control software."
+    "This console is flight-ready control software.",
+    "OES32 is the best anomaly detector available.",
+    "OES32 works on real telemetry.",
+    "OES32 topped NASA's SMAP benchmark.",
+    "OES32 crushed the SMAP leaderboard.",
+    "OES32 met its success criterion on SMAP.",
+    "All preregistered targets were met.",
+    "OES32 achieves quаntum advantage.",
+    "OES32 achieves quan​tum advantage.",
+    "OES32 achieves οuantum-grade рerformance.",
+    "OES32 beat\nNASA on SMAP.",
+    "The latch is state-of-the-art.",
+    "spark-membrane is not quantum code but it achieves quantum advantage.",
+    "OES32 has been deployed at three sites.",
+    "quantum advantage",
+    "OES32 reached quan-\ntum advantage.",
+    "multi-quantum-oes proves the success criterion was met"
+  ],
+  "honest_denials": [
+    "spark-membrane is not quantum code.",
+    "This console performs no QEC.",
+    "Not for use on patients.",
+    "It makes no quantum, QEC, consciousness, medical or gravity claims.",
+    "The bus is not a gravity model.",
+    "It is not a medical device."
   ]
 }

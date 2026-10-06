@@ -182,7 +182,7 @@ class ShieldSignatures(unittest.TestCase):
         from unittest import mock
         from spark_membrane import shield
         with mock.patch.object(shield, "signature_backend", return_value=None):
-            v = shield.CapabilityVerifier({"k": shield.AuthorityKey("k", "DECODEUR", b"\0" * 32)}, clock=lambda: 0)
+            v = shield.CapabilityVerifier({"k": shield.AuthorityKey("k", "DECODEUR", shield.RFC8032_TEST1_PUBLIC_KEY)}, clock=lambda: 0)
             for raw in (b"{}", b"not json", b'{"role":"decodeur"}'):
                 d = v.verify(raw, action="WRITE")
                 self.assertFalse(d.admitted)
