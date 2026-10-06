@@ -1,0 +1,34 @@
+name: Feature request
+description: Propose a focused improvement.
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and use case
+      description: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the behavior, including how it stays fail-closed and which upstream pin (if any) it relies on.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Scope and honesty
+      options:
+        - label: This does not let an advisory engine, the explorer or a tampered protocol produce ACCEPT.
+          required: true
+        - label: I have not included credentials, private tokens, personal data or undisclosed vulnerability details.
+          required: true

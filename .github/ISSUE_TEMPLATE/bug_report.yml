@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a reproducible defect in the console, the audit, the explorer or the evidence files.
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include secrets, private tokens, personal data, private telemetry or undisclosed vulnerabilities. Use SECURITY.md for security reports.
+        spark-membrane is a SYNTHETIC classical software simulation; please do not attach real operational data.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: The exact command (for example `python3 -m spark_membrane demo --seed 42`), the smallest synthetic input that shows the problem, and expected versus actual output.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version and whether the [shield] extra is installed
+    validations:
+      required: true

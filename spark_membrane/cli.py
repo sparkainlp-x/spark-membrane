@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
-"""Command line: demo, audit, verify-trail, claims, pins, build-docs."""
+"""Command line: demo, audit, verify-trail, claims, pins, shield-selftest, build-docs."""
 from __future__ import annotations
 
 import argparse
@@ -29,9 +29,19 @@ def _cmd_audit(args: argparse.Namespace) -> int:
     protocol = load_protocol(args.protocol) if args.protocol else load_protocol()
     locked = args.sha256 or expected_sha256()
     stream = load_stream(args.frames)
-    run = run_stream(stream, protocol, locked, seed=args.seed)
+    calibration = load_stream(args.calibration) if args.calibration else None
+    run = run_stream(stream, protocol, locked, seed=args.seed, calibration=calibration)
     print(f"SYNTHETIC/UNVERIFIED INPUT. {BANNER}")
     print(f"protocol sha256 {protocol.sha256} (locked {locked}: {'MATCH' if protocol.sha256 == locked else 'MISMATCH'})")
+    print("thresholds: UNCALIBRATED placeholders (docs/PROTOCOL.md)")
+    t = run.temporal
+    if t is None:
+        print(f"EWMA/CUSUM: not scored (no --calibration and the stream has <= {protocol.in_stream_warmup} frames)")
+    elif t.mode == "calibration_stream":
+        print(f"EWMA/CUSUM: separate calibration stream, {t.calibration_frames} frames; restart after alarm: {t.reset_after_alarm}")
+    else:
+        print(f"EWMA/CUSUM: no --calibration given; upstream in-stream warm-up of {t.warmup} frames (not scored); "
+              f"restart after alarm: {t.reset_after_alarm}")
     for o in run.outcomes:
         a = o.audit
         fails = ", ".join(f"{c.name}@{c.index}" if c.index is not None else c.name for c in a.failed_gating) or "-"
@@ -41,6 +51,23 @@ def _cmd_audit(args: argparse.Namespace) -> int:
     c = run.counts()
     print(json.dumps(c, sort_keys=True))
     return 0 if c["latch"] == 0 else 3
+
+
+def _cmd_shield_selftest(args: argparse.Namespace) -> int:
+    from .shield import EXTRA_HINT, self_test
+    backend, cases = self_test()
+    print(f"shield gate self-test (role policy of oes32-membrane-shield; Ed25519 backend: {backend or 'UNAVAILABLE'})")
+    bad = 0
+    for name, expected, d in cases:
+        ok = d.admitted == expected
+        bad += not ok
+        print(f"  {'ok ' if ok else 'BAD'} {name}: {'ADMITTED' if d.admitted else 'REFUSED'} "
+              f"[signature {d.signature}] {d.reason}")
+    if backend is None:
+        print(f"  Signature checks were not run. Every signed capability is REFUSED until you {EXTRA_HINT}.")
+    if bad:
+        return 1
+    return 4 if backend is None and args.require_backend else 0
 
 
 def _cmd_verify_trail(args: argparse.Namespace) -> int:
@@ -89,7 +116,8 @@ def build_parser() -> argparse.ArgumentParser:
     a = sub.add_parser("audit", help="audit a native-32 JSONL stream (oes-telemetry-bench contract)")
     a.add_argument("--frames", required=True)
     a.add_argument("--protocol")
-    a.add_argument("--sha256", help="expected protocol SHA-256 (default: protocols/SHA256SUMS)")
+    a.add_argument("--sha256", help="expected protocol SHA-256 (default: bundled protocols/SHA256SUMS)")
+    a.add_argument("--calibration", help="separate event-free native-32 stream used only for the EWMA/CUSUM mean and scale")
     a.add_argument("--seed", type=int, default=42)
     a.set_defaults(fn=_cmd_audit)
     v = sub.add_parser("verify-trail", help="verify a hash-chained trail (measurement-trail format)")
@@ -97,7 +125,10 @@ def build_parser() -> argparse.ArgumentParser:
     v.set_defaults(fn=_cmd_verify_trail)
     sub.add_parser("claims", help="print the claim ledger").set_defaults(fn=_cmd_claims)
     sub.add_parser("pins", help="print the pinned upstream commits").set_defaults(fn=_cmd_pins)
-    b = sub.add_parser("build-docs", help="regenerate docs/ from demo --seed")
+    sh = sub.add_parser("shield-selftest", help="exercise the capability gate (Ed25519 needs the [shield] extra)")
+    sh.add_argument("--require-backend", action="store_true", help="exit 4 if the Ed25519 backend is missing")
+    sh.set_defaults(fn=_cmd_shield_selftest)
+    b = sub.add_parser("build-docs", help="regenerate docs/ and the root data mirrors from demo --seed (needs a clone)")
     b.add_argument("--seed", type=int, default=42)
     b.add_argument("--check", action="store_true", help="fail if docs/ differs from a fresh build")
     b.set_defaults(fn=_cmd_build_docs)

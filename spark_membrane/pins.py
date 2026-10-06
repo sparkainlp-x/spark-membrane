@@ -8,15 +8,17 @@ from pathlib import Path
 from typing import Any
 
 from .canonical import MembraneError
+from .resources import data_text
 
-ROOT = Path(__file__).resolve().parent.parent
-PINS = ROOT / "PINS.json"
 _SHA = re.compile(r"^[0-9a-f]{40}$")
+_DOI = re.compile(r"^10\.5281/zenodo\.[0-9]+$")
 PLANES = {"contract_spine", "frame_bus", "audit", "evidence_membrane", "linked_context"}
 
 
-def load_pins(path: str | Path = PINS) -> dict[str, Any]:
-    data = json.loads(Path(path).read_text(encoding="utf-8"))
+def load_pins(path: str | Path | None = None) -> dict[str, Any]:
+    """Load PINS.json (default: the bundled copy, mirrored at the repository root)."""
+    text = data_text("PINS.json") if path is None else Path(path).read_text(encoding="utf-8")
+    data = json.loads(text)
     validate_pins(data)
     return data
 
@@ -36,9 +38,12 @@ def validate_pins(data: dict[str, Any]) -> None:
             raise MembraneError(f"pin {r['name']}: unknown plane {r['plane']!r}")
         if r["url"] != f"https://github.com/sparkainlp-x/{r['name']}":
             raise MembraneError(f"pin {r['name']}: url must point at sparkainlp-x/{r['name']}")
+        doi = r.get("doi")
+        if doi is not None and not _DOI.fullmatch(str(doi)):
+            raise MembraneError(f"pin {r['name']}: doi must look like 10.5281/zenodo.N or be null")
         if r["name"] in names:
             raise MembraneError(f"duplicate pin {r['name']}")
         names.add(r["name"])
 
 
-__all__ = ["load_pins", "validate_pins", "PINS"]
+__all__ = ["load_pins", "validate_pins"]

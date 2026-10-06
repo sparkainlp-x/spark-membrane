@@ -1,0 +1,19 @@
+name: Evidence or wording correction
+description: Report an overclaim, a misquoted upstream result, a wrong pin or DOI, or a threshold presented as calibrated.
+title: "evidence: "
+labels: [documentation]
+body:
+  - type: textarea
+    id: where
+    attributes:
+      label: Where
+      description: File and line, page section, or console output line.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong and what the source says
+      description: Quote the upstream repository, commit or DOI that shows the correct statement.
+    validations:
+      required: true

@@ -28,8 +28,48 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: First command
         run: python -m spark_membrane demo --seed 42
-      - name: Committed docs match a fresh build
+      - name: Committed docs and root mirrors match a fresh build
         run: python -m spark_membrane build-docs --check
+      - name: Shield gate without the optional extra refuses signed capabilities
+        run: python -m spark_membrane shield-selftest
+
+  package:
+    name: Package (pip install, console script, [shield] extra)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: pip install . into a clean virtual environment
+        run: |
+          python -m venv /tmp/venv
+          /tmp/venv/bin/python -m pip install --upgrade pip
+          /tmp/venv/bin/python -m pip install .
+      - name: Console script runs outside the checkout and matches the committed output
+        run: |
+          cd "$RUNNER_TEMP"
+          /tmp/venv/bin/spark-membrane demo --seed 42 > installed-demo.txt
+          diff -u "$GITHUB_WORKSPACE/docs/demo-seed42.txt" installed-demo.txt
+          /tmp/venv/bin/spark-membrane pins
+          /tmp/venv/bin/python -c "import spark_membrane, pathlib; p = pathlib.Path(spark_membrane.__file__).parent; assert 'site-packages' in str(p), p; print(p)"
+      - name: Without the extra, shield-selftest --require-backend exits 4
+        run: |
+          cd "$RUNNER_TEMP"
+          set +e; /tmp/venv/bin/spark-membrane shield-selftest --require-backend; code=$?; set -e
+          test "$code" -eq 4
+      - name: With the [shield] extra, Ed25519 capabilities are verified
+        run: |
+          /tmp/venv/bin/python -m pip install ".[shield]"
+          cd "$RUNNER_TEMP"
+          /tmp/venv/bin/spark-membrane shield-selftest --require-backend
+      - name: Build sdist and wheel
+        run: |
+          python -m pip install build
+          python -m build
+          ls -l dist
 
   upstream:
     name: Live conformance against pinned upstream commits
@@ -42,7 +82,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install upstream test dependencies (CI only; spark_membrane itself is stdlib-only)
-        run: python -m pip install --upgrade pip && python -m pip install "numpy>=1.24,<3" pytest
+        run: python -m pip install --upgrade pip && python -m pip install "numpy>=1.24,<3" pytest "cryptography>=50,<51"
       - name: Check out every PINS.json repository at its pinned commit
         run: |
           mkdir -p upstream

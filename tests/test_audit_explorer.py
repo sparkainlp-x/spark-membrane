@@ -156,17 +156,65 @@ class Explorer(unittest.TestCase):
 
 class ShieldPolicy(unittest.TestCase):
     def test_explorer_cannot_write_or_calibrate(self):
-        self.assertFalse(authorize("WRITE", ("EXPLORER",)).admitted)
-        self.assertFalse(authorize("CALIBRATE", ("EXPLORER", "GARDIEN")).admitted)
+        self.assertFalse(authorize("WRITE", ("EXPLORER",)).policy_ok)
+        self.assertFalse(authorize("CALIBRATE", ("EXPLORER", "GARDIEN")).policy_ok)
 
     def test_role_table_mirrors_upstream(self):
-        self.assertTrue(authorize("WRITE", ("DECODEUR",)).admitted)
-        self.assertTrue(authorize("WRITE", ("GARDIEN",)).admitted)
-        self.assertFalse(authorize("WRITE", ("CALIBRATEUR",)).admitted)
-        self.assertTrue(authorize("CALIBRATE", ("CALIBRATEUR", "GARDIEN")).admitted)
-        self.assertFalse(authorize("CALIBRATE", ("CALIBRATEUR",)).admitted)
-        self.assertFalse(authorize("DELETE", ("GARDIEN",)).admitted)
-        self.assertFalse(authorize("WRITE", ("ROOT",)).admitted)
+        self.assertTrue(authorize("WRITE", ("DECODEUR",)).policy_ok)
+        self.assertTrue(authorize("WRITE", ("GARDIEN",)).policy_ok)
+        self.assertFalse(authorize("WRITE", ("CALIBRATEUR",)).policy_ok)
+        self.assertTrue(authorize("CALIBRATE", ("CALIBRATEUR", "GARDIEN")).policy_ok)
+        self.assertFalse(authorize("CALIBRATE", ("CALIBRATEUR",)).policy_ok)
+        self.assertTrue(authorize("OBSERVE", ("OBSERVATEUR",)).policy_ok)
+        self.assertFalse(authorize("DELETE", ("GARDIEN",)).policy_ok)
+        self.assertFalse(authorize("WRITE", ("ROOT",)).policy_ok)
+
+    def test_policy_alone_never_admits(self):
+        for action, roles in (("WRITE", ("DECODEUR",)), ("CALIBRATE", ("CALIBRATEUR", "GARDIEN"))):
+            d = authorize(action, roles)
+            self.assertTrue(d.policy_ok)
+            self.assertFalse(d.admitted)
+            self.assertEqual(d.signature, "not presented")
+
+
+class ShieldSignatures(unittest.TestCase):
+    def test_without_backend_every_signed_capability_is_refused(self):
+        from unittest import mock
+        from spark_membrane import shield
+        with mock.patch.object(shield, "signature_backend", return_value=None):
+            v = shield.CapabilityVerifier({"k": shield.AuthorityKey("k", "DECODEUR", b"\0" * 32)}, clock=lambda: 0)
+            for raw in (b"{}", b"not json", b'{"role":"decodeur"}'):
+                d = v.verify(raw, action="WRITE")
+                self.assertFalse(d.admitted)
+                self.assertEqual(d.signature, "backend unavailable")
+                self.assertIn("spark-membrane[shield]", d.reason)
+            d = v.verify_pair(b"{}", b"{}")
+            self.assertFalse(d.admitted)
+            backend, cases = shield.self_test()
+            self.assertIsNone(backend)
+            self.assertTrue(all(dec.admitted == exp for _, exp, dec in cases))
+            self.assertFalse(any(dec.admitted for _, _, dec in cases))
+
+    def test_selftest_with_backend(self):
+        from spark_membrane import shield
+        if shield.signature_backend() is None:
+            self.skipTest("cryptography not installed (optional [shield] extra)")
+        backend, cases = shield.self_test()
+        self.assertIn("Ed25519", backend)
+        self.assertGreaterEqual(len(cases), 10)
+        for name, expected, d in cases:
+            self.assertEqual(d.admitted, expected, name)
+        admitted = [n for n, _, d in cases if d.admitted]
+        self.assertEqual(admitted, ["DECODEUR WRITE, valid signature", "CALIBRATE with CALIBRATEUR + GARDIEN"])
+
+    def test_capability_wire_format_round_trip(self):
+        from spark_membrane.shield import Capability
+        cap = Capability("k1", "subj", "DECODEUR", "WRITE", "r1", "ab" * 32, 10, 70, b"\x01" * 64)
+        self.assertEqual(Capability.from_bytes(cap.to_bytes()), cap)
+        self.assertIn(b'"role":"decodeur"', cap.unsigned_payload())
+        self.assertIn(b'"action":"write"', cap.unsigned_payload())
+        with self.assertRaises(ValueError):
+            Capability.from_bytes(b'{"role":"explorer"}')
 
 
 if __name__ == "__main__":

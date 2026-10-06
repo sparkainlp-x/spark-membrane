@@ -143,6 +143,12 @@ class LockedProtocolTests(unittest.TestCase):
             lambda d: d["baselines"].__setitem__("role", "gating"),
             lambda d: d.__setitem__("evidence_class", "FIELD"),
             lambda d: d.__setitem__("reference_vector", [0.0] * 31),
+            lambda d: d.__setitem__("calibration_status", "calibrated on field data"),
+            lambda d: d["baselines"]["calibration"].__setitem__("mode", "in_stream"),
+            lambda d: d["baselines"]["calibration"].__setitem__("frames", 1),
+            lambda d: d["baselines"].__setitem__("reset_after_alarm", "yes"),
+            lambda d: d["provenance"].__setitem__("residual.nonexistent", "author choice"),
+            lambda d: d.__setitem__("schema_version", 1),
         ]
         for fn in cases:
             with self.assertRaises(MembraneError):
@@ -151,6 +157,72 @@ class LockedProtocolTests(unittest.TestCase):
     def test_any_byte_change_changes_the_hash(self):
         tampered = parse_protocol(self.p.raw.replace(b'"candidates": 16', b'"candidates": 17'))
         self.assertNotEqual(tampered.sha256, expected_sha256())
+
+
+class PlaceholderStatus(unittest.TestCase):
+    """Every threshold and cap is documented, with its source, as UNCALIBRATED."""
+
+    def setUp(self):
+        self.p = load_protocol()
+        self.doc = (ROOT / "docs" / "PROTOCOL.md").read_text(encoding="utf-8")
+
+    def _numeric_paths(self, node, prefix=""):
+        out = []
+        for k, v in node.items():
+            path = f"{prefix}{k}"
+            if isinstance(v, bool):
+                continue
+            if isinstance(v, (int, float)) and k not in ("schema_version",):
+                out.append(path)
+            elif isinstance(v, (list, tuple)) and v and all(isinstance(x, (int, float)) for x in v) and k != "reference_vector":
+                out.append(path)
+            elif hasattr(v, "items") and k != "provenance":
+                out.extend(self._numeric_paths(v, path + "."))
+        return out
+
+    def test_every_numeric_parameter_has_a_provenance(self):
+        prov = self.p.data["provenance"]
+        for path in self._numeric_paths(self.p.data):
+            if path in ("sidecar_profile_a.mu_offset", "explorer.indices_per_proposal"):
+                continue  # definitions, not tunable thresholds
+            self.assertTrue(any(path == k or path.startswith(k + ".") for k in prov), path)
+
+    def test_protocol_md_documents_every_parameter_and_says_uncalibrated(self):
+        self.assertIn("UNCALIBRATED", self.doc)
+        self.assertIn(self.p.sha256, self.doc)
+        for path, source in self.p.data["provenance"].items():
+            self.assertIn(f"`{path}`", self.doc, path)
+            kind = "author choice" if source.startswith("author choice") else "upstream"
+            row = next(line for line in self.doc.splitlines() if f"`{path}`" in line)
+            self.assertIn(kind, row.lower(), path)
+
+    def test_calibration_status_is_uncalibrated(self):
+        self.assertTrue(self.p.data["calibration_status"].startswith("UNCALIBRATED"))
+
+
+class PackagingAndMirrors(unittest.TestCase):
+    def test_root_mirrors_are_byte_identical_to_package_data(self):
+        from spark_membrane.resources import MIRRORS, data_bytes
+        for src, dest in MIRRORS.items():
+            self.assertEqual((ROOT / dest).read_bytes(), data_bytes(src), dest)
+
+    def test_pyproject_ships_every_data_file(self):
+        try:
+            import tomllib
+        except ModuleNotFoundError:
+            self.skipTest("tomllib needs Python 3.11+")
+        import fnmatch
+        cfg = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
+        patterns = cfg["tool"]["setuptools"]["package-data"]["spark_membrane"]
+        data_dir = ROOT / "spark_membrane" / "data"
+        files = [str(p.relative_to(ROOT / "spark_membrane")) for p in data_dir.rglob("*") if p.is_file()]
+        self.assertTrue(files)
+        for f in files:
+            self.assertTrue(any(fnmatch.fnmatch(f, pat) for pat in patterns), f)
+        self.assertEqual(cfg["project"]["scripts"]["spark-membrane"], "spark_membrane.cli:main")
+        self.assertEqual(cfg["project"]["dependencies"], [])
+        self.assertIn("shield", cfg["project"]["optional-dependencies"])
+        self.assertEqual(cfg["project"]["license"]["text"], "AGPL-3.0-only")
 
 
 if __name__ == "__main__":

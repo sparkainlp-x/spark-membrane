@@ -79,7 +79,25 @@ class PassportTests(unittest.TestCase):
             text = path.read_text()
             self.assertIn("SYNTHETIC", text)
             self.assertIn("Not a medical device", text)
-            self.assertNotIn("<script", text.lower())
+        self.assertNotIn("<script", (PASSPORT / "index.html").read_text().lower())
+
+    def test_page_is_self_contained_and_works_without_script(self):
+        text = (ROOT / "docs" / "index.html").read_text()
+        # no external fetches: no src= / stylesheet links / fonts / fetch()
+        self.assertNotIn(" src=", text)
+        self.assertNotIn('rel="stylesheet"', text)
+        self.assertNotIn("fetch(", text)
+        self.assertNotIn("@import", text)
+        self.assertEqual(text.lower().count("<script"), 1)  # one small inline script that only toggles frames
+        # every frame is rendered server-side; one is visible without script, noscript shows all
+        self.assertEqual(text.count('class="detail panel"'), 40)
+        self.assertIn('<noscript><style>.detail[hidden]{display:block}</style></noscript>', text)
+        self.assertIn('lang="en"', text)
+        self.assertIn('class="skip"', text)
+        self.assertIn("residual", text)
+        self.assertLess(text.index("Read this first"), text.index("The seed-42 run"))
+        for name, url, _ in __import__("spark_membrane.page", fromlist=["LINKS"]).LINKS:
+            self.assertIn(url, text, name)
 
 
 class ClaimsGate(unittest.TestCase):
@@ -89,7 +107,7 @@ class ClaimsGate(unittest.TestCase):
         self.assertTrue({"public_dataset_negative", "synthetic_negative", "unrun", "external_inspiration"} <= labels)
 
     def test_every_probe_overclaim_is_refused(self):
-        probes = json.loads((ROOT / "spark_membrane" / "refused_probes.json").read_text())["probes"]
+        probes = claims.load_probes()
         self.assertGreaterEqual(len(probes), 10)
         for s in probes:
             self.assertEqual(claims.classify(s, "boundary"), claims.REFUSED_LABEL, s)
@@ -102,7 +120,7 @@ class ClaimsGate(unittest.TestCase):
             self.assertEqual(claims.scan_line(s), [], s)
 
     def test_ledger_rejects_a_fenced_statement(self):
-        probe = json.loads((ROOT / "spark_membrane" / "refused_probes.json").read_text())["probes"][0]
+        probe = claims.load_probes()[0]
         data = {"schema_version": 1, "claims": [{"id": "MEM-01", "label": "boundary", "statement": probe, "source": "x"}]}
         with self.assertRaises(MembraneError):
             claims.validate_ledger(data)
@@ -114,7 +132,7 @@ class ClaimsGate(unittest.TestCase):
                 claims.validate_ledger(data)
 
     def test_assert_clean_refuses(self):
-        probe = json.loads((ROOT / "spark_membrane" / "refused_probes.json").read_text())["probes"][3]
+        probe = claims.load_probes()[3]
         with self.assertRaises(MembraneError):
             claims.assert_clean("ok line\n" + probe)
 
@@ -129,6 +147,16 @@ class PinsTests(unittest.TestCase):
     def test_residual_pinned_at_adr_normative_commit(self):
         p = next(p for p in load_pins()["repositories"] if p["name"] == "oes32-residual")
         self.assertTrue(p["commit"].startswith("b77b612"))
+
+    def test_dois_are_real_concept_dois_or_null(self):
+        pins = {p["name"]: p for p in load_pins()["repositories"]}
+        self.assertIsNone(pins["oes-telemetry-bench"]["doi"])
+        self.assertEqual(pins["oes-resilience"]["doi"], "10.5281/zenodo.23071166")
+        self.assertEqual(pins["quantum-claims-passport"]["doi"], "10.5281/zenodo.23167801")
+        with self.assertRaises(MembraneError):
+            validate_pins({"schema_version": 1, "repositories": [
+                {"name": "x", "url": "https://github.com/sparkainlp-x/x", "commit": "a" * 40, "plane": "audit",
+                 "role": "r", "doi": "10.9999/fake"}]})
 
     def test_validation_rejects_short_sha(self):
         with self.assertRaises(MembraneError):

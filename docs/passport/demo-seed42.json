@@ -20,6 +20,25 @@
    "382b7da40b91c88fb656ecee6f905627aaef3c1310dd1eb91c3d6eab52b7813d"
   ],
   "blocks": 16,
+  "calibration": "one separate 64-frame calibration stream per block, regenerated from the seed",
+  "calibration_sha256": [
+   "3dce5d82713d68cac4ccdaae713c295e6752796321c08666a94d19111be3fe54",
+   "302a281941c7f9ff9212629ac94cf68b037e0a0c92f96102845a527b11a2c12d",
+   "e436aa5a006de3df559dc02e3b4d5b6b072790ce276d9f5625483a53b7af91c8",
+   "1a4e1736f34d8112895d3c50a4dc48d279a1b9996b44b615d517026babe20dec",
+   "705d8b0cdb7d932bf0235088a5144442640041cbd92a32ab1f60a3eab5ee8f5b",
+   "78dcc0d3e6bd0ed1e395441e285f04274fbb0dc5c59f9dd3526b6a684c2b755d",
+   "caedcb17816612f3b65baf255b6e6d621280108ee6db863204ddd57dd9407cc9",
+   "b31e6ec2c8e286fa0573923f12ca3b3904521bef2a3eba06f6b5fa46fd465dd0",
+   "d3c764c21f2b9bb47fae796a99eca12e9b00768fe6bd5c298660971624cf427b",
+   "42738c555f38a179201795cb1ecf79ef1a0810146723a22cbda80a77cf4b2ace",
+   "3b5fc6ce5a9faa9de62609ffbe922302ffb8a0af47a6bba0e7307f5aeb15b256",
+   "fa693f23e5471ef9aed58ff2a58f87142b78a0384ca9718b44e482a247c7e921",
+   "bf09d1e6bb4679057881e520aac26393ce3f449941cee8c3439b3b3f463140f6",
+   "b5d66807c5042e12a0255be2aeff2f69d351f7c8a086f06890b3463e5a7e8160",
+   "cf0da6c8a46a76262c8caf15a3df94a8d9dbe7489a3f554babadf7f723693d5a",
+   "88e5b802a68b6dd0aae6985ff9dbfc8effb55c870ef18e7d593a2d9731ba41db"
+  ],
   "channels": 512,
   "frame": "last frame of each 3-frame block stream",
   "resampling": "none",
@@ -27,8 +46,8 @@
    {
     "block": 0,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -41,8 +60,8 @@
    {
     "block": 1,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -55,8 +74,8 @@
    {
     "block": 2,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -69,8 +88,8 @@
    {
     "block": 3,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -83,8 +102,8 @@
    {
     "block": 4,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -97,8 +116,8 @@
    {
     "block": 5,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -111,8 +130,8 @@
    {
     "block": 6,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -125,8 +144,8 @@
    {
     "block": 7,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -139,8 +158,8 @@
    {
     "block": 8,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -153,8 +172,8 @@
    {
     "block": 9,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -167,8 +186,8 @@
    {
     "block": 10,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -181,8 +200,8 @@
    {
     "block": 11,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "FIRED",
+     "ewma": "FIRED",
      "maxabs": "quiet",
      "residual": "FIRED",
      "sidecar": "FIRED",
@@ -216,8 +235,8 @@
    {
     "block": 12,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -230,8 +249,8 @@
    {
     "block": 13,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -244,8 +263,8 @@
    {
     "block": 14,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -258,8 +277,8 @@
    {
     "block": 15,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -281,7 +300,7 @@
  "command": "python3 -m spark_membrane demo --seed 42",
  "evidence_class": "SYNTHETIC",
  "pins": {
-  "evidence-passport": "76a6164364c08b2bd66c039198f03115defc4980",
+  "evidence-passport": "e275bb04064c02fb39c7d96f1aa66f7508f0cdda",
   "measurement-trail": "7ab6ec8c9750c2de9c8df1c79fdb9c53804da0f4",
   "multi-quantum-oes": "132e0a7b2ae05c742d5b0d91be221cc0d2def106",
   "oes-resilience": "1ee533cd4360a6b1415f923c4e52cfc166b8917a",
@@ -300,6 +319,7 @@
    "ewma",
    "cusum"
   ],
+  "calibration_status": "UNCALIBRATED: every threshold and cap below is an upstream default or an author choice. None was fitted to data, none is validated, none is a recommendation. See docs/PROTOCOL.md.",
   "gating": [
    "protocol_hash",
    "residual",
@@ -309,10 +329,10 @@
    "sidecar_Cfold",
    "weighted"
   ],
-  "locked_sha256": "c1d9d9e7f352dc0853a16abbabf0aea1af0c52896a72257f0f747c510a90c91d",
+  "locked_sha256": "69efc39ab63b4b1157ddcaf42a3c3f5398cd0e1937de2633b1e67c47dde28f3b",
   "match": true,
-  "protocol_id": "spark-membrane-demo-v1",
-  "sha256": "c1d9d9e7f352dc0853a16abbabf0aea1af0c52896a72257f0f747c510a90c91d"
+  "protocol_id": "spark-membrane-demo-v2",
+  "sha256": "69efc39ab63b4b1157ddcaf42a3c3f5398cd0e1937de2633b1e67c47dde28f3b"
  },
  "read_first": [
   {
@@ -349,10 +369,80 @@
  "schema_version": 1,
  "seed": 42,
  "stream": {
+  "baseline_calibration": {
+   "artifact": "calibration-seed42.jsonl",
+   "calibration_frames": 64,
+   "k": 0.5,
+   "lambda": 0.2,
+   "mode": "calibration_stream",
+   "mu": -0.000163222656,
+   "reset_after_alarm": true,
+   "resets": [
+    {
+     "detector": "ewma",
+     "frame_index": 20
+    },
+    {
+     "detector": "cusum",
+     "frame_index": 20
+    },
+    {
+     "detector": "ewma",
+     "frame_index": 24
+    },
+    {
+     "detector": "cusum",
+     "frame_index": 24
+    },
+    {
+     "detector": "ewma",
+     "frame_index": 30
+    },
+    {
+     "detector": "cusum",
+     "frame_index": 30
+    },
+    {
+     "detector": "ewma",
+     "frame_index": 31
+    },
+    {
+     "detector": "cusum",
+     "frame_index": 31
+    },
+    {
+     "detector": "ewma",
+     "frame_index": 32
+    },
+    {
+     "detector": "cusum",
+     "frame_index": 32
+    },
+    {
+     "detector": "ewma",
+     "frame_index": 33
+    },
+    {
+     "detector": "cusum",
+     "frame_index": 33
+    },
+    {
+     "detector": "ewma",
+     "frame_index": 36
+    },
+    {
+     "detector": "cusum",
+     "frame_index": 36
+    }
+   ],
+   "sha256": "7b2f103b71b39f6bfb857e6f60b418e1d59d5623ac72653bd6bed413e4334ece",
+   "sigma": 0.001069601606,
+   "unscored_warmup_frames": 0
+  },
   "cadence_seconds": 1.0,
   "counts": {
    "accept": 36,
-   "engine_disagreement": 19,
+   "engine_disagreement": 7,
    "frames": 40,
    "latch": 4,
    "latch_held": 3,
@@ -472,31 +562,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.522791760153
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.371319600256
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -624,31 +714,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.452396975236
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.0
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -776,31 +866,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.722277366578
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.100599643982
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -928,31 +1018,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.011341261253
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.444134386682
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -1080,31 +1170,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.233313188627
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.0
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -1232,31 +1322,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.488723448367
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.003454829109
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -1384,31 +1474,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.679188243074
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 1.283611669612
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -1536,31 +1626,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.612911394793
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.899546336835
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -1688,31 +1778,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.661861294475
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.685433301236
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -1840,31 +1930,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.72833278503
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.51683955032
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -1992,31 +2082,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 1.715081874172
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 1.904198960567
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -2144,31 +2234,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 1.458612764444
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 1.54844440241
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -2296,31 +2386,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.87366990925
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.559743898568
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -2448,31 +2538,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 1.147019672855
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.806550140994
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -2600,31 +2690,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.993469769633
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 0.432973526574
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -2752,31 +2842,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": null
+      "value": 0.32617089899
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "warm-up frame, not scored",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": null,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": null
+      "value": 1.368244524494
      }
     ],
     "engine_disagreement": false,
     "engine_families": {
-     "cusum": "n/a",
-     "ewma": "n/a",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -2904,25 +2994,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 0.068239715855
+      "value": 0.265615008961
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 0.0
+      "value": 0.876041674108
      }
     ],
     "engine_disagreement": false,
@@ -3056,25 +3146,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 1.00589703526
+      "value": 0.854396904905
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 1.267481346573
+      "value": 1.27814818679
      }
     ],
     "engine_disagreement": false,
@@ -3208,25 +3298,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 1.098465773572
+      "value": 1.022495225271
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 1.257061588846
+      "value": 1.343111022368
      }
     ],
     "engine_disagreement": false,
@@ -3360,25 +3450,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 0.463589031285
+      "value": 0.396279676323
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 1.737269416904
+      "value": 1.523793094233
      }
     ],
     "engine_disagreement": false,
@@ -3512,25 +3602,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 3.5373822175
+      "value": 3.453412673048
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 6.013755737547
+      "value": 5.784060690177
      }
     ],
     "engine_disagreement": true,
@@ -3608,8 +3698,10 @@
     "shield_commit": {
      "action": "WRITE",
      "admitted": false,
+     "policy_ok": false,
      "reason": "only DECODEUR or GARDIEN may write; EXPLORER proposals stay in simulation",
-     "role": "EXPLORER"
+     "role": "EXPLORER",
+     "signature": "not presented"
     },
     "timestamp": "2026-10-05T12:00:20Z",
     "verdict": "LATCH"
@@ -3726,31 +3818,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 3.297206454948
+      "value": 0.503741150668
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 6.292590205793
+      "value": 0.339568584447
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -3878,30 +3970,30 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 2.762392373753
+      "value": 0.581414346498
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 6.000302222117
+      "value": 0.136937627719
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
+     "cusum": "quiet",
      "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
@@ -4030,30 +4122,30 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 2.798418840358
+      "value": 1.083938835053
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 6.481143791043
+      "value": 0.668283224144
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
+     "cusum": "quiet",
      "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
@@ -4182,25 +4274,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 10.589150509764
+      "value": 8.854788517382
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 19.898502853506
+      "value": 13.481012306377
      }
     ],
     "engine_disagreement": true,
@@ -4559,31 +4651,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 8.871593138533
+      "value": 0.440107644866
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 20.065624071376
+      "value": 0.233512741443
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -4711,31 +4803,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 8.28829240421
+      "value": 1.542893830313
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 21.550653893682
+      "value": 1.718192265477
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -4863,31 +4955,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 6.006616170643
+      "value": 0.702004573064
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 20.010624305807
+      "value": 0.387184151978
      }
     ],
     "engine_disagreement": true,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "FIRED",
      "sidecar": "FIRED",
@@ -5247,31 +5339,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 5.881310809511
+      "value": 1.643235209197
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 21.303987427467
+      "value": 1.633727364743
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -5399,31 +5491,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 5.761105855538
+      "value": 2.377269905495
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 22.564082774016
+      "value": 2.904863594971
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -5551,25 +5643,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 19.459109398783
+      "value": 16.060097857755
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 46.814457297937
+      "value": 26.00200015057
      }
     ],
     "engine_disagreement": true,
@@ -5703,25 +5795,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 30.106284657332
+      "value": 13.862815613717
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 70.546119195112
+      "value": 22.604692689529
      }
     ],
     "engine_disagreement": true,
@@ -5855,25 +5947,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 38.124417357489
+      "value": 13.388509341955
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 93.445101914486
+      "value": 21.814182236592
      }
     ],
     "engine_disagreement": true,
@@ -6007,25 +6099,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 45.026177939255
+      "value": 13.851088116367
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 117.156175336592
+      "value": 22.585146860612
      }
     ],
     "engine_disagreement": true,
@@ -6159,31 +6251,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 36.298182786712
+      "value": 0.32330597843
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 117.118242728772
+      "value": 0.038843297384
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -6311,31 +6403,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 28.77555615786
+      "value": 0.06907872832
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 116.179925942922
+      "value": 0.0
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -6463,25 +6555,25 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 376.692360245929
+      "value": 335.876551804251
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
       "passed": false,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 705.133118142325
+      "value": 559.202148035991
      }
     ],
     "engine_disagreement": false,
@@ -6862,31 +6954,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 301.211326855639
+      "value": 0.075236102677
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 704.39551590715
+      "value": 0.0
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -7014,31 +7106,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 240.80079686332
+      "value": 0.159826593654
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 703.615074871831
+      "value": 0.0
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -7166,31 +7258,31 @@
       "engine": "EWMA baseline",
       "index": null,
       "name": "ewma",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 3.0,
-      "value": 192.520344939626
+      "value": 0.181956328565
      },
      {
       "engine": "CUSUM baseline",
       "index": null,
       "name": "cusum",
-      "note": "advisory; frame mean standardized on warm-up",
+      "note": "advisory; frame mean standardized on separate calibration stream; restarts after an alarm",
       "pair": null,
-      "passed": false,
+      "passed": true,
       "role": "advisory",
       "rule": "alarm iff score >= threshold",
       "threshold": 5.0,
-      "value": 702.914587286781
+      "value": 0.0
      }
     ],
-    "engine_disagreement": true,
+    "engine_disagreement": false,
     "engine_families": {
-     "cusum": "FIRED",
-     "ewma": "FIRED",
+     "cusum": "quiet",
+     "ewma": "quiet",
      "maxabs": "quiet",
      "residual": "quiet",
      "sidecar": "quiet",
@@ -7208,7 +7300,7 @@
    }
   ],
   "sha256": "a074efbf7bcd91cfb68ee6babee490314108f05b1e0e37ed47d44b1a3a0dc9aa",
-  "warmup_frames": 16
+  "unscored_warmup_frames": 0
  },
  "tamper_check": {
   "audit": {
@@ -7218,7 +7310,7 @@
      "engine": "membrane protocol lock",
      "index": null,
      "name": "protocol_hash",
-     "note": "protocol 2c1585d8aa2b... != locked c1d9d9e7f352...; protocol untrusted",
+     "note": "protocol 0d1b61891f58... != locked 69efc39ab63b...; protocol untrusted",
      "pair": null,
      "passed": false,
      "role": "gating",
@@ -7336,12 +7428,12 @@
    "seed": 42002146,
    "verdict": "LATCH_HELD"
   },
-  "tampered_sha256": "2c1585d8aa2b3b8aac62790b8b3c45a7dfce0452387ce65e2591d31cdf626da7"
+  "tampered_sha256": "0d1b61891f58081650f6802d6369de9fdd17198c0531cb2fac22aa5bc709e1b4"
  },
  "tool": "spark-membrane 0.1.0",
  "trail": {
   "format": "measurement-trail v1",
-  "head": "b0a0ce00cea16e3a890f4bfc9d4e7d32e5b0ab2d5a54eab1528da2380043b67a",
-  "records": 96
+  "head": "a1cf7013943895f37d1d32b36a06ab9d2b28b5fbdb8188ecaa3ea0fcc5bdd3f5",
+  "records": 97
  }
 }

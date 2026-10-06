@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below. Everything it computes is SYNTHETIC, classical software simulation; it is not field evidence and makes no superiority claims."
+message: "If you use this software, please cite it as below. Everything it computes is SYNTHETIC, classical software simulation with UNCALIBRATED placeholder thresholds; it is not field evidence and makes no superiority claims. No release or DOI exists yet: cite the repository and commit."
 title: "spark-membrane: a fail-closed console that orchestrates pinned OES repositories without merging them"
 type: software
 authors:
@@ -11,49 +11,69 @@ repository-code: "https://github.com/sparkainlp-x/spark-membrane"
 url: "https://sparkainlp-x.github.io/spark-membrane/"
 license: AGPL-3.0-only
 version: "0.1.0"
-date-released: "2026-10-05"
+# Prepared for v0.1.0. Add date-released and the Zenodo DOIs only when the release actually exists.
 abstract: >-
-  Offline, standard-library Python console that audits native 32-channel
-  frames with a conjunction of pinned, independently tested checks (the
-  normative OES-32 residual, the oes32_engine Profile A sidecar and the
-  OES-Resilience weighted score), reports advisory baselines and engine
-  disagreement, and adds one new component: a seeded, protocol-capped
-  one-index explorer whose verdicts (REPAIRED_IN_SIM / LATCH_HELD) are
-  SYNTHETIC. Runs are hash-chained and rendered as an evidence passport.
-  Upstream repositories are pinned by commit SHA, not copied.
+  Offline, standard-library Python console that audits SYNTHETIC native
+  32-channel frames with a conjunction of separate deterministic checks
+  taken from pinned repositories: a protocol hash, the normative OES-32
+  residual, the oes32_engine Profile A sidecar and the OES-Resilience
+  weighted score. The two OES-32 formulas are never blended. It reports
+  the failing engine and channel index, and engine disagreement with
+  advisory max-abs, EWMA and CUSUM baselines (calibrated on a separate
+  event-free stream, restarted after alarms). One new component, a seeded
+  protocol-capped one-index explorer, reports REPAIRED_IN_SIM or
+  LATCH_HELD in simulation only. Runs are hash-chained and rendered as an
+  evidence passport, and a claims gate refuses overclaims. An optional
+  extra verifies Ed25519 capabilities. All thresholds are uncalibrated
+  placeholders; the project leads with the negative results of the
+  repositories it builds on.
 keywords:
   - fail-closed
   - audit
   - telemetry
   - synthetic data
   - reproducibility
+  - evidence
   - research software
   - python
+  - OES32
 references:
   - type: software
     title: "OES-32 Residual Reference"
-    authors:
-      - family-names: "Brisson"
-        given-names: "Jean-François"
+    authors: [{family-names: "Brisson", given-names: "Jean-François", orcid: "https://orcid.org/0009-0000-9778-5374"}]
     repository-code: "https://github.com/sparkainlp-x/oes32-residual"
     doi: "10.5281/zenodo.22985520"
   - type: software
     title: "OES-32 Engine"
-    authors:
-      - family-names: "Brisson"
-        given-names: "Jean-François"
+    authors: [{family-names: "Brisson", given-names: "Jean-François", orcid: "https://orcid.org/0009-0000-9778-5374"}]
     repository-code: "https://github.com/sparkainlp-x/oes32_engine"
     doi: "10.5281/zenodo.22985523"
   - type: software
+    title: "OES-32 Membrane Shield"
+    authors: [{family-names: "Brisson", given-names: "Jean-François", orcid: "https://orcid.org/0009-0000-9778-5374"}]
+    repository-code: "https://github.com/sparkainlp-x/oes32-membrane-shield"
+    doi: "10.5281/zenodo.22999276"
+  - type: software
     title: "OES-Resilience: benchmarking telemetry intelligence under real-world stress"
-    authors:
-      - family-names: "Brisson"
-        given-names: "Jean-François"
+    authors: [{family-names: "Brisson", given-names: "Jean-François", orcid: "https://orcid.org/0009-0000-9778-5374"}]
     repository-code: "https://github.com/sparkainlp-x/oes-resilience"
     doi: "10.5281/zenodo.23071166"
   - type: software
     title: "oes-telemetry-bench"
-    authors:
-      - family-names: "Brisson"
-        given-names: "Jean-François"
+    authors: [{family-names: "Brisson", given-names: "Jean-François", orcid: "https://orcid.org/0009-0000-9778-5374"}]
     repository-code: "https://github.com/sparkainlp-x/oes-telemetry-bench"
+  - type: software
+    title: "Measurement Trail"
+    authors: [{family-names: "Brisson", given-names: "Jean-François", orcid: "https://orcid.org/0009-0000-9778-5374"}]
+    repository-code: "https://github.com/sparkainlp-x/measurement-trail"
+    doi: "10.5281/zenodo.23067465"
+  - type: software
+    title: "Evidence Passport"
+    authors: [{family-names: "Brisson", given-names: "Jean-François", orcid: "https://orcid.org/0009-0000-9778-5374"}]
+    repository-code: "https://github.com/sparkainlp-x/evidence-passport"
+    doi: "10.5281/zenodo.23165143"
+  - type: software
+    title: "Quantum Claims Evidence Passport"
+    authors: [{family-names: "Brisson", given-names: "Jean-François", orcid: "https://orcid.org/0009-0000-9778-5374"}]
+    repository-code: "https://github.com/sparkainlp-x/quantum-claims-passport"
+    doi: "10.5281/zenodo.23167801"

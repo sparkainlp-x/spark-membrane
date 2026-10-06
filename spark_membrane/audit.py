@@ -52,7 +52,7 @@ class Check:
     name: str
     engine: str
     role: str  # "gating" | "advisory"
-    passed: bool | None  # None = not evaluated (warm-up, or protocol untrusted)
+    passed: bool | None  # None = not evaluated (in-stream warm-up, or protocol untrusted)
     value: float | None
     threshold: float | None
     rule: str
@@ -175,18 +175,35 @@ def audit_frame(values: Sequence[float], protocol: LockedProtocol, expected_sha2
         thr = float(b[name]["threshold"])
         if temporal is None or not temporal.scored(frame_index):
             checks.append(Check(name, ENGINE_NAMES[name], "advisory", None, None, thr, "alarm iff score >= threshold",
-                                None, None, "warm-up frame, not scored" if temporal else "no stream context"))
+                                None, None, "in-stream warm-up frame, not scored" if temporal else "no stream context"))
         else:
             s = getattr(temporal, fn)(frame_index, values)
+            basis = ("separate calibration stream" if temporal.mode == "calibration_stream"
+                     else "in-stream warm-up (upstream behaviour)")
+            reset = "; restarts after an alarm" if temporal.reset_after_alarm else ""
             checks.append(Check(name, ENGINE_NAMES[name], "advisory", s < thr, s, thr, "alarm iff score >= threshold",
-                                None, None, "advisory; frame mean standardized on warm-up"))
+                                None, None, f"advisory; frame mean standardized on {basis}{reset}"))
     verdict = "ACCEPT" if all(c.passed is True for c in checks if c.role == "gating") else "LATCH"
     return AuditResult(frame_index, timestamp, block, verdict, tuple(checks))
 
 
-def fit_temporal(frames: Sequence[Sequence[float]], protocol: LockedProtocol) -> TemporalBaselines:
+def fit_temporal(frames: Sequence[Sequence[float]], protocol: LockedProtocol,
+                 calibration: Sequence[Sequence[float]] | None = None) -> TemporalBaselines | None:
+    """EWMA/CUSUM context for one stream.
+
+    With a separate calibration stream (the default in the demo) every evaluation frame is
+    scored. Without one, fall back to the upstream in-stream warm-up; returns None when the
+    stream is too short for that.
+    """
     b = protocol.baselines
-    return TemporalBaselines.fit(frames, int(b["warmup_frames"]), float(b["ewma"]["lambda"]), float(b["cusum"]["k"]))
+    kw = dict(ewma_threshold=float(b["ewma"]["threshold"]), cusum_threshold=float(b["cusum"]["threshold"]),
+              reset_after_alarm=protocol.reset_after_alarm)
+    lam, k = float(b["ewma"]["lambda"]), float(b["cusum"]["k"])
+    if calibration is not None:
+        return TemporalBaselines.calibrated(calibration, frames, lam, k, **kw)
+    if len(frames) <= protocol.in_stream_warmup:
+        return None
+    return TemporalBaselines.fit(frames, protocol.in_stream_warmup, lam, k, **kw)
 
 
 __all__ = ["Check", "AuditResult", "audit_frame", "fit_temporal", "ENGINE_NAMES", "FAMILIES"]

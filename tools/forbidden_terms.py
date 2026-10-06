@@ -6,7 +6,7 @@ Uses the same fenced/allowed patterns as the runtime claims gate (spark_membrane
 the fenced topics are listed there and are deliberately not repeated in this file.
 Honest negative reporting, project names and explicit non-claims are allowed.
 Excluded: LICENSE (legal text), spark_membrane/claims.py (defines the patterns) and
-spark_membrane/refused_probes.json (probe overclaims the gate must refuse).
+spark_membrane/data/refused_probes.json (probe overclaims the gate must refuse).
 """
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from spark_membrane.claims import scan_text  # noqa: E402
 
-EXCLUDE = {"LICENSE", "spark_membrane/claims.py", "spark_membrane/refused_probes.json"}
+EXCLUDE = {"LICENSE", "spark_membrane/claims.py", "spark_membrane/data/refused_probes.json"}
 
 
 def tracked_files() -> list[str]:

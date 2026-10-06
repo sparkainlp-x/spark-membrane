@@ -35,8 +35,7 @@ SCENARIO: dict[int, tuple[str, str, str, Any]] = {
     36: ("shock", "global_common_shift", "evt-05", ("all", 0.60)),
 }
 BUS_FAULT = (11, 7, 0.20)  # block, channel, offset  -> global channel 359
-# Probe overclaims the gate must refuse; kept out of every rendered output.
-PROBE_FILE = "spark_membrane/refused_probes.json"
+BUS_FRAMES = 3
 
 
 def _ts(t: datetime) -> str:
@@ -45,6 +44,18 @@ def _ts(t: datetime) -> str:
 
 def _noise(rng: random.Random, ref: tuple[float, ...]) -> list[float]:
     return [round(r + (rng.random() * 2.0 - 1.0) * NOISE, 6) for r in ref]
+
+
+def synthetic_calibration(seed: int, protocol: LockedProtocol, tag: str = "main") -> bytes:
+    """Event-free calibration frames: same generator and noise model as the evaluation frames,
+    an independent RNG stream, timestamps strictly before the evaluation window. They estimate
+    the EWMA/CUSUM mean and scale and are never audited or mixed into the evaluation frames."""
+    rng = random.Random(f"spark-membrane:calibration:{tag}:{seed}")
+    n = protocol.calibration_frames
+    ids = CHANNEL_IDS if tag == "main" else tuple(f"{tag}_ch_{i:02d}" for i in range(CHANNEL_COUNT))
+    records = [frame_record(_ts(START - timedelta(minutes=5) + timedelta(seconds=t)), ids, _noise(rng, protocol.reference),
+                            "calibration", "none", None) for t in range(n)]
+    return dump_stream(records)
 
 
 def synthetic_stream(seed: int, protocol: LockedProtocol) -> bytes:
@@ -72,7 +83,7 @@ def synthetic_bus(seed: int, protocol: LockedProtocol) -> list[bytes]:
     for b in range(BLOCKS_512):
         ids = tuple(f"b{b:02d}_ch_{i:02d}" for i in range(CHANNEL_COUNT))
         records = []
-        for t in range(3):
+        for t in range(BUS_FRAMES):
             values = _noise(rng, ref)
             regime, label, eid = "nominal", "none", None
             if b == BUS_FAULT[0] and t == 2:
@@ -91,6 +102,7 @@ class DemoRun:
     bus_jsonl: list[bytes]
     trail_jsonl: bytes
     protocol_raw: bytes
+    calibration_jsonl: bytes
 
 
 def run_demo(seed: int = 42) -> DemoRun:
@@ -99,12 +111,19 @@ def run_demo(seed: int = 42) -> DemoRun:
     trail = Trail()
     raw = synthetic_stream(seed, protocol)
     stream = parse_stream_bytes(raw, "synthetic-stream")
+    cal_raw = synthetic_calibration(seed, protocol)
+    cal_stream = parse_stream_bytes(cal_raw, "calibration-stream")
     trail.append({"timestamp": stream.frames[0].timestamp_text, "step": "protocol-lock", "actor": ACTOR,
                   "event_id": "protocol-lock",
                   "metadata": {"protocol_id": protocol.protocol_id, "match": "yes" if protocol.sha256 == locked else "no",
                                "evidence_class": "SYNTHETIC"},
                   "payload_digest": protocol.sha256})
-    main = run_stream(stream, protocol, locked, seed=seed, trail=trail)
+    trail.append({"timestamp": cal_stream.frames[-1].timestamp_text, "step": "baseline-calibration", "actor": ACTOR,
+                  "event_id": "baseline-calibration",
+                  "metadata": {"frames": str(len(cal_stream.frames)), "audited": "no",
+                               "role": "EWMA/CUSUM mean and scale only", "evidence_class": "SYNTHETIC"},
+                  "payload_digest": cal_stream.sha256})
+    main = run_stream(stream, protocol, locked, seed=seed, trail=trail, calibration=cal_stream)
 
     # Fail-closed check: a protocol whose tolerance was edited after the lock.
     tampered = parse_protocol(protocol.raw.replace(b'"tolerance": 0.08', b'"tolerance": 0.5'), "tampered")
@@ -118,10 +137,12 @@ def run_demo(seed: int = 42) -> DemoRun:
 
     # 512 channels = 16 native-32 blocks, audited block by block, no resampling.
     bus_raw = synthetic_bus(seed, protocol)
+    bus_cal = [synthetic_calibration(seed, protocol, f"b{b:02d}") for b in range(BLOCKS_512)]
     bus_rows = []
     for b, braw in enumerate(bus_raw):
         brun = run_stream(parse_stream_bytes(braw, f"bus-block-{b:02d}"), protocol, locked, seed=seed, block=b,
-                          trail=trail, trail_prefix=f"bus-b{b:02d}-")
+                          trail=trail, trail_prefix=f"bus-b{b:02d}-",
+                          calibration=parse_stream_bytes(bus_cal[b], f"bus-calibration-{b:02d}"))
         last = brun.outcomes[-1]
         fails = [{"check": c.name, "channel": c.index,
                   "global_channel": None if c.index is None else global_index(b, c.index)} for c in last.audit.failed_gating]
@@ -132,7 +153,7 @@ def run_demo(seed: int = 42) -> DemoRun:
 
     # Claims gate.
     ledger = claims_gate.load_ledger()
-    probes = json.loads((claims_gate.ROOT / PROBE_FILE).read_text(encoding="utf-8"))["probes"]
+    probes = claims_gate.load_probes()
     admitted, refused = claims_gate.probe(probes)
     trail.append({"timestamp": stream.frames[-1].timestamp_text, "step": "claims-gate", "actor": ACTOR,
                   "event_id": "claims-gate",
@@ -151,25 +172,30 @@ def run_demo(seed: int = 42) -> DemoRun:
         "read_first": [c for c in ledger["claims"] if c["label"] in {"public_dataset_negative", "synthetic_negative", "unrun"}],
         "protocol": {"protocol_id": protocol.protocol_id, "sha256": protocol.sha256, "locked_sha256": locked,
                      "match": protocol.sha256 == locked, "gating": list(protocol.data["gating"]),
-                     "advisory": ["maxabs", "ewma", "cusum"]},
-        "stream": {"frames": len(stream.frames), "warmup_frames": int(protocol.baselines["warmup_frames"]),
+                     "advisory": ["maxabs", "ewma", "cusum"], "calibration_status": protocol.data["calibration_status"]},
+        "stream": {"frames": len(stream.frames), "unscored_warmup_frames": main.temporal.warmup,
                    "cadence_seconds": stream.cadence_seconds, "sha256": stream.sha256,
+                   "baseline_calibration": {**main.temporal.describe(), "sha256": cal_stream.sha256,
+                                            "artifact": f"calibration-seed{seed}.jsonl"},
                    "counts": main.counts(), "outcomes": [o.to_dict() for o in main.outcomes]},
         "tamper_check": {"description": "protocol tolerance edited from 0.08 to 0.5 after the lock",
                          "tampered_sha256": tampered.sha256, "audit": t_audit.to_dict(), "explorer": t_expl.to_dict()},
         "bus512": {"blocks": BLOCKS_512, "channels": BLOCKS_512 * CHANNEL_COUNT, "resampling": "none",
-                   "verdict": bus_verdict, "frame": "last frame of each 3-frame block stream",
-                   "block_sha256": [sha256_bytes(b) for b in bus_raw], "rows": bus_rows},
+                   "verdict": bus_verdict, "frame": f"last frame of each {BUS_FRAMES}-frame block stream",
+                   "block_sha256": [sha256_bytes(b) for b in bus_raw],
+                   "calibration": f"one separate {protocol.calibration_frames}-frame calibration stream per block, regenerated from the seed",
+                   "calibration_sha256": [sha256_bytes(b) for b in bus_cal], "rows": bus_rows},
         "claims_gate": {"ledger_claims": len(ledger["claims"]), "probe_overclaims": len(probes),
                         "probe_refused": refused, "probe_admitted": admitted},
         "trail": {"records": len(trail.records), "head": trail.head, "format": "measurement-trail v1"},
         "pins": {p["name"]: p["commit"] for p in pins["repositories"]},
     }
-    return DemoRun(seed, results, raw, bus_raw, trail.dumps(), protocol.raw)
+    return DemoRun(seed, results, raw, bus_raw, trail.dumps(), protocol.raw, cal_raw)
 
 
 def results_bytes(run: DemoRun) -> bytes:
     return (json.dumps(run.results, indent=1, sort_keys=True, ensure_ascii=False, allow_nan=False) + "\n").encode("utf-8")
 
 
-__all__ = ["run_demo", "results_bytes", "DemoRun", "synthetic_stream", "synthetic_bus", "SCENARIO", "BUS_FAULT"]
+__all__ = ["run_demo", "results_bytes", "DemoRun", "synthetic_stream", "synthetic_bus", "synthetic_calibration",
+           "SCENARIO", "BUS_FAULT"]

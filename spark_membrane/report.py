@@ -48,6 +48,18 @@ def _families(o: dict[str, Any]) -> str:
     return f"DISAGREE fired={','.join(fired)} quiet={','.join(quiet)}"
 
 
+def _spans(ts: list[int]) -> str:
+    out, start, prev = [], ts[0], ts[0]
+    for t in ts[1:] + [None]:  # type: ignore[list-item]
+        if t is not None and t == prev + 1:
+            prev = t
+            continue
+        out.append(f"{start}" if start == prev else f"{start}-{prev}")
+        if t is not None:
+            start = prev = t
+    return ",".join(out)
+
+
 def _banner(w: Any) -> None:
     w(RULE)
     for line in BANNER_LINES:
@@ -62,19 +74,22 @@ def render(results: dict[str, Any]) -> str:
     p = results["protocol"]
     w(f"{results['tool']}  |  {results['command']}")
     w(f"protocol {p['protocol_id']}  sha256 {p['sha256'][:16]}...  locked hash: {'MATCH' if p['match'] else 'MISMATCH'}")
+    w("PLACEHOLDERS: every threshold and cap is UNCALIBRATED (upstream defaults or author choices; docs/PROTOCOL.md).")
     w("")
     w("READ FIRST - results from the pinned repos that do not flatter OES32:")
     for c in results["read_first"]:
         w(f"  [{c['label']}] {c['statement']}")
     w("")
     s = results["stream"]
-    w(f"FRAME BUS: {s['frames']} native-32 frames, cadence {s['cadence_seconds']:g} s, first {s['warmup_frames']} = warm-up; "
-      f"stream sha256 {s['sha256'][:16]}...")
+    cal = s["baseline_calibration"]
+    w(f"FRAME BUS: {s['frames']} native-32 frames, cadence {s['cadence_seconds']:g} s, all audited; stream sha256 {s['sha256'][:16]}...")
+    w(f"           EWMA/CUSUM calibration: separate {cal['calibration_frames']}-frame event-free stream ({cal['artifact']}, "
+      f"never audited), sigma of frame means {cal['sigma']:.5f}; restart after alarm: {'yes' if cal['reset_after_alarm'] else 'no'}.")
     w("AUDIT (T=0): ACCEPT iff " + " AND ".join(p["gating"]) + ".")
     w("             Advisory, never gating: " + ", ".join(p["advisory"]) + ". Residual and weighted are separate checks, never blended.")
     w("")
     w("  t      event                     verdict  failing gating checks (check@index value>threshold) | engines")
-    rows = [o for o in s["outcomes"] if o["frame_index"] >= s["warmup_frames"]]
+    rows = [o for o in s["outcomes"] if o["frame_index"] >= s["unscored_warmup_frames"]]
     i = 0
     while i < len(rows):
         o = rows[i]
@@ -92,8 +107,11 @@ def render(results: dict[str, Any]) -> str:
             w(f"        engines: {_families(o)}")
             w(f"        {_two_formulas(o)}")
         i = j + 1
-    w("  Note: EWMA/CUSUM use uncalibrated upstream default thresholds, standardized on a warm-up whose")
-    w("  frame-mean spread is tiny (~0.001), so they stay alarmed long after any event. They are advisory only.")
+    missed = [o["frame_index"] for o in rows if o["verdict"] == "ACCEPT" and o["engine_disagreement"]]
+    if missed:
+        fired = sorted({k for o in rows if o["frame_index"] in missed for k, v in o["engine_families"].items() if v == "FIRED"})
+        w(f"  Gate ACCEPTED while advisory engines ({', '.join(fired)}) fired at t={_spans(missed)}: the gating checks do not")
+        w("  see these events. Advisory engines never change the verdict; this is reported, not hidden.")
     w("")
     w("EXPLORER (new code; SYNTHETIC; one index, |delta| <= protocol cap; reference and thresholds read-only):")
     for o in s["outcomes"]:

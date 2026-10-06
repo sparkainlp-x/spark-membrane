@@ -158,5 +158,57 @@ class TemporalBaselinesVsUpstream(unittest.TestCase):
             TemporalBaselines.fit(self.frames[:16], 16, 0.2, 0.5)
 
 
+class TemporalCalibrationAndRestart(unittest.TestCase):
+    """spark-membrane defaults: separate calibration stream; restart after an alarm (author choice)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.frames = [f.channels for f in load_stream(ROOT / "docs" / "passport" / "frames-seed42.jsonl").frames]
+        cls.up = TemporalBaselines.fit(cls.frames, 16, 0.2, 0.5)
+
+    def test_calibrated_mode_uses_the_upstream_formulas(self):
+        """Calibrating on frames 0-15 and scoring 16+ reproduces upstream's in-stream scores exactly."""
+        cal = TemporalBaselines.calibrated(self.frames[:16], self.frames[16:], 0.2, 0.5,
+                                           ewma_threshold=3.0, cusum_threshold=5.0, reset_after_alarm=False)
+        self.assertEqual(cal.warmup, 0)
+        for i, f in enumerate(self.frames[16:]):
+            self.assertTrue(close(cal.ewma_score(i, f), self.up.ewma_score(16 + i, f), rtol=1e-12, atol=1e-12))
+            self.assertTrue(close(cal.cusum_score(i, f), self.up.cusum_score(16 + i, f), rtol=1e-12, atol=1e-12))
+
+    def _spike_stream(self):
+        import random
+        rng = random.Random(5)
+        noise = lambda: [(rng.random() * 2 - 1) * 0.01 for _ in range(32)]  # noqa: E731
+        cal = [noise() for _ in range(64)]
+        ev = [noise() for _ in range(30)]
+        ev[5] = [v + 0.6 for v in ev[5]]  # one large common shift
+        return cal, ev
+
+    def test_without_restart_one_event_keeps_cusum_alarmed(self):
+        cal, ev = self._spike_stream()
+        tb = TemporalBaselines.calibrated(cal, ev, 0.2, 0.5, ewma_threshold=3.0, cusum_threshold=5.0,
+                                          reset_after_alarm=False)
+        alarmed = [t for t, f in enumerate(ev) if tb.cusum_score(t, f) >= 5.0]
+        self.assertGreater(len(alarmed), 20)  # the carry-over problem the restart fixes
+
+    def test_restart_clears_state_after_an_alarm(self):
+        cal, ev = self._spike_stream()
+        tb = TemporalBaselines.calibrated(cal, ev, 0.2, 0.5, ewma_threshold=3.0, cusum_threshold=5.0,
+                                          reset_after_alarm=True)
+        self.assertEqual([t for t, f in enumerate(ev) if tb.cusum_score(t, f) >= 5.0], [5])
+        self.assertEqual([t for t, f in enumerate(ev) if tb.ewma_score(t, f) >= 3.0], [5])
+        self.assertIn((5, "ewma"), tb.resets)
+        self.assertIn((5, "cusum"), tb.resets)
+        self.assertEqual(tb.ewma_before[6], 0.0)
+        self.assertEqual(tb.cusum_before[6], (0.0, 0.0))
+
+    def test_restart_needs_thresholds_and_calibration_needs_frames(self):
+        with self.assertRaises(ValueError):
+            TemporalBaselines.fit(self.frames, 16, 0.2, 0.5, reset_after_alarm=True)
+        with self.assertRaises(ValueError):
+            TemporalBaselines.calibrated(self.frames[:1], self.frames, 0.2, 0.5, ewma_threshold=3.0,
+                                         cusum_threshold=5.0, reset_after_alarm=True)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -21,9 +21,7 @@ from pathlib import Path
 from typing import Any
 
 from .canonical import MembraneError
-
-ROOT = Path(__file__).resolve().parent.parent
-LEDGER = ROOT / "CLAIMS.json"
+from .resources import data_text
 UPSTREAM = "sparkainlp-x/quantum-claims-passport@880ddc9ceae7bd6835dee2358b1beb4d642fc718"
 
 LABELS = {
@@ -113,8 +111,10 @@ def assert_clean(text: str, where: str = "output") -> str:
     return text
 
 
-def load_ledger(path: str | Path = LEDGER) -> dict[str, Any]:
-    data = json.loads(Path(path).read_text(encoding="utf-8"))
+def load_ledger(path: str | Path | None = None) -> dict[str, Any]:
+    """Load CLAIMS.json (default: the bundled copy, mirrored at the repository root)."""
+    text = data_text("CLAIMS.json") if path is None else Path(path).read_text(encoding="utf-8")
+    data = json.loads(text)
     validate_ledger(data)
     return data
 
@@ -139,6 +139,11 @@ def validate_ledger(data: dict[str, Any]) -> None:
             raise MembraneError(f"{cid}: unrun claims must say UNRUN in the statement")
 
 
+def load_probes() -> list[str]:
+    """Deliberate overclaims the gate must refuse (never rendered into any output)."""
+    return list(json.loads(data_text("refused_probes.json"))["probes"])
+
+
 def probe(statements: list[str]) -> tuple[int, int]:
     """Classify probe statements; returns (admitted, refused)."""
     refused = sum(1 for s in statements if classify(s, "boundary") == REFUSED_LABEL)
@@ -146,4 +151,4 @@ def probe(statements: list[str]) -> tuple[int, int]:
 
 
 __all__ = ["LABELS", "REFUSED_LABEL", "scan_line", "scan_text", "classify", "assert_clean",
-           "load_ledger", "validate_ledger", "probe", "UPSTREAM"]
+           "load_ledger", "validate_ledger", "load_probes", "probe", "UPSTREAM"]

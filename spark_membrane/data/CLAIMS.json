@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "note": "Claim ledger for spark-membrane. Labels classify claim types; they are not a score. Statements touching fenced topics are refused by spark_membrane/claims.py and may not appear here.",
+  "claims": [
+    {
+      "id": "MEM-01",
+      "label": "public_dataset_negative",
+      "statement": "On the locked NASA SMAP/MSL protocol, OES32 did not meet its pre-stated success criterion: it beat only EWMA on SMAP, and maxabs and CUSUM scored a higher pooled F1 (not significantly).",
+      "source": "sparkainlp-x/oes-resilience@1ee533cd4360a6b1415f923c4e52cfc166b8917a README, v0.5.0 section"
+    },
+    {
+      "id": "MEM-02",
+      "label": "synthetic_negative",
+      "statement": "On the oes-telemetry-bench SYNTHETIC held-out set, max-abs matched OES32's detections (6/7 each) with fewer false-alarm episodes per normal hour (11.54 vs 23.08); the rates come from about 5 minutes of synthetic normal time and are highly uncertain.",
+      "source": "sparkainlp-x/oes-telemetry-bench@48fc4d9b79e58557cc562b8dad0bc90b482d443f reports/synthetic-demo-report.json"
+    },
+    {
+      "id": "MEM-03",
+      "label": "synthetic_negative",
+      "statement": "The multi-quantum-oes preregistered SYNTHETIC stress evaluation found no demonstrated advantage: the block score did not beat a simple max-abs baseline.",
+      "source": "sparkainlp-x/multi-quantum-oes@132e0a7b2ae05c742d5b0d91be221cc0d2def106 README, Stress evaluation"
+    },
+    {
+      "id": "MEM-04",
+      "label": "unrun",
+      "statement": "oes32-hls FPGA synthesis is UNRUN; its latency figure is a design target, not a measurement.",
+      "source": "sparkainlp-x/oes32-hls@56a4cc29f0bfed84583fe9c21879daefdb2a116c README"
+    },
+    {
+      "id": "MEM-05",
+      "label": "unrun",
+      "statement": "The qldpc_decoder_cpp HLS kernel has no belief-propagation updates yet; its HLS synthesis and hardware-in-the-loop runs are UNRUN.",
+      "source": "sparkainlp-x/qldpc_decoder_cpp@908c65dd6eb30f21ffab3348704001e4155151cd README"
+    },
+    {
+      "id": "MEM-06",
+      "label": "external_inspiration",
+      "statement": "The split into an exploratory proposer and a zero-entropy auditor is an external dual-engine inspiration. The pinned OES repositories do not implement it; the explorer in this repository is new code.",
+      "source": "Design conversation (Grok chat) shared by the author; oes32-residual and oes32_engine contain no proposer"
+    },
+    {
+      "id": "MEM-07",
+      "label": "synthetic_result",
+      "statement": "REPAIRED_IN_SIM means only that one capped single-index edit of a SYNTHETIC frame passes the T=0 audit in simulation; nothing is repaired or written anywhere.",
+      "source": "spark_membrane/explorer.py"
+    },
+    {
+      "id": "MEM-08",
+      "label": "boundary",
+      "statement": "spark-membrane is a classical software simulation on generated numbers. It is not a medical device, not control software, not sensor fusion and not field evidence, and it makes no quantum, QEC, consciousness, medical or gravity claims.",
+      "source": "README.md, docs/index.html"
+    },
+    {
+      "id": "MEM-09",
+      "label": "boundary",
+      "statement": "signal-loom is linked as an art skin only; none of its streams enter the audit.",
+      "source": "sparkainlp-x/signal-loom@750a806b180975eb3e7a0edd564c7ed10f33aa20 README"
+    }
+  ]
+}

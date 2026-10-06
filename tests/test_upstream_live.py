@@ -90,6 +90,33 @@ class LiveUpstream(unittest.TestCase):
             self.assertEqual(r.returncode, 0, r.stdout[-2000:])
             self.assertIn("12 passed", r.stdout)
 
+    def test_shield_capabilities_interoperate_with_upstream_library(self):
+        """Upstream-issued capabilities verify here, and ours verify upstream (needs cryptography)."""
+        try:
+            import cryptography  # noqa: F401
+        except ImportError:
+            self.skipTest("cryptography not installed")
+        sys.path.insert(0, str(self.up / "oes32-membrane-shield/src"))
+        from oes32_membrane_shield.authorization import (Action, AuthorityKey as UpKey, CapabilityIssuer,
+                                                         CapabilityVerifier as UpVerifier, Role, SignedCapability)
+        from spark_membrane import shield
+        now = 1_800_000_000
+        issuer = CapabilityIssuer.generate("dec-1", "decoder", Role.DECODEUR)
+        up_key = issuer.authority_key()
+        ours = shield.CapabilityVerifier({"dec-1": shield.AuthorityKey("dec-1", "DECODEUR", up_key.public_key)},
+                                         clock=lambda: now)
+        cap = issuer.issue(Action.WRITE, b"payload", request_id="u1", now=now)
+        self.assertTrue(ours.verify(cap.to_bytes(), action="WRITE", payload=b"payload").admitted)
+        self.assertFalse(ours.verify(cap.to_bytes(), action="WRITE", payload=b"payload").admitted)  # replay
+        self.assertFalse(ours.verify(issuer.issue(Action.WRITE, b"payload", request_id="u2", now=now).to_bytes(),
+                                     action="WRITE", payload=b"tampered").admitted)
+        # ours -> upstream
+        raw = shield.issue_capability(issuer._private_key, "dec-1", "decoder", "DECODEUR", "WRITE", b"p2",
+                                      request_id="s1", now=now)
+        up = UpVerifier({"dec-1": up_key}, clock=lambda: now)
+        verified = up.verify(SignedCapability.from_bytes(raw), action=Action.WRITE, role=Role.DECODEUR, payload=b"p2")
+        self.assertEqual(verified.request_id, "s1")
+
 
 if __name__ == "__main__":
     unittest.main()

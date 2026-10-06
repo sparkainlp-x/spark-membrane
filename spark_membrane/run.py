@@ -38,6 +38,7 @@ class FrameOutcome:
 @dataclass
 class StreamRun:
     outcomes: list[FrameOutcome] = field(default_factory=list)
+    temporal: TemporalBaselines | None = None
 
     def counts(self) -> dict[str, int]:
         o = self.outcomes
@@ -52,11 +53,12 @@ class StreamRun:
 
 
 def run_stream(stream: Stream, protocol: LockedProtocol, expected_sha256: str, *, seed: int,
-               block: int | None = None, trail: Trail | None = None, trail_prefix: str = "") -> StreamRun:
+               block: int | None = None, trail: Trail | None = None, trail_prefix: str = "",
+               calibration: Stream | None = None) -> StreamRun:
     values = [f.channels for f in stream.frames]
-    warmup = int(protocol.baselines["warmup_frames"])
-    temporal: TemporalBaselines | None = fit_temporal(values, protocol) if len(values) > warmup else None
-    run = StreamRun()
+    cal = None if calibration is None else [f.channels for f in calibration.frames]
+    temporal: TemporalBaselines | None = fit_temporal(values, protocol, cal)
+    run = StreamRun(temporal=temporal)
     for t, frame in enumerate(stream.frames):
         def reaudit(candidate: Sequence[float], _t: int = t, _ts: str = frame.timestamp_text) -> AuditResult:
             return audit_frame(candidate, protocol, expected_sha256, frame_index=_t, timestamp=_ts,
@@ -67,7 +69,7 @@ def run_stream(stream: Stream, protocol: LockedProtocol, expected_sha256: str, *
             outcome.explorer = explore(frame.channels, result, protocol, expected_sha256, reaudit, seed=seed)
             if outcome.explorer.verdict == "REPAIRED_IN_SIM":
                 g = authorize("WRITE", ("EXPLORER",))
-                outcome.commit_decision = {"role": g.role, "action": g.action, "admitted": g.admitted, "reason": g.reason}
+                outcome.commit_decision = g.to_dict()
         run.outcomes.append(outcome)
         if trail is not None:
             _trail_events(trail, outcome, frame.channels, trail_prefix)

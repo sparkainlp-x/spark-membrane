@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spark-membrane"
+dynamic = ["version"]
+description = "Fail-closed console that audits SYNTHETIC 32-channel frames against pinned OES repositories (classical software simulation; uncalibrated thresholds)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "AGPL-3.0-only" }
+authors = [{ name = "Jean-François Brisson" }]
+keywords = ["audit", "fail-closed", "reproducibility", "evidence", "synthetic-data", "telemetry", "oes32"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.optional-dependencies]
+# Ed25519 capability verification in the shield gate. Without it, signed capabilities are refused.
+shield = ["cryptography>=41"]
+
+[project.urls]
+Homepage = "https://sparkainlp-x.github.io/spark-membrane/"
+Repository = "https://github.com/sparkainlp-x/spark-membrane"
+Issues = "https://github.com/sparkainlp-x/spark-membrane/issues"
+Changelog = "https://github.com/sparkainlp-x/spark-membrane/blob/main/CHANGELOG.md"
+
+[project.scripts]
+spark-membrane = "spark_membrane.cli:main"
+
+[tool.setuptools]
+packages = ["spark_membrane", "spark_membrane.engines"]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = { attr = "spark_membrane.__version__" }
+
+[tool.setuptools.package-data]
+spark_membrane = ["data/*.json", "data/protocols/*.json", "data/protocols/SHA256SUMS"]
