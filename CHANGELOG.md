@@ -4,6 +4,7 @@ All notable changes to this project. Everything spark-membrane computes is SYNTH
 
 ## Unreleased
 
+- oes-telemetry-bench now has concept DOI [10.5281/zenodo.23175492](https://doi.org/10.5281/zenodo.23175492). It is recorded in `PINS.json`, the README related-work table, the page, `CITATION.cff` and `.zenodo.json` (isDerivedFrom). The pin moves from `48fc4d9` to `d49472b` because DOIs are read from the pinned `CITATION.cff`; the diff is metadata only, so the upstream fixtures are unchanged apart from the commit and the locked protocol v2 text still cites `48fc4d9`.
 - Added the Zenodo concept DOI [10.5281/zenodo.23175490](https://doi.org/10.5281/zenodo.23175490) (v0.1.0 version DOI [10.5281/zenodo.23175491](https://doi.org/10.5281/zenodo.23175491)) to the README and `CITATION.cff`. The `v0.1.0` tag was not moved.
 
 ## 0.1.0 (2026-10-05)

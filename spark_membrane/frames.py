@@ -2,7 +2,7 @@
 """Frame bus: the native 32-channel JSONL contract of oes-telemetry-bench.
 
 REFERENCE RE-IMPLEMENTATION of the frame checks in
-sparkainlp-x/oes-telemetry-bench @ 48fc4d9b79e58557cc562b8dad0bc90b482d443f (``load_replay``):
+sparkainlp-x/oes-telemetry-bench @ d49472b7e12d96ec25e62ff600a94a2b5ae49209 (``load_replay``):
 exactly the seven fields timestamp / channel_ids / channel_timestamps / channels / regime /
 event_label / event_id; 32 unique channel IDs in constant order; every channel timestamp equal
 to the frame timestamp; finite JSON numbers only; strictly increasing timestamps with one exact

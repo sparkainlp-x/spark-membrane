@@ -55,7 +55,7 @@ FAIL-CLOSED: protocol tolerance edited from 0.08 to 0.5 after the lock -> sha256
   other 15 blocks: ACCEPT
 
 SUMMARY: 36 ACCEPT, 4 LATCH, 7 frames with engine disagreement, 1 REPAIRED_IN_SIM, 3 LATCH_HELD (explorer evidence class SYNTHETIC).
-EVIDENCE: trail 97 records (measurement-trail v1), head a1cf7013943895f3...; claims gate: 9 ledger claims admitted, 10/10 probe overclaims refused.
+EVIDENCE: trail 97 records (measurement-trail v1), head 0ae93dcc90935ce0...; claims gate: 9 ledger claims admitted, 10/10 probe overclaims refused.
 ==============================================================================
   SYNTHETIC - classical software simulation on generated numbers.
   Not a medical device, not control software, not sensor fusion, not field evidence.

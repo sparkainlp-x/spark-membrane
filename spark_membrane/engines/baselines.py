@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: AGPL-3.0-only
 """REFERENCE RE-IMPLEMENTATIONS of the comparison baselines (max-abs, EWMA, CUSUM).
 
-Upstream definitions: sparkainlp-x/oes-telemetry-bench @ 48fc4d9b79e58557cc562b8dad0bc90b482d443f
+Upstream definitions: sparkainlp-x/oes-telemetry-bench @ d49472b7e12d96ec25e62ff600a94a2b5ae49209
 (``detector_scores``), which follow oes-resilience ``MaxAbsDetector`` / ``EWMADetector`` /
 ``CUSUMDetector`` for a single 32-channel block.
 
@@ -30,7 +30,7 @@ from dataclasses import dataclass
 from math import fsum, isfinite, sqrt
 from typing import Sequence
 
-UPSTREAM = "sparkainlp-x/oes-telemetry-bench@48fc4d9b79e58557cc562b8dad0bc90b482d443f"
+UPSTREAM = "sparkainlp-x/oes-telemetry-bench@d49472b7e12d96ec25e62ff600a94a2b5ae49209"
 MIN_SCALE = 1e-9
 
 

@@ -35,11 +35,12 @@
     {
       "name": "oes-telemetry-bench",
       "url": "https://github.com/sparkainlp-x/oes-telemetry-bench",
-      "commit": "48fc4d9b79e58557cc562b8dad0bc90b482d443f",
+      "commit": "d49472b7e12d96ec25e62ff600a94a2b5ae49209",
       "plane": "frame_bus",
       "role": "Native 32-channel JSONL frame contract; max-abs / EWMA / CUSUM baseline definitions; synthetic held-out result (max-abs 6/7 at 11.54/h vs OES32 6/7 at 23.08/h).",
-      "doi": null,
-      "doi_note": "no DOI of its own; cites oes-resilience 10.5281/zenodo.23071166"
+      "doi": "10.5281/zenodo.23175492",
+      "doi_note": "concept DOI (all versions), from the repository's CITATION.cff",
+      "note": "Re-pinned from 48fc4d9b79e58557cc562b8dad0bc90b482d443f for the DOI. The diff is metadata only (.zenodo.json, CITATION.cff, README.md, CHANGELOG.md); code, data, protocols and reports are byte-identical, so the locked protocol v2 text still cites 48fc4d9. v0.1.0 tag = ad3d10a4eeae9aec7d8b86e48531c5c9bec3415f."
     },
     {
       "name": "oes-resilience",

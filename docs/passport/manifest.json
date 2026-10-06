@@ -158,13 +158,13 @@
    "path": "trail-seed42.jsonl",
    "role": "trail",
    "description": "Hash-chained run trail (measurement-trail record format).",
-   "sha256": "4a30a536939fba54e5c1b651a583ddf4b293b2df529e6e739fabc11822784c9a"
+   "sha256": "d8fd29cd478ece571551f465f664d3d5f35c287f3bce89572173d1dd5b2a6a95"
   },
   {
    "path": "demo-seed42.json",
    "role": "results",
    "description": "Full demo results: every check, index, engine family and explorer proposal.",
-   "sha256": "ccdf10cd1cc998f830c6c17ff22f3f431213ee9b0ef147b4efae031dc726ef87"
+   "sha256": "9db9ab92b15a86c5855f2b8dbe88ec8488d8b9f06bf692b5fb278b29f830eee9"
   },
   {
    "path": "bus512/block_00.jsonl",

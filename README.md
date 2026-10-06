@@ -31,7 +31,7 @@ These come from the pinned repositories. The console prints them before anything
 | Result | Source (pinned) | Class |
 |---|---|---|
 | On the locked NASA SMAP/MSL protocol, OES32 **did not meet its pre-stated success criterion**: it beat only EWMA on SMAP, and maxabs and CUSUM scored a higher pooled F1 (not significantly). | [oes-resilience](https://github.com/sparkainlp-x/oes-resilience/tree/1ee533cd4360a6b1415f923c4e52cfc166b8917a) v0.5.0 | public dataset, negative |
-| On the oes-telemetry-bench held-out synthetic set, **max-abs matched OES32's detections (6/7 each) with fewer false alarms (11.54 vs 23.08 false-alarm episodes per normal hour)**. The rates come from about 5 minutes of synthetic normal time and are highly uncertain. | [oes-telemetry-bench](https://github.com/sparkainlp-x/oes-telemetry-bench/tree/48fc4d9b79e58557cc562b8dad0bc90b482d443f) | SYNTHETIC, negative |
+| On the oes-telemetry-bench held-out synthetic set, **max-abs matched OES32's detections (6/7 each) with fewer false alarms (11.54 vs 23.08 false-alarm episodes per normal hour)**. The rates come from about 5 minutes of synthetic normal time and are highly uncertain. | [oes-telemetry-bench](https://github.com/sparkainlp-x/oes-telemetry-bench/tree/d49472b7e12d96ec25e62ff600a94a2b5ae49209) | SYNTHETIC, negative |
 | The multi-quantum-oes preregistered stress evaluation found **no demonstrated advantage**: the block score did not beat a simple max-abs baseline (fixed 0.50: 5/11 vs 8/11 events; calibrated: 0/11 each). | [multi-quantum-oes](https://github.com/sparkainlp-x/multi-quantum-oes/tree/132e0a7b2ae05c742d5b0d91be221cc0d2def106) | SYNTHETIC, negative |
 | oes32-hls FPGA synthesis is **UNRUN**; its latency figure is a design target. | [oes32-hls](https://github.com/sparkainlp-x/oes32-hls/tree/56a4cc29f0bfed84583fe9c21879daefdb2a116c) | UNRUN |
 | The qldpc_decoder_cpp HLS kernel has no belief-propagation updates yet; synthesis and hardware runs are **UNRUN**. | [qldpc_decoder_cpp](https://github.com/sparkainlp-x/qldpc_decoder_cpp/tree/908c65dd6eb30f21ffab3348704001e4155151cd) | UNRUN |
@@ -78,8 +78,8 @@ flowchart TB
 | Plane | What runs | Pinned upstream | New code? |
 |---|---|---|---|
 | 1 · Contract spine | Normative residual `R = max_i \|y_i − x_i\|`, latch iff `R > τ`; Profile A sidecar `SAFE = A ∧ C0 ∧ C1 ∧ Cfold`, `LATCH = ¬SAFE`; capability gate | oes32-residual @ `b77b612` (ADR-001 normative), oes32_engine @ `d66025f`, oes32-membrane-shield @ `f1ca680` | No: labelled re-implementations in [`spark_membrane/engines/`](spark_membrane/engines/) and [`shield.py`](spark_membrane/shield.py), tested against the pins |
-| 2 · Frame bus | Native 32-channel JSONL frame contract; 512 channels = 16 native-32 blocks; no interpolation, resampling, padding or imputation | oes-telemetry-bench @ `48fc4d9` | No: re-implemented parser ([`frames.py`](spark_membrane/frames.py)) |
-| 3 · Audit side (T=0) | Gate: protocol hash ∧ residual ∧ sidecar (A, C0, C1, Cfold) ∧ weighted score `0.45·max\|x\| + 0.35·RMS + 0.20·mean\|x\| < 0.50`. Advisory: max-abs, EWMA, CUSUM | oes-resilience @ `1ee533c`, oes-telemetry-bench @ `48fc4d9` | Conjunction logic only ([`audit.py`](spark_membrane/audit.py)) |
+| 2 · Frame bus | Native 32-channel JSONL frame contract; 512 channels = 16 native-32 blocks; no interpolation, resampling, padding or imputation | oes-telemetry-bench @ `d49472b` | No: re-implemented parser ([`frames.py`](spark_membrane/frames.py)) |
+| 3 · Audit side (T=0) | Gate: protocol hash ∧ residual ∧ sidecar (A, C0, C1, Cfold) ∧ weighted score `0.45·max\|x\| + 0.35·RMS + 0.20·mean\|x\| < 0.50`. Advisory: max-abs, EWMA, CUSUM | oes-resilience @ `1ee533c`, oes-telemetry-bench @ `d49472b` | Conjunction logic only ([`audit.py`](spark_membrane/audit.py)) |
 | 4 · Explorer | Seeded one-index delta, `\|δ\| ≤ 0.25` from the locked protocol, re-audited; `REPAIRED_IN_SIM` or `LATCH_HELD`, evidence class SYNTHETIC | none | **Yes** ([`explorer.py`](spark_membrane/explorer.py)) |
 | 5 · Evidence membrane | Hash-chained trail; evidence passport; claims gate | measurement-trail @ `7ab6ec8`, evidence-passport @ `e275bb0`, quantum-claims-passport @ `880ddc9` | Glue only |
 
@@ -203,7 +203,7 @@ Concept DOIs are taken from each repository's own `CITATION.cff` (every DOI reso
 | [oes32_engine](https://github.com/sparkainlp-x/oes32_engine) | Profile A sidecar | [10.5281/zenodo.22985523](https://doi.org/10.5281/zenodo.22985523) |
 | [oes32-membrane-shield](https://github.com/sparkainlp-x/oes32-membrane-shield) | capability gate | [10.5281/zenodo.22999276](https://doi.org/10.5281/zenodo.22999276) |
 | [oes-resilience](https://github.com/sparkainlp-x/oes-resilience) | weighted score, baselines, SMAP/MSL result | [10.5281/zenodo.23071166](https://doi.org/10.5281/zenodo.23071166) |
-| [oes-telemetry-bench](https://github.com/sparkainlp-x/oes-telemetry-bench) | native-32 frame contract, held-out bench | none of its own (cites oes-resilience) |
+| [oes-telemetry-bench](https://github.com/sparkainlp-x/oes-telemetry-bench) | native-32 frame contract, held-out bench | [10.5281/zenodo.23175492](https://doi.org/10.5281/zenodo.23175492) |
 | [measurement-trail](https://github.com/sparkainlp-x/measurement-trail) | hash-chained trail format | [10.5281/zenodo.23067465](https://doi.org/10.5281/zenodo.23067465) |
 | [evidence-passport](https://github.com/sparkainlp-x/evidence-passport) | passport manifest schema | [10.5281/zenodo.23165143](https://doi.org/10.5281/zenodo.23165143) |
 | [quantum-claims-passport](https://github.com/sparkainlp-x/quantum-claims-passport) | claim classification | [10.5281/zenodo.23167801](https://doi.org/10.5281/zenodo.23167801) |

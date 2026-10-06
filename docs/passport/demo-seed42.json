@@ -304,7 +304,7 @@
   "measurement-trail": "7ab6ec8c9750c2de9c8df1c79fdb9c53804da0f4",
   "multi-quantum-oes": "132e0a7b2ae05c742d5b0d91be221cc0d2def106",
   "oes-resilience": "1ee533cd4360a6b1415f923c4e52cfc166b8917a",
-  "oes-telemetry-bench": "48fc4d9b79e58557cc562b8dad0bc90b482d443f",
+  "oes-telemetry-bench": "d49472b7e12d96ec25e62ff600a94a2b5ae49209",
   "oes32-hls": "56a4cc29f0bfed84583fe9c21879daefdb2a116c",
   "oes32-membrane-shield": "f1ca680fa83b369ee4e62acc7394d6dc51bac1e8",
   "oes32-residual": "b77b61254f15778c6ae221843dceac7a8571158e",
@@ -344,7 +344,7 @@
   {
    "id": "MEM-02",
    "label": "synthetic_negative",
-   "source": "sparkainlp-x/oes-telemetry-bench@48fc4d9b79e58557cc562b8dad0bc90b482d443f reports/synthetic-demo-report.json",
+   "source": "sparkainlp-x/oes-telemetry-bench@d49472b7e12d96ec25e62ff600a94a2b5ae49209 reports/synthetic-demo-report.json",
    "statement": "On the oes-telemetry-bench SYNTHETIC held-out set, max-abs matched OES32's detections (6/7 each) with fewer false-alarm episodes per normal hour (11.54 vs 23.08); the rates come from about 5 minutes of synthetic normal time and are highly uncertain."
   },
   {
@@ -7433,7 +7433,7 @@
  "tool": "spark-membrane 0.1.0",
  "trail": {
   "format": "measurement-trail v1",
-  "head": "a1cf7013943895f37d1d32b36a06ab9d2b28b5fbdb8188ecaa3ea0fcc5bdd3f5",
+  "head": "0ae93dcc90935ce0ffee644ae7119d0814237f03a64957dbee0fbb2949a48207",
   "records": 97
  }
 }

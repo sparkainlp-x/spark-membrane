@@ -12,7 +12,7 @@
       "id": "MEM-02",
       "label": "synthetic_negative",
       "statement": "On the oes-telemetry-bench SYNTHETIC held-out set, max-abs matched OES32's detections (6/7 each) with fewer false-alarm episodes per normal hour (11.54 vs 23.08); the rates come from about 5 minutes of synthetic normal time and are highly uncertain.",
-      "source": "sparkainlp-x/oes-telemetry-bench@48fc4d9b79e58557cc562b8dad0bc90b482d443f reports/synthetic-demo-report.json"
+      "source": "sparkainlp-x/oes-telemetry-bench@d49472b7e12d96ec25e62ff600a94a2b5ae49209 reports/synthetic-demo-report.json"
     },
     {
       "id": "MEM-03",

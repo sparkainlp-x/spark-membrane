@@ -150,7 +150,7 @@ class PinsTests(unittest.TestCase):
 
     def test_dois_are_real_concept_dois_or_null(self):
         pins = {p["name"]: p for p in load_pins()["repositories"]}
-        self.assertIsNone(pins["oes-telemetry-bench"]["doi"])
+        self.assertEqual(pins["oes-telemetry-bench"]["doi"], "10.5281/zenodo.23175492")
         self.assertEqual(pins["oes-resilience"]["doi"], "10.5281/zenodo.23071166")
         self.assertEqual(pins["quantum-claims-passport"]["doi"], "10.5281/zenodo.23167801")
         with self.assertRaises(MembraneError):
