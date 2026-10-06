@@ -2,9 +2,9 @@
 
 All notable changes to this project. Everything spark-membrane computes is SYNTHETIC. The README and page lead with the results that do not flatter OES32.
 
-## 0.1.0 (prepared, not released)
+## 0.1.0 (2026-10-05)
 
-There is no tag, no GitHub release and no DOI yet. No release will be minted until the Zenodo webhook is enabled for this repository.
+First tagged release (`v0.1.0`). The Zenodo DOI is added to the README and `CITATION.cff` after Zenodo archives the release; the tag itself is not moved.
 
 ### Changed since the first public commit (`ad849ad`)
 

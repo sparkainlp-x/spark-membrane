@@ -327,7 +327,7 @@ def render_page(results: dict[str, Any], pins: dict[str, Any], frames: Sequence[
 <div class="banner" role="note">{e(BANNER)}</div>
 <div class="wrap">
 <header class="hero">
-<p class="eyebrow">Spark AI NLP &middot; research prototype &middot; v{__version__} (prepared, not released)</p>
+<p class="eyebrow">Spark AI NLP &middot; research prototype &middot; v{__version__} &middot; released 2026-10-05</p>
 <h1>spark-membrane</h1>
 <p class="lede">A fail-closed console that audits each synthetic 32-channel frame against pinned OES contracts.
 Every check runs separately, and a frame is accepted only when all of them pass. When a frame latches, the console
@@ -336,7 +336,7 @@ try one capped edit, in simulation only. Upstream repositories are pinned by com
 Every threshold is an uncalibrated placeholder.</p>
 <div class="pills"><span class="pill warn">SYNTHETIC</span><span class="pill warn">UNCALIBRATED thresholds</span>
 <span class="pill">AGPL-3.0-only</span><span class="pill">Python 3.10&ndash;3.13 &middot; stdlib</span>
-<span class="pill">No release &middot; no DOI yet</span><span class="pill bad">Negative results first</span></div>
+<span class="pill">DOI pending Zenodo archive</span><span class="pill bad">Negative results first</span></div>
 <div class="cta"><a class="btn primary" href="#run">Explore the seed-{seed} run</a>
 <a class="btn" href="{REPO}">Source on GitHub</a><a class="btn" href="passport/index.html">Evidence passport</a></div>
 </header>
@@ -421,10 +421,10 @@ independent deterministic checks, not a vote, and the two OES-32 formulas (norma
 
 <section aria-labelledby="cite-h">
 <h2 id="cite-h">How to cite</h2>
-<p>No release or DOI exists yet. Cite the repository and commit; see <a href="{REPO}/blob/main/CITATION.cff">CITATION.cff</a>.</p>
+<p>Cite release v{__version__} (2026-10-05); the Zenodo DOI is added once the archive exists. See <a href="{REPO}/blob/main/CITATION.cff">CITATION.cff</a>.</p>
 <pre class="cite">Brisson, J.-F. (2026). spark-membrane: a fail-closed console over pinned OES repositories
-(SYNTHETIC research prototype, version {__version__}, unreleased) [Computer software]. Spark AI NLP.
-{REPO}</pre>
+(SYNTHETIC research prototype, version {__version__}) [Computer software]. Spark AI NLP.
+{REPO}/releases/tag/v{__version__}</pre>
 </section>
 </main>
 <footer>AGPL-3.0-only; commercial licensing: <a href="{REPO}/blob/main/COMMERCIAL-LICENSE.md">COMMERCIAL-LICENSE.md</a>.

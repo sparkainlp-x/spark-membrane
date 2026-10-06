@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below. Everything it computes is SYNTHETIC, classical software simulation with UNCALIBRATED placeholder thresholds; it is not field evidence and makes no superiority claims. No release or DOI exists yet: cite the repository and commit."
+message: "If you use this software, please cite it as below. Everything it computes is SYNTHETIC, classical software simulation with UNCALIBRATED placeholder thresholds; it is not field evidence and makes no superiority claims. Cite release v0.1.0 (the Zenodo DOI is added once the archive exists)."
 title: "spark-membrane: a fail-closed console that orchestrates pinned OES repositories without merging them"
 type: software
 authors:
@@ -11,7 +11,7 @@ repository-code: "https://github.com/sparkainlp-x/spark-membrane"
 url: "https://sparkainlp-x.github.io/spark-membrane/"
 license: AGPL-3.0-only
 version: "0.1.0"
-# Prepared for v0.1.0. Add date-released and the Zenodo DOIs only when the release actually exists.
+date-released: "2026-10-05"
 abstract: >-
   Offline, standard-library Python console that audits SYNTHETIC native
   32-channel frames with a conjunction of separate deterministic checks

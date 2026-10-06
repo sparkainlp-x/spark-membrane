@@ -103,5 +103,6 @@
       "identifier": "spark-ai-nlp"
     }
   ],
-  "notes": "Evidence status: SYNTHETIC only; thresholds UNCALIBRATED. Related identifiers are concept DOIs taken from each repository's CITATION.cff (oes-telemetry-bench has none). Commercial licensing: see COMMERCIAL-LICENSE.md. Do not mint a GitHub release until the Zenodo webhook is enabled for this repository."
+  "notes": "Evidence status: SYNTHETIC only; thresholds UNCALIBRATED. Related identifiers are concept DOIs taken from each repository's CITATION.cff (oes-telemetry-bench has none). Commercial licensing: see COMMERCIAL-LICENSE.md.",
+  "publication_date": "2026-10-05"
 }

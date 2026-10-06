@@ -6,7 +6,7 @@
 [![Pages](https://img.shields.io/badge/Pages-live-2ea44f.svg)](https://sparkainlp-x.github.io/spark-membrane/)
 [![Evidence: SYNTHETIC](https://img.shields.io/badge/evidence-SYNTHETIC-orange.svg)](#evidence-and-limitations)
 [![Thresholds: UNCALIBRATED](https://img.shields.io/badge/thresholds-UNCALIBRATED-orange.svg)](docs/PROTOCOL.md)
-[![DOI: pending](https://img.shields.io/badge/DOI-pending%20(no%20release%20yet)-lightgrey.svg)](#how-to-cite)
+[![DOI: pending](https://img.shields.io/badge/DOI-pending%20Zenodo%20archive-lightgrey.svg)](#how-to-cite)
 
 > **SYNTHETIC: classical software simulation on generated numbers.**
 > Not a medical device, not control software, not sensor fusion, not field evidence.
@@ -231,9 +231,9 @@ tools/                 fixture generator, upstream harness, overclaim scan
 
 ## How to cite
 
-There is no release and no DOI yet. Version 0.1.0 is prepared in [CHANGELOG.md](CHANGELOG.md), [CITATION.cff](CITATION.cff) and [.zenodo.json](.zenodo.json). No GitHub release will be minted until the Zenodo webhook is enabled for this repository. Until then, cite the repository and the commit you used:
+Version 0.1.0 was released on 2026-10-05 (tag `v0.1.0`). The Zenodo DOI will be added here once Zenodo archives the release. Until then, cite the release:
 
-> Brisson, J.-F. (2026). *spark-membrane: a fail-closed console over pinned OES repositories* (SYNTHETIC research prototype, version 0.1.0, unreleased) [Computer software]. Spark AI NLP. https://github.com/sparkainlp-x/spark-membrane
+> Brisson, J.-F. (2026). *spark-membrane: a fail-closed console over pinned OES repositories* (SYNTHETIC research prototype, version 0.1.0) [Computer software]. Spark AI NLP. https://github.com/sparkainlp-x/spark-membrane/releases/tag/v0.1.0
 
 ## Contributing, security, license
 
