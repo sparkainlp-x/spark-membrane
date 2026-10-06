@@ -98,6 +98,11 @@ jobs:
         env:
           SPARK_MEMBRANE_UPSTREAM: ${{ github.workspace }}/upstream
         run: python -m unittest tests.test_upstream_live -v
+      - name: Weak-key forgery regression tests with cryptography installed (skipped in the stdlib-only test jobs)
+        run: |
+          python -c "import cryptography; print('cryptography', cryptography.__version__)"
+          python -m unittest tests.test_hardening -v 2>&1 | tee /tmp/hardening.txt
+          if grep -q "skipped" /tmp/hardening.txt; then echo "a hardening test was skipped although cryptography is installed"; exit 1; fi
       - name: Upstream measurement-trail verifies the demo trail
         run: python upstream/measurement-trail/measurement_trail.py verify docs/passport/trail-seed42.jsonl
       - name: Upstream evidence-passport validates the demo manifest
