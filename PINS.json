@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "policy": "Upstream repositories are pinned by full commit SHA and never copied. The only upstream logic in this repository is in spark_membrane/engines/ and spark_membrane/frames.py: small, labelled reference re-implementations that are tested against outputs of the pinned upstream code (tests/fixtures/upstream_reference.json) and, in CI, live against checkouts of these exact commits.",
+  "resolved_at": "2026-10-05T20:45:00-04:00",
+  "repositories": [
+    {
+      "name": "oes32-residual",
+      "url": "https://github.com/sparkainlp-x/oes32-residual",
+      "commit": "b77b61254f15778c6ae221843dceac7a8571158e",
+      "head_at_resolution": "7277e0fce756c8bc4318debb9f180858e91610a9",
+      "plane": "contract_spine",
+      "role": "Normative OES-32 residual (ADR-001): R = max_i |y_i - x_i|, fail iff R > tolerance.",
+      "note": "Pinned at the ADR-001 normative commit, not HEAD. src/, residual_definition.md and failure_criterion.md are byte-identical between b77b612 and HEAD 7277e0f; later commits are docs, CI, licence and citation metadata."
+    },
+    {
+      "name": "oes32_engine",
+      "url": "https://github.com/sparkainlp-x/oes32_engine",
+      "commit": "d66025f5d13c759650f1d6a180a3d8205640d044",
+      "plane": "contract_spine",
+      "role": "Profile A sidecar: SAFE = A and C0 and C1 and Cfold (coherence, EVEN/ODD symmetry, FOLD8 continuity); LATCH = not SAFE."
+    },
+    {
+      "name": "oes32-membrane-shield",
+      "url": "https://github.com/sparkainlp-x/oes32-membrane-shield",
+      "commit": "f1ca680fa83b369ee4e62acc7394d6dc51bac1e8",
+      "plane": "contract_spine",
+      "role": "Capability gate (Ed25519, v2). spark_membrane/shield.py mirrors its role table only; signatures are not re-implemented."
+    },
+    {
+      "name": "oes-telemetry-bench",
+      "url": "https://github.com/sparkainlp-x/oes-telemetry-bench",
+      "commit": "48fc4d9b79e58557cc562b8dad0bc90b482d443f",
+      "plane": "frame_bus",
+      "role": "Native 32-channel JSONL frame contract; max-abs / EWMA / CUSUM baseline definitions; synthetic held-out result (max-abs 6/7 at 11.54/h vs OES32 6/7 at 23.08/h)."
+    },
+    {
+      "name": "oes-resilience",
+      "url": "https://github.com/sparkainlp-x/oes-resilience",
+      "commit": "1ee533cd4360a6b1415f923c4e52cfc166b8917a",
+      "plane": "audit",
+      "role": "Weighted block score 0.45*max|x| + 0.35*RMS + 0.20*mean|x| (OES32Detector); v0.5.0 SMAP/MSL result: success criterion not met.",
+      "note": "Tag v0.5.0 = 85dc5e6f63696e0cd7d2d2a276a596b71f74bb37; HEAD adds docs only. The detector code is unchanged since v0.4.0 = 15692152f1851bde617efd3a61fc09485dbe8ed7 (the commit oes-telemetry-bench pins)."
+    },
+    {
+      "name": "measurement-trail",
+      "url": "https://github.com/sparkainlp-x/measurement-trail",
+      "commit": "7ab6ec8c9750c2de9c8df1c79fdb9c53804da0f4",
+      "plane": "evidence_membrane",
+      "role": "Hash-chained JSONL record format used for the run trail; CI verifies the committed demo trail with the upstream verifier."
+    },
+    {
+      "name": "evidence-passport",
+      "url": "https://github.com/sparkainlp-x/evidence-passport",
+      "commit": "76a6164364c08b2bd66c039198f03115defc4980",
+      "plane": "evidence_membrane",
+      "role": "Run-manifest schema v1; CI validates docs/passport/manifest.json with the upstream validator."
+    },
+    {
+      "name": "quantum-claims-passport",
+      "url": "https://github.com/sparkainlp-x/quantum-claims-passport",
+      "commit": "880ddc9ceae7bd6835dee2358b1beb4d642fc718",
+      "plane": "evidence_membrane",
+      "role": "Claim-type classification with fail-closed fencing; the model for spark_membrane/claims.py."
+    },
+    {
+      "name": "multi-quantum-oes",
+      "url": "https://github.com/sparkainlp-x/multi-quantum-oes",
+      "commit": "132e0a7b2ae05c742d5b0d91be221cc0d2def106",
+      "plane": "linked_context",
+      "role": "Cited for its preregistered SYNTHETIC stress evaluation (no demonstrated advantage over max-abs). Its toy simulations never enter the audit."
+    },
+    {
+      "name": "oes32-hls",
+      "url": "https://github.com/sparkainlp-x/oes32-hls",
+      "commit": "56a4cc29f0bfed84583fe9c21879daefdb2a116c",
+      "plane": "linked_context",
+      "role": "Cited for status only: FPGA synthesis UNRUN. Its squared-difference, >= rule is a different Profile A sidecar and is not used here."
+    },
+    {
+      "name": "qldpc_decoder_cpp",
+      "url": "https://github.com/sparkainlp-x/qldpc_decoder_cpp",
+      "commit": "908c65dd6eb30f21ffab3348704001e4155151cd",
+      "plane": "linked_context",
+      "role": "Cited for status only: BP kernel is a scaffold; HLS synthesis and hardware runs UNRUN."
+    },
+    {
+      "name": "signal-loom",
+      "url": "https://github.com/sparkainlp-x/signal-loom",
+      "commit": "750a806b180975eb3e7a0edd564c7ed10f33aa20",
+      "plane": "linked_context",
+      "role": "Art skin only (performance-art prototype, MIT). Linked from the page; nothing from it enters the audit."
+    }
+  ]
+}

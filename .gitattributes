@@ -1,0 +1,9 @@
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.html text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.cff text eol=lf
+protocols/SHA256SUMS text eol=lf

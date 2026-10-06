@@ -1,0 +1,15 @@
+{
+  "note": "Probe overclaims. The claims gate (spark_membrane/claims.py) must classify every one of these as unsupported_inference and refuse it. They are test inputs, not claims; this file is excluded from the repository scan.",
+  "probes": [
+    "OES32 beat NASA on the SMAP/MSL benchmark.",
+    "The membrane outperformed SMAP and MSL baselines.",
+    "The SMAP/MSL success criterion was met.",
+    "The explorer performs quantum error correction.",
+    "OES-32 runs QEC on logical qubits.",
+    "The latch measures operator consciousness.",
+    "spark-membrane is a medical monitoring tool for patients.",
+    "The fold check detects HRV and EEG anomalies.",
+    "The 512-channel bus models classical gravity.",
+    "This console is flight-ready control software."
+  ]
+}

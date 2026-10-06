@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below. Everything it computes is SYNTHETIC, classical software simulation; it is not field evidence and makes no superiority claims."
+title: "spark-membrane: a fail-closed console that orchestrates pinned OES repositories without merging them"
+type: software
+authors:
+  - family-names: "Brisson"
+    given-names: "Jean-François"
+    affiliation: "Spark AI NLP"
+    orcid: "https://orcid.org/0009-0000-9778-5374"
+repository-code: "https://github.com/sparkainlp-x/spark-membrane"
+url: "https://sparkainlp-x.github.io/spark-membrane/"
+license: AGPL-3.0-only
+version: "0.1.0"
+date-released: "2026-10-05"
+abstract: >-
+  Offline, standard-library Python console that audits native 32-channel
+  frames with a conjunction of pinned, independently tested checks (the
+  normative OES-32 residual, the oes32_engine Profile A sidecar and the
+  OES-Resilience weighted score), reports advisory baselines and engine
+  disagreement, and adds one new component: a seeded, protocol-capped
+  one-index explorer whose verdicts (REPAIRED_IN_SIM / LATCH_HELD) are
+  SYNTHETIC. Runs are hash-chained and rendered as an evidence passport.
+  Upstream repositories are pinned by commit SHA, not copied.
+keywords:
+  - fail-closed
+  - audit
+  - telemetry
+  - synthetic data
+  - reproducibility
+  - research software
+  - python
+references:
+  - type: software
+    title: "OES-32 Residual Reference"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+    repository-code: "https://github.com/sparkainlp-x/oes32-residual"
+    doi: "10.5281/zenodo.22985520"
+  - type: software
+    title: "OES-32 Engine"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+    repository-code: "https://github.com/sparkainlp-x/oes32_engine"
+    doi: "10.5281/zenodo.22985523"
+  - type: software
+    title: "OES-Resilience: benchmarking telemetry intelligence under real-world stress"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+    repository-code: "https://github.com/sparkainlp-x/oes-resilience"
+    doi: "10.5281/zenodo.23071166"
+  - type: software
+    title: "oes-telemetry-bench"
+    authors:
+      - family-names: "Brisson"
+        given-names: "Jean-François"
+    repository-code: "https://github.com/sparkainlp-x/oes-telemetry-bench"

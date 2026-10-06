@@ -1,0 +1,61 @@
+==============================================================================
+  SYNTHETIC - classical software simulation on generated numbers.
+  Not a medical device, not control software, not sensor fusion, not field evidence.
+==============================================================================
+spark-membrane 0.1.0  |  python3 -m spark_membrane demo --seed 42
+protocol spark-membrane-demo-v1  sha256 c1d9d9e7f352dc08...  locked hash: MATCH
+
+READ FIRST - results from the pinned repos that do not flatter OES32:
+  [public_dataset_negative] On the locked NASA SMAP/MSL protocol, OES32 did not meet its pre-stated success criterion: it beat only EWMA on SMAP, and maxabs and CUSUM scored a higher pooled F1 (not significantly).
+  [synthetic_negative] On the oes-telemetry-bench SYNTHETIC held-out set, max-abs matched OES32's detections (6/7 each) with fewer false-alarm episodes per normal hour (11.54 vs 23.08); the rates come from about 5 minutes of synthetic normal time and are highly uncertain.
+  [synthetic_negative] The multi-quantum-oes preregistered SYNTHETIC stress evaluation found no demonstrated advantage: the block score did not beat a simple max-abs baseline.
+  [unrun] oes32-hls FPGA synthesis is UNRUN; its latency figure is a design target, not a measurement.
+  [unrun] The qldpc_decoder_cpp HLS kernel has no belief-propagation updates yet; its HLS synthesis and hardware-in-the-loop runs are UNRUN.
+
+FRAME BUS: 40 native-32 frames, cadence 1 s, first 16 = warm-up; stream sha256 a074efbf7bcd91cf...
+AUDIT (T=0): ACCEPT iff protocol_hash AND residual AND sidecar_A AND sidecar_C0 AND sidecar_C1 AND sidecar_Cfold AND weighted.
+             Advisory, never gating: maxabs, ewma, cusum. Residual and weighted are separate checks, never blended.
+
+  t      event                     verdict  failing gating checks (check@index value>threshold) | engines
+ 16-19  none                      ACCEPT   - | all quiet
+ 20     single_channel_spike      LATCH    residual@13 0.1996>0.08; sidecar_A@13 0.1996>0.08; sidecar_C1@13<->29 0.1986>0.08; sidecar_Cfold@13<->14 0.1931>0.08
+        engines: DISAGREE fired=residual,sidecar,ewma,cusum quiet=weighted,maxabs
+        residual R=0.1996 vs tol 0.08 at index 13 -> LATCH | weighted score=0.1045 vs 0.5 -> quiet  (separate formulas, never blended)
+ 21     none                      ACCEPT   - | DISAGREE fired=ewma,cusum quiet=residual,sidecar,weighted,maxabs
+ 22-23  none                      ACCEPT   - | DISAGREE fired=cusum quiet=residual,sidecar,weighted,maxabs,ewma
+ 24     spike_above_explorer_cap  LATCH    residual@5 0.4010>0.08; sidecar_A@5 0.4010>0.08; sidecar_C1@5<->21 0.3987>0.08; sidecar_Cfold@4<->5 0.4078>0.08
+        engines: DISAGREE fired=residual,sidecar,ewma,cusum quiet=weighted,maxabs
+        residual R=0.4010 vs tol 0.08 at index 5 -> LATCH | weighted score=0.2089 vs 0.5 -> quiet  (separate formulas, never blended)
+ 25-26  none                      ACCEPT   - | DISAGREE fired=ewma,cusum quiet=residual,sidecar,weighted,maxabs
+ 27     two_channel_fault         LATCH    residual@27 0.1515>0.08; sidecar_A@27 0.1515>0.08; sidecar_C0@2<->18 0.1557>0.08; sidecar_C1@11<->27 0.1491>0.08; sidecar_Cfold@26<->27 0.1543>0.08
+        engines: DISAGREE fired=residual,sidecar,ewma,cusum quiet=weighted,maxabs
+        residual R=0.1515 vs tol 0.08 at index 27 -> LATCH | weighted score=0.0841 vs 0.5 -> quiet  (separate formulas, never blended)
+ 28-29  none                      ACCEPT   - | DISAGREE fired=ewma,cusum quiet=residual,sidecar,weighted,maxabs
+ 30-33  slow_common_drift         ACCEPT   - | DISAGREE fired=ewma,cusum quiet=residual,sidecar,weighted,maxabs
+ 34-35  none                      ACCEPT   - | DISAGREE fired=ewma,cusum quiet=residual,sidecar,weighted,maxabs
+ 36     global_common_shift       LATCH    residual@31 0.6072>0.08; sidecar_A@31 0.6072>0.08; sidecar_C1@15<->31 1.2092>0.08; weighted@31 0.6024>=0.5
+        engines: all fired
+        residual R=0.6072 vs tol 0.08 at index 31 -> LATCH | weighted score=0.6024 vs 0.5 -> ALARM  (separate formulas, never blended)
+ 37-39  none                      ACCEPT   - | DISAGREE fired=ewma,cusum quiet=residual,sidecar,weighted,maxabs
+  Note: EWMA/CUSUM use uncalibrated upstream default thresholds, standardized on a warm-up whose
+  frame-mean spread is tiny (~0.001), so they stay alarmed long after any event. They are advisory only.
+
+EXPLORER (new code; SYNTHETIC; one index, |delta| <= protocol cap; reference and thresholds read-only):
+ t=20  REPAIRED_IN_SIM  one-index delta -0.183669 at index 13 passes every gating check (|delta| <= cap 0.25); original frame kept
+        shield gate: EXPLORER WRITE -> REFUSED (only DECODEUR or GARDIEN may write; EXPLORER proposals stay in simulation)
+ t=24  LATCH_HELD       no single-index delta within cap 0.25 passed the audit in 16 seeded proposals (cap was binding)
+ t=27  LATCH_HELD       no single-index delta within cap 0.25 passed the audit in 16 seeded proposals
+ t=36  LATCH_HELD       no single-index delta within cap 0.25 passed the audit in 16 seeded proposals (cap was binding)
+
+FAIL-CLOSED: protocol tolerance edited from 0.08 to 0.5 after the lock -> sha256 2c1585d8aa2b3b8a... -> LATCH [failed: protocol_hash; not evaluated: 6 checks]; explorer LATCH_HELD (explorer disabled: protocol hash mismatch (fail-closed))
+
+512-CHANNEL BUS: 16 blocks x 32 = 512 channels, resampling: none -> LATCH
+  block 11: LATCH  residual@ch7 (global 359), sidecar_A@ch7 (global 359), sidecar_C1@ch7 (global 359), sidecar_Cfold@ch6 (global 358); explorer REPAIRED_IN_SIM
+  other 15 blocks: ACCEPT
+
+SUMMARY: 36 ACCEPT, 4 LATCH, 19 frames with engine disagreement, 1 REPAIRED_IN_SIM, 3 LATCH_HELD (explorer evidence class SYNTHETIC).
+EVIDENCE: trail 96 records (measurement-trail v1), head b0a0ce00cea16e3a...; claims gate: 9 ledger claims admitted, 10/10 probe overclaims refused.
+==============================================================================
+  SYNTHETIC - classical software simulation on generated numbers.
+  Not a medical device, not control software, not sensor fusion, not field evidence.
+==============================================================================

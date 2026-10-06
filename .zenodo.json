@@ -1,0 +1,76 @@
+{
+  "upload_type": "software",
+  "title": "spark-membrane: a fail-closed console that orchestrates pinned OES repositories without merging them",
+  "version": "0.1.0",
+  "description": "<p><strong>spark-membrane</strong> is an offline, standard-library Python console that runs the existing Spark AI NLP OES repositories side by side without merging them. Upstream code is pinned by commit SHA in PINS.json; small labelled reference re-implementations are tested against outputs of the pinned upstream code.</p><p><strong>Read first.</strong> On the locked NASA SMAP/MSL protocol, OES32 did not meet its pre-stated success criterion (oes-resilience v0.5.0). On the oes-telemetry-bench synthetic held-out set, max-abs matched OES32 (6/7) with fewer false alarms (11.54/h vs 23.08/h). The multi-quantum-oes stress evaluation was negative. oes32-hls synthesis and the qldpc_decoder_cpp kernel are UNRUN.</p><p><strong>What it does.</strong> A T=0 audit accepts a native 32-channel frame only if the protocol hash, the normative residual, the oes32_engine Profile A sidecar and the weighted score all pass; max-abs, EWMA and CUSUM are advisory. The two OES-32 formulas are never blended. A seeded, protocol-capped one-index explorer (new code, inspired by an external dual-engine idea) reports REPAIRED_IN_SIM or LATCH_HELD with evidence class SYNTHETIC. Runs are hash-chained (measurement-trail format) and rendered as an evidence passport.</p><p><strong>Limits.</strong> Everything is SYNTHETIC classical simulation. Not a medical device, not control software, not sensor fusion; no field-performance or superiority claims; it makes no quantum, QEC, consciousness, medical or gravity claims. Do not mint a GitHub release until the Zenodo webhook is enabled.</p>",
+  "creators": [
+    {
+      "name": "Brisson, Jean-François",
+      "affiliation": "Spark AI NLP",
+      "orcid": "0009-0000-9778-5374"
+    }
+  ],
+  "access_right": "open",
+  "license": "agpl-3.0-only",
+  "language": "eng",
+  "keywords": [
+    "fail-closed",
+    "audit",
+    "telemetry",
+    "synthetic data",
+    "reproducibility",
+    "research software",
+    "python",
+    "OES32",
+    "open science"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sparkainlp-x/spark-membrane",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.22985520",
+      "relation": "requires",
+      "scheme": "doi",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.22985523",
+      "relation": "requires",
+      "scheme": "doi",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23071166",
+      "relation": "requires",
+      "scheme": "doi",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23067465",
+      "relation": "requires",
+      "scheme": "doi",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23165143",
+      "relation": "requires",
+      "scheme": "doi",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23167801",
+      "relation": "isDerivedFrom",
+      "scheme": "doi",
+      "resource_type": "software"
+    }
+  ],
+  "communities": [
+    {
+      "identifier": "spark-ai-nlp"
+    }
+  ],
+  "notes": "Evidence status: SYNTHETIC only. Commercial licensing: see COMMERCIAL-LICENSE.md. Do not mint a GitHub release until the Zenodo webhook is enabled for this repository."
+}

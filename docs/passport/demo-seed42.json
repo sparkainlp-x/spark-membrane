@@ -1,0 +1,7347 @@
+{
+ "banner": "SYNTHETIC - classical software simulation on generated numbers. Not a medical device, not control software, not sensor fusion, not field evidence.",
+ "bus512": {
+  "block_sha256": [
+   "c9242233109afba5a3c3ce616b636e1168bd7d0cd008c3b156c77e5ef53d69af",
+   "ae5fc2038338e5aab42ac5751bf27327e5c0d4f3ece7435a27ff93868762cb80",
+   "c0b1f3b86bbe3faaf990b5d00072fd959f4f745e71598bbba9c6ede57ffaa6f1",
+   "41e4129b279b1b2c79634b7329043e095f6f55f459003e34c54f3a7dbd39edf1",
+   "c09759ca19ca5ddb834008ee956f391b30d28d990bc755c424120e0ef80788ef",
+   "88b4690a81a36fac4e15f9aad5b8bd3e6a996f15913795625d0fb8fc09ba35f6",
+   "0100f77df5b5a944ee606f878ac4fdd98eb8e71d4dd48e173be68d2f34a4d1de",
+   "cc437f7dcdcd03b4ad6ce10f06a49ec5fc2cb842b72598b93b07b14dfe483eb0",
+   "9a58df08166d857a2ae2a65d2f941941edc5d099465d2bca278c1942c417dcae",
+   "89e86fda1451d61b86ae5702b8d05afbf2ad2cf4a5535612d065f0d71ac88dc1",
+   "87a13ef1f1f447729344aae24339ef2335df2045df5b2f2af57f9cc88a385a72",
+   "6e44cf151090807d7ad812a22552d91201e29e28e2127630d321062e9a03f012",
+   "9e6fe88b3fd29143015ce8cb58c5ca01fabef29b93cb6c35be5c8b8d44b7c6b0",
+   "dbce50f890ade051e22023523b2c5bb038d48144eaa152e6b9df7fc6d2480286",
+   "121602cc51af6037c0e26152e55c0212abbc2c05189acbf99a75a7ab8d6fad08",
+   "382b7da40b91c88fb656ecee6f905627aaef3c1310dd1eb91c3d6eab52b7813d"
+  ],
+  "blocks": 16,
+  "channels": 512,
+  "frame": "last frame of each 3-frame block stream",
+  "resampling": "none",
+  "rows": [
+   {
+    "block": 0,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 1,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 2,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 3,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 4,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 5,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 6,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 7,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 8,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 9,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 10,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 11,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "FIRED",
+     "sidecar": "FIRED",
+     "weighted": "quiet"
+    },
+    "explorer": "REPAIRED_IN_SIM",
+    "failed_gating": [
+     {
+      "channel": 7,
+      "check": "residual",
+      "global_channel": 359
+     },
+     {
+      "channel": 7,
+      "check": "sidecar_A",
+      "global_channel": 359
+     },
+     {
+      "channel": 7,
+      "check": "sidecar_C1",
+      "global_channel": 359
+     },
+     {
+      "channel": 6,
+      "check": "sidecar_Cfold",
+      "global_channel": 358
+     }
+    ],
+    "verdict": "LATCH"
+   },
+   {
+    "block": 12,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 13,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 14,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": 15,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "explorer": null,
+    "failed_gating": [],
+    "verdict": "ACCEPT"
+   }
+  ],
+  "verdict": "LATCH"
+ },
+ "claims_gate": {
+  "ledger_claims": 9,
+  "probe_admitted": 0,
+  "probe_overclaims": 10,
+  "probe_refused": 10
+ },
+ "command": "python3 -m spark_membrane demo --seed 42",
+ "evidence_class": "SYNTHETIC",
+ "pins": {
+  "evidence-passport": "76a6164364c08b2bd66c039198f03115defc4980",
+  "measurement-trail": "7ab6ec8c9750c2de9c8df1c79fdb9c53804da0f4",
+  "multi-quantum-oes": "132e0a7b2ae05c742d5b0d91be221cc0d2def106",
+  "oes-resilience": "1ee533cd4360a6b1415f923c4e52cfc166b8917a",
+  "oes-telemetry-bench": "48fc4d9b79e58557cc562b8dad0bc90b482d443f",
+  "oes32-hls": "56a4cc29f0bfed84583fe9c21879daefdb2a116c",
+  "oes32-membrane-shield": "f1ca680fa83b369ee4e62acc7394d6dc51bac1e8",
+  "oes32-residual": "b77b61254f15778c6ae221843dceac7a8571158e",
+  "oes32_engine": "d66025f5d13c759650f1d6a180a3d8205640d044",
+  "qldpc_decoder_cpp": "908c65dd6eb30f21ffab3348704001e4155151cd",
+  "quantum-claims-passport": "880ddc9ceae7bd6835dee2358b1beb4d642fc718",
+  "signal-loom": "750a806b180975eb3e7a0edd564c7ed10f33aa20"
+ },
+ "protocol": {
+  "advisory": [
+   "maxabs",
+   "ewma",
+   "cusum"
+  ],
+  "gating": [
+   "protocol_hash",
+   "residual",
+   "sidecar_A",
+   "sidecar_C0",
+   "sidecar_C1",
+   "sidecar_Cfold",
+   "weighted"
+  ],
+  "locked_sha256": "c1d9d9e7f352dc0853a16abbabf0aea1af0c52896a72257f0f747c510a90c91d",
+  "match": true,
+  "protocol_id": "spark-membrane-demo-v1",
+  "sha256": "c1d9d9e7f352dc0853a16abbabf0aea1af0c52896a72257f0f747c510a90c91d"
+ },
+ "read_first": [
+  {
+   "id": "MEM-01",
+   "label": "public_dataset_negative",
+   "source": "sparkainlp-x/oes-resilience@1ee533cd4360a6b1415f923c4e52cfc166b8917a README, v0.5.0 section",
+   "statement": "On the locked NASA SMAP/MSL protocol, OES32 did not meet its pre-stated success criterion: it beat only EWMA on SMAP, and maxabs and CUSUM scored a higher pooled F1 (not significantly)."
+  },
+  {
+   "id": "MEM-02",
+   "label": "synthetic_negative",
+   "source": "sparkainlp-x/oes-telemetry-bench@48fc4d9b79e58557cc562b8dad0bc90b482d443f reports/synthetic-demo-report.json",
+   "statement": "On the oes-telemetry-bench SYNTHETIC held-out set, max-abs matched OES32's detections (6/7 each) with fewer false-alarm episodes per normal hour (11.54 vs 23.08); the rates come from about 5 minutes of synthetic normal time and are highly uncertain."
+  },
+  {
+   "id": "MEM-03",
+   "label": "synthetic_negative",
+   "source": "sparkainlp-x/multi-quantum-oes@132e0a7b2ae05c742d5b0d91be221cc0d2def106 README, Stress evaluation",
+   "statement": "The multi-quantum-oes preregistered SYNTHETIC stress evaluation found no demonstrated advantage: the block score did not beat a simple max-abs baseline."
+  },
+  {
+   "id": "MEM-04",
+   "label": "unrun",
+   "source": "sparkainlp-x/oes32-hls@56a4cc29f0bfed84583fe9c21879daefdb2a116c README",
+   "statement": "oes32-hls FPGA synthesis is UNRUN; its latency figure is a design target, not a measurement."
+  },
+  {
+   "id": "MEM-05",
+   "label": "unrun",
+   "source": "sparkainlp-x/qldpc_decoder_cpp@908c65dd6eb30f21ffab3348704001e4155151cd README",
+   "statement": "The qldpc_decoder_cpp HLS kernel has no belief-propagation updates yet; its HLS synthesis and hardware-in-the-loop runs are UNRUN."
+  }
+ ],
+ "schema_version": 1,
+ "seed": 42,
+ "stream": {
+  "cadence_seconds": 1.0,
+  "counts": {
+   "accept": 36,
+   "engine_disagreement": 19,
+   "frames": 40,
+   "latch": 4,
+   "latch_held": 3,
+   "repaired_in_sim": 1
+  },
+  "frames": 40,
+  "outcomes": [
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 19,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 19",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.00987
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 19,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.00987
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 12,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       12,
+       28
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.016419
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 3,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       3,
+       19
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015406
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 6,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       6,
+       7
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.016105
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 19,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007668084356
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 19,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.00987
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 0,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:00Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 28,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 28",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.00979
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 28,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.00979
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 12,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       12,
+       28
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.018194
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 5,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       5,
+       21
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.011103
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 20,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       20,
+       21
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.013393
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 28,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007233503203
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 28,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.00979
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 1,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:01Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 22,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 22",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009951
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 22,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009951
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 6,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       6,
+       22
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015731
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 9,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       9,
+       25
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.012764
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 21,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       21,
+       22
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.015565
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 22,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007563285108
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 22,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009951
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 2,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:02Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 28,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 28",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009989
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 28,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009989
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 14,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       14,
+       30
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.017127
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 3,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       3,
+       19
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.014626
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 30,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       30,
+       31
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.018192
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 28,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007679784845
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 28,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009989
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 3,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:03Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 22,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 22",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009903
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 22,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009903
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 6,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       6,
+       22
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.01819
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 11,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       11,
+       27
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.012938
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 5,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       5,
+       6
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.017226
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 22,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007441907055
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 22,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009903
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 4,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:04Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 22,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 22",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009683
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 22,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009683
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 6,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       6,
+       22
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.014923
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 15,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       15,
+       31
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.010621
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 22,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       22,
+       23
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.017715
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 22,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007334033567
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 22,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009683
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 5,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:05Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 6,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 6",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009986
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 6,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009986
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 10,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       10,
+       26
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.013878
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 1,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       1,
+       17
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.018171
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 5,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       5,
+       6
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.018974
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 6,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007799939327
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 6,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009986
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 6,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:06Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 30,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 30",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009969
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 30,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009969
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 12,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       12,
+       28
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.016355
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 3,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       3,
+       19
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015748
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 5,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       5,
+       6
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.017614
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 30,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007510545477
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 30,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009969
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 7,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:07Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 13,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 13",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009844
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 13,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009844
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 4,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       4,
+       20
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015476
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 15,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       15,
+       31
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.012166
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 13,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       13,
+       14
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.016186
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 13,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007753193269
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 13,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009844
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 8,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:08Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 2,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 2",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009929
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 2,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009929
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 10,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       10,
+       26
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.014097
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 9,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       9,
+       25
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.017751
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 10,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       10,
+       11
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.016157
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 2,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007750375538
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 2,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009929
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 9,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:09Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 30,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 30",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009623
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 30,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009623
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 4,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       4,
+       20
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015411
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 1,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       1,
+       17
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015856
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 3,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       3,
+       4
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.017132
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 30,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007804097369
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 30,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009623
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 10,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:10Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 16,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 16",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009966
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 16,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009966
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 0,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       0,
+       16
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.018751
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 7,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       7,
+       23
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.00991
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 16,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       16,
+       17
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.018478
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 16,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007372575816
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 16,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009966
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 11,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:11Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 10,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 10",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009992
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 10,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009992
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 6,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       6,
+       22
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.01636
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 15,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       15,
+       31
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.010211
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 20,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       20,
+       21
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.012526
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 10,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007228472715
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 10,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009992
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 12,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:12Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 11,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 11",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009889
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 11,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009889
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 14,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       14,
+       30
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.012253
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 3,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       3,
+       19
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.017539
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 16,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       16,
+       17
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.015641
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 11,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007436766938
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 11,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009889
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 13,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:13Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 21,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 21",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.008715
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 21,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.008715
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 2,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       2,
+       18
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.013319
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 5,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       5,
+       21
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.013531
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 20,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       20,
+       21
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.012843
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 21,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.006477081913
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 21,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.008715
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 14,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:14Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 1,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 1",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009882
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 1,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009882
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 8,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       8,
+       24
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.010381
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 1,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       1,
+       17
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.016581
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 24,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       24,
+       25
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.012313
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 1,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007296014874
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 1,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009882
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": null
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "warm-up frame, not scored",
+      "pair": null,
+      "passed": null,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": null
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "n/a",
+     "ewma": "n/a",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 15,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:15Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 8,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 8",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009998
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 8,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009998
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 14,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       14,
+       30
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.01683
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 15,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       15,
+       31
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015499
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 29,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       29,
+       30
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.017132
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 8,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007882131348
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 8,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009998
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 0.068239715855
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 0.0
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "quiet",
+     "ewma": "quiet",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 16,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:16Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 13,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 13",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009677
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 13,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009677
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 12,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       12,
+       28
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.012255
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 13,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       13,
+       29
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.018986
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 12,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       12,
+       13
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.017256
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 13,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007388854428
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 13,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009677
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 1.00589703526
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 1.267481346573
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "quiet",
+     "ewma": "quiet",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 17,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:17Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 22,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 22",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009797
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 22,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009797
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 6,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       6,
+       22
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.016412
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 3,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       3,
+       19
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.012227
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 22,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       22,
+       23
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.018758
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 22,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007336794409
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 22,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009797
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 1.098465773572
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 1.257061588846
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "quiet",
+     "ewma": "quiet",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 18,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:18Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 29,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 29",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009717
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 29,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009717
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 10,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       10,
+       26
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.010175
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 13,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       13,
+       29
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.017304
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 15,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       15,
+       8
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.012528
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 29,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007148171789
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 29,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009717
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 0.463589031285
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 1.737269416904
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "quiet",
+     "ewma": "quiet",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 19,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:19Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 13,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 13",
+      "pair": null,
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.199555
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 13,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.199555
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 0,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       0,
+       16
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.018004
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 13,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       13,
+       29
+      ],
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.198565
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 13,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       13,
+       14
+      ],
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.193113
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 13,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.10449982338
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 13,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.199555
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 3.5373822175
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 6.013755737547
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "FIRED",
+     "sidecar": "FIRED",
+     "weighted": "quiet"
+    },
+    "event_id": "evt-01",
+    "event_label": "single_channel_spike",
+    "explorer": {
+     "accepted_proposal": {
+      "attempt": 3,
+      "capped": false,
+      "delta": -0.183668816724,
+      "failed_gating": [],
+      "index": 13,
+      "verdict": "ACCEPT"
+     },
+     "evidence_class": "SYNTHETIC",
+     "original_frame_kept": true,
+     "original_frame_sha256": "f9aa7a8fcd6a97843b69203fbbf3586a141955a200051ae9a0bf1e4ca4235c72",
+     "proposals": [
+      {
+       "attempt": 1,
+       "capped": false,
+       "delta": -0.114122973066,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1"
+       ],
+       "index": 13,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 2,
+       "capped": false,
+       "delta": -0.002189616433,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 17,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 3,
+       "capped": false,
+       "delta": -0.183668816724,
+       "failed_gating": [],
+       "index": 13,
+       "verdict": "ACCEPT"
+      }
+     ],
+     "proposals_tried": 3,
+     "reason": "one-index delta -0.183669 at index 13 passes every gating check (|delta| <= cap 0.25); original frame kept",
+     "repaired_audit_verdict": "ACCEPT",
+     "seed": 42002146,
+     "verdict": "REPAIRED_IN_SIM"
+    },
+    "failed_gating": [
+     "residual",
+     "sidecar_A",
+     "sidecar_C1",
+     "sidecar_Cfold"
+    ],
+    "frame_index": 20,
+    "not_evaluated": [],
+    "shield_commit": {
+     "action": "WRITE",
+     "admitted": false,
+     "reason": "only DECODEUR or GARDIEN may write; EXPLORER proposals stay in simulation",
+     "role": "EXPLORER"
+    },
+    "timestamp": "2026-10-05T12:00:20Z",
+    "verdict": "LATCH"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 12,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 12",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009946
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 12,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009946
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 0,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       0,
+       16
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015171
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 5,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       5,
+       21
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.01743
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 7,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       7,
+       0
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.01558
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 12,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007492631318
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 12,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009946
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 3.297206454948
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 6.292590205793
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 21,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:21Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 21,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 21",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009991
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 21,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009991
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 8,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       8,
+       24
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.018049
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 13,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       13,
+       29
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.007729
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 16,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       16,
+       17
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.017411
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 21,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007580858683
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 21,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009991
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 2.762392373753
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 6.000302222117
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "quiet",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 22,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:22Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 18,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 18",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009762
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 18,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009762
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 2,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       2,
+       18
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.012803
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 15,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       15,
+       31
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.013369
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 15,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       15,
+       8
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.01364
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 18,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.006932729158
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 18,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009762
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 2.798418840358
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 6.481143791043
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "quiet",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 23,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:23Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 5,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 5",
+      "pair": null,
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.401017
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 5,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.401017
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 12,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       12,
+       28
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.008344
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 5,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       5,
+       21
+      ],
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.398689
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 4,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       4,
+       5
+      ],
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.407849
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 5,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.208850779818
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 5,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.401017
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 10.589150509764
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 19.898502853506
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "FIRED",
+     "sidecar": "FIRED",
+     "weighted": "quiet"
+    },
+    "event_id": "evt-02",
+    "event_label": "spike_above_explorer_cap",
+    "explorer": {
+     "accepted_proposal": null,
+     "evidence_class": "SYNTHETIC",
+     "original_frame_kept": true,
+     "original_frame_sha256": "659db05c306c5dffc0eb1017633da8f048c8403b2f1bd212eba41ade95587cfa",
+     "proposals": [
+      {
+       "attempt": 1,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 2,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 3,
+       "capped": false,
+       "delta": -0.249361606391,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 4,
+       "capped": false,
+       "delta": -0.006905619093,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 29,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 5,
+       "capped": false,
+       "delta": 0.004765862736,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 19,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 6,
+       "capped": false,
+       "delta": 0.01058594767,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 11,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 7,
+       "capped": false,
+       "delta": -0.00781176602,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 29,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 8,
+       "capped": false,
+       "delta": -0.202728170533,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 9,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 10,
+       "capped": false,
+       "delta": -0.001388747961,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 20,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 11,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 12,
+       "capped": false,
+       "delta": -0.210773900951,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 13,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 14,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 15,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 16,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 5,
+       "verdict": "LATCH"
+      }
+     ],
+     "proposals_tried": 16,
+     "reason": "no single-index delta within cap 0.25 passed the audit in 16 seeded proposals (cap was binding)",
+     "repaired_audit_verdict": null,
+     "seed": 42002550,
+     "verdict": "LATCH_HELD"
+    },
+    "failed_gating": [
+     "residual",
+     "sidecar_A",
+     "sidecar_C1",
+     "sidecar_Cfold"
+    ],
+    "frame_index": 24,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:24Z",
+    "verdict": "LATCH"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 3,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 3",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009978
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 3,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009978
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 0,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       0,
+       16
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.009854
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 3,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       3,
+       19
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.014083
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 16,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       16,
+       17
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.014638
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 3,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007117443489
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 3,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009978
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 8.871593138533
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 20.065624071376
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 25,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:25Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 23,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 23",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009949
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 23,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009949
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 4,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       4,
+       20
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.011728
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 7,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       7,
+       23
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.019333
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 18,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       18,
+       19
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.01673
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 23,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007470098199
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 23,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009949
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 8.28829240421
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 21.550653893682
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 26,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:26Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 27,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 27",
+      "pair": null,
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.151514
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 27,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.151514
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 2,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       2,
+       18
+      ],
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.155679
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 11,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       11,
+       27
+      ],
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.14912
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 26,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       26,
+       27
+      ],
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.154293
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 27,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.084143334658
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 27,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.151514
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 6.006616170643
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 20.010624305807
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "FIRED",
+     "sidecar": "FIRED",
+     "weighted": "quiet"
+    },
+    "event_id": "evt-03",
+    "event_label": "two_channel_fault",
+    "explorer": {
+     "accepted_proposal": null,
+     "evidence_class": "SYNTHETIC",
+     "original_frame_kept": true,
+     "original_frame_sha256": "d4ac12d1ce7ec6d47342963db326994c9f829fc3391613d5a18d7df7fee3720b",
+     "proposals": [
+      {
+       "attempt": 1,
+       "capped": false,
+       "delta": 0.170997659196,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_Cfold"
+       ],
+       "index": 27,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 2,
+       "capped": false,
+       "delta": 0.006209735699,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 18,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 3,
+       "capped": false,
+       "delta": -0.09369578898,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 2,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 4,
+       "capped": false,
+       "delta": 0.214418709988,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_Cfold"
+       ],
+       "index": 27,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 5,
+       "capped": false,
+       "delta": -0.169071456553,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 2,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 6,
+       "capped": false,
+       "delta": -0.010535763602,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 20,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 7,
+       "capped": false,
+       "delta": 0.169600899061,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_Cfold"
+       ],
+       "index": 27,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 8,
+       "capped": false,
+       "delta": 0.202785852552,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_Cfold"
+       ],
+       "index": 27,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 9,
+       "capped": false,
+       "delta": -0.214405196493,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 2,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 10,
+       "capped": false,
+       "delta": 0.009817307103,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 18,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 11,
+       "capped": false,
+       "delta": 0.001125165573,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 15,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 12,
+       "capped": false,
+       "delta": 0.006342638864,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 17,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 13,
+       "capped": false,
+       "delta": 0.08240953766,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_Cfold"
+       ],
+       "index": 27,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 14,
+       "capped": false,
+       "delta": 0.003349128383,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 3,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 15,
+       "capped": false,
+       "delta": -0.134596369235,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold"
+       ],
+       "index": 2,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 16,
+       "capped": false,
+       "delta": 0.200352691444,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_Cfold"
+       ],
+       "index": 27,
+       "verdict": "LATCH"
+      }
+     ],
+     "proposals_tried": 16,
+     "reason": "no single-index delta within cap 0.25 passed the audit in 16 seeded proposals",
+     "repaired_audit_verdict": null,
+     "seed": 42002853,
+     "verdict": "LATCH_HELD"
+    },
+    "failed_gating": [
+     "residual",
+     "sidecar_A",
+     "sidecar_C0",
+     "sidecar_C1",
+     "sidecar_Cfold"
+    ],
+    "frame_index": 27,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:27Z",
+    "verdict": "LATCH"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 4,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 4",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009854
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 4,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009854
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 12,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       12,
+       28
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.011946
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 11,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       11,
+       27
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.012961
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 4,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       4,
+       5
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.013949
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 4,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.00689816296
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 4,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009854
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 5.881310809511
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 21.303987427467
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 28,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:28Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 28,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 28",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009722
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 28,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009722
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 12,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       12,
+       28
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.016216
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 7,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       7,
+       23
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.019029
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 17,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       17,
+       18
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.016955
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 28,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007726007734
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 28,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009722
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 5.761105855538
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 22.564082774016
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 29,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:29Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 17,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 17",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.033925
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 17,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.033925
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 10,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       10,
+       26
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.014492
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 9,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       9,
+       25
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.063168
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 6,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       6,
+       7
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.017185
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 17,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.029328870574
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 17,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.033925
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 19.459109398783
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 46.814457297937
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": "evt-04",
+    "event_label": "slow_common_drift",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 30,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:30Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 11,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 11",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.034557
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 11,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.034557
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 14,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       14,
+       30
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.013598
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 11,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       11,
+       27
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.06486
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 2,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       2,
+       3
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.018376
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 11,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.029294386138
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 11,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.034557
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 30.106284657332
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 70.546119195112
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": "evt-04",
+    "event_label": "slow_common_drift",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 31,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:31Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 30,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 30",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.034281
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 30,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.034281
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 14,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       14,
+       30
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015796
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 11,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       11,
+       27
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.06314
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 30,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       30,
+       31
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.018064
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 30,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.028764271706
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 30,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.034281
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 38.124417357489
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 93.445101914486
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": "evt-04",
+    "event_label": "slow_common_drift",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 32,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:32Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 13,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 13",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.034893
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 13,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.034893
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 6,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       6,
+       22
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.012801
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 3,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       3,
+       19
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.056861
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 4,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       4,
+       5
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.016724
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 13,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.029366705484
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 13,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.034893
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 45.026177939255
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 117.156175336592
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": "evt-04",
+    "event_label": "slow_common_drift",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 33,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:33Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 19,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 19",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009368
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 19,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009368
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 6,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       6,
+       22
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.009627
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 5,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       5,
+       21
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.011102
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 2,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       2,
+       3
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.017117
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 19,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007157308021
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 19,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009368
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 36.298182786712
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 117.118242728772
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 34,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:34Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 13,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 13",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009878
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 13,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009878
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 14,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       14,
+       30
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.014249
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 13,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       13,
+       29
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.018826
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 5,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       5,
+       6
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.018057
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 13,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007594857503
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 13,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009878
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 28.77555615786
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 116.179925942922
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 35,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:35Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 31,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 31",
+      "pair": null,
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.607235
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 31,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.607235
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 6,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       6,
+       22
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.014944
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 15,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       15,
+       31
+      ],
+      "passed": false,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 1.209221
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 30,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       30,
+       31
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.015793
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 31,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": false,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.602435745348
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 31,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.607235
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 376.692360245929
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 705.133118142325
+     }
+    ],
+    "engine_disagreement": false,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "FIRED",
+     "residual": "FIRED",
+     "sidecar": "FIRED",
+     "weighted": "FIRED"
+    },
+    "event_id": "evt-05",
+    "event_label": "global_common_shift",
+    "explorer": {
+     "accepted_proposal": null,
+     "evidence_class": "SYNTHETIC",
+     "original_frame_kept": true,
+     "original_frame_sha256": "5a854afa1439472b401c3e9d512f05b5f98446a5296a84cb3932047cf2ccaa88",
+     "proposals": [
+      {
+       "attempt": 1,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 31,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 2,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 1,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 3,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 31,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 4,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 27,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 5,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 16,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 6,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 18,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 7,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 27,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 8,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 24,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 9,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 20,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 10,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 9,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 11,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 21,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 12,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 28,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 13,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 13,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 14,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 1,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 15,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C0",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 30,
+       "verdict": "LATCH"
+      },
+      {
+       "attempt": 16,
+       "capped": true,
+       "delta": -0.25,
+       "failed_gating": [
+        "residual",
+        "sidecar_A",
+        "sidecar_C1",
+        "sidecar_Cfold",
+        "weighted"
+       ],
+       "index": 27,
+       "verdict": "LATCH"
+      }
+     ],
+     "proposals_tried": 16,
+     "reason": "no single-index delta within cap 0.25 passed the audit in 16 seeded proposals (cap was binding)",
+     "repaired_audit_verdict": null,
+     "seed": 42003762,
+     "verdict": "LATCH_HELD"
+    },
+    "failed_gating": [
+     "residual",
+     "sidecar_A",
+     "sidecar_C1",
+     "weighted"
+    ],
+    "frame_index": 36,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:36Z",
+    "verdict": "LATCH"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 1,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 1",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.009625
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 1,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.009625
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 0,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       0,
+       16
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.016044
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 1,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       1,
+       17
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.014759
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 1,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       1,
+       2
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.018048
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 1,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.007350120098
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 1,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.009625
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 301.211326855639
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 704.39551590715
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 37,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:37Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 24,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 24",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.008877
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 24,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.008877
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 8,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       8,
+       24
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.014334
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 13,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       13,
+       29
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.015117
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 31,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       31,
+       24
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.016162
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 24,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.006879860668
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 24,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.008877
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 240.80079686332
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 703.615074871831
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 38,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:38Z",
+    "verdict": "ACCEPT"
+   },
+   {
+    "block": null,
+    "checks": [
+     {
+      "engine": "membrane protocol lock",
+      "index": null,
+      "name": "protocol_hash",
+      "note": "match",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "sha256(protocol bytes) == locked sha256",
+      "threshold": null,
+      "value": null
+     },
+     {
+      "engine": "oes32-residual (normative R)",
+      "index": 13,
+      "name": "residual",
+      "note": "max |y_i - x_i| at index 13",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tolerance",
+      "threshold": 0.08,
+      "value": 0.008763
+     },
+     {
+      "engine": "oes32_engine Profile A: coherence A",
+      "index": 13,
+      "name": "sidecar_A",
+      "note": "same R as the normative residual, sidecar tau",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff R > tau",
+      "threshold": 0.08,
+      "value": 0.008763
+     },
+     {
+      "engine": "oes32_engine Profile A: EVEN symmetry C0",
+      "index": 14,
+      "name": "sidecar_C0",
+      "note": "|x_i - x_mu(i)|, even i, mu(i) = (i+16) mod 32",
+      "pair": [
+       14,
+       30
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_0 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.013715
+     },
+     {
+      "engine": "oes32_engine Profile A: ODD symmetry C1",
+      "index": 15,
+      "name": "sidecar_C1",
+      "note": "|x_i + x_mu(i)|, odd i (antisymmetric)",
+      "pair": [
+       15,
+       31
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff S_1 > tau_sym",
+      "threshold": 0.08,
+      "value": 0.010929
+     },
+     {
+      "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+      "index": 14,
+      "name": "sidecar_Cfold",
+      "note": "|x_8s+k - x_8s+(k+1) mod 8| within contiguous 8-blocks",
+      "pair": [
+       14,
+       15
+      ],
+      "passed": true,
+      "role": "gating",
+      "rule": "latch iff F > tau_fold",
+      "threshold": 0.08,
+      "value": 0.015913
+     },
+     {
+      "engine": "oes-resilience weighted score",
+      "index": 13,
+      "name": "weighted",
+      "note": "frame-level score; index is the peak channel",
+      "pair": null,
+      "passed": true,
+      "role": "gating",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 0.5,
+      "value": 0.00634568647
+     },
+     {
+      "engine": "max-abs baseline",
+      "index": 13,
+      "name": "maxabs",
+      "note": "advisory",
+      "pair": null,
+      "passed": true,
+      "role": "advisory",
+      "rule": "alarm iff max|x| >= threshold",
+      "threshold": 0.5,
+      "value": 0.008763
+     },
+     {
+      "engine": "EWMA baseline",
+      "index": null,
+      "name": "ewma",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 3.0,
+      "value": 192.520344939626
+     },
+     {
+      "engine": "CUSUM baseline",
+      "index": null,
+      "name": "cusum",
+      "note": "advisory; frame mean standardized on warm-up",
+      "pair": null,
+      "passed": false,
+      "role": "advisory",
+      "rule": "alarm iff score >= threshold",
+      "threshold": 5.0,
+      "value": 702.914587286781
+     }
+    ],
+    "engine_disagreement": true,
+    "engine_families": {
+     "cusum": "FIRED",
+     "ewma": "FIRED",
+     "maxabs": "quiet",
+     "residual": "quiet",
+     "sidecar": "quiet",
+     "weighted": "quiet"
+    },
+    "event_id": null,
+    "event_label": "none",
+    "explorer": null,
+    "failed_gating": [],
+    "frame_index": 39,
+    "not_evaluated": [],
+    "shield_commit": null,
+    "timestamp": "2026-10-05T12:00:39Z",
+    "verdict": "ACCEPT"
+   }
+  ],
+  "sha256": "a074efbf7bcd91cfb68ee6babee490314108f05b1e0e37ed47d44b1a3a0dc9aa",
+  "warmup_frames": 16
+ },
+ "tamper_check": {
+  "audit": {
+   "block": null,
+   "checks": [
+    {
+     "engine": "membrane protocol lock",
+     "index": null,
+     "name": "protocol_hash",
+     "note": "protocol 2c1585d8aa2b... != locked c1d9d9e7f352...; protocol untrusted",
+     "pair": null,
+     "passed": false,
+     "role": "gating",
+     "rule": "sha256(protocol bytes) == locked sha256",
+     "threshold": null,
+     "value": null
+    },
+    {
+     "engine": "oes32-residual (normative R)",
+     "index": null,
+     "name": "residual",
+     "note": "not evaluated: protocol untrusted (fail-closed)",
+     "pair": null,
+     "passed": null,
+     "role": "gating",
+     "rule": "",
+     "threshold": null,
+     "value": null
+    },
+    {
+     "engine": "oes32_engine Profile A: coherence A",
+     "index": null,
+     "name": "sidecar_A",
+     "note": "not evaluated: protocol untrusted (fail-closed)",
+     "pair": null,
+     "passed": null,
+     "role": "gating",
+     "rule": "",
+     "threshold": null,
+     "value": null
+    },
+    {
+     "engine": "oes32_engine Profile A: EVEN symmetry C0",
+     "index": null,
+     "name": "sidecar_C0",
+     "note": "not evaluated: protocol untrusted (fail-closed)",
+     "pair": null,
+     "passed": null,
+     "role": "gating",
+     "rule": "",
+     "threshold": null,
+     "value": null
+    },
+    {
+     "engine": "oes32_engine Profile A: ODD symmetry C1",
+     "index": null,
+     "name": "sidecar_C1",
+     "note": "not evaluated: protocol untrusted (fail-closed)",
+     "pair": null,
+     "passed": null,
+     "role": "gating",
+     "rule": "",
+     "threshold": null,
+     "value": null
+    },
+    {
+     "engine": "oes32_engine Profile A: FOLD8 continuity Cfold",
+     "index": null,
+     "name": "sidecar_Cfold",
+     "note": "not evaluated: protocol untrusted (fail-closed)",
+     "pair": null,
+     "passed": null,
+     "role": "gating",
+     "rule": "",
+     "threshold": null,
+     "value": null
+    },
+    {
+     "engine": "oes-resilience weighted score",
+     "index": null,
+     "name": "weighted",
+     "note": "not evaluated: protocol untrusted (fail-closed)",
+     "pair": null,
+     "passed": null,
+     "role": "gating",
+     "rule": "",
+     "threshold": null,
+     "value": null
+    }
+   ],
+   "engine_disagreement": false,
+   "engine_families": {
+    "cusum": "n/a",
+    "ewma": "n/a",
+    "maxabs": "n/a",
+    "residual": "n/a",
+    "sidecar": "n/a",
+    "weighted": "n/a"
+   },
+   "failed_gating": [
+    "protocol_hash"
+   ],
+   "frame_index": 20,
+   "not_evaluated": [
+    "residual",
+    "sidecar_A",
+    "sidecar_C0",
+    "sidecar_C1",
+    "sidecar_Cfold",
+    "weighted"
+   ],
+   "timestamp": "2026-10-05T12:00:20Z",
+   "verdict": "LATCH"
+  },
+  "description": "protocol tolerance edited from 0.08 to 0.5 after the lock",
+  "explorer": {
+   "accepted_proposal": null,
+   "evidence_class": "SYNTHETIC",
+   "original_frame_kept": true,
+   "original_frame_sha256": "f9aa7a8fcd6a97843b69203fbbf3586a141955a200051ae9a0bf1e4ca4235c72",
+   "proposals": [],
+   "proposals_tried": 0,
+   "reason": "explorer disabled: protocol hash mismatch (fail-closed)",
+   "repaired_audit_verdict": null,
+   "seed": 42002146,
+   "verdict": "LATCH_HELD"
+  },
+  "tampered_sha256": "2c1585d8aa2b3b8aac62790b8b3c45a7dfce0452387ce65e2591d31cdf626da7"
+ },
+ "tool": "spark-membrane 0.1.0",
+ "trail": {
+  "format": "measurement-trail v1",
+  "head": "b0a0ce00cea16e3a890f4bfc9d4e7d32e5b0ab2d5a54eab1528da2380043b67a",
+  "records": 96
+ }
+}
