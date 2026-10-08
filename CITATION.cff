@@ -10,8 +10,8 @@ authors:
 repository-code: "https://github.com/sparkainlp-x/spark-membrane"
 url: "https://sparkainlp-x.github.io/spark-membrane/"
 license: AGPL-3.0-only
-version: "0.2.0"
-date-released: "2026-10-06"
+version: "0.2.1"
+date-released: "2026-10-08"
 doi: "10.5281/zenodo.23175490"
 identifiers:
   - type: doi

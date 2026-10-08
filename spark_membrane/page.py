@@ -404,8 +404,8 @@ every step is chained by 5. The thresholds in plane 3 are listed with their sour
 <li>Claims gate: {results["claims_gate"]["ledger_claims"]} ledger claims admitted; {results["claims_gate"]["probe_refused"]}/{results["claims_gate"]["probe_overclaims"]} probe overclaims refused; {results["claims_gate"]["honest_denials_admitted"]}/{results["claims_gate"]["honest_denials"]} honest denials admitted.</li>
 </ul>
 <h3>What this is, and is not</h3>
-<p>A classical software simulation on generated numbers. It is not a medical device, not control software, not sensor fusion and
-not field evidence, and it makes no quantum, QEC, consciousness, medical or gravity claims. The audit is a conjunction of
+<p>A classical software simulation on generated numbers. It is not a medical device, control software
+or field evidence. The audit is a conjunction of
 independent deterministic checks, not a vote, and the two OES-32 formulas (normative residual and weighted score) are never blended.</p>
 </section>
 

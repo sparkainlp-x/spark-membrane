@@ -50,7 +50,7 @@ There is no NASA-beat claim here. The dual-engine split (an exploratory proposer
 
 ### What it is NOT
 
-A classical software simulation on generated numbers. It is not a medical device, not control software, not sensor fusion and not field evidence, and it makes no quantum, QEC, consciousness, medical or gravity claims. Items in multi-quantum-oes are exact classical toy simulations and never enter the audit. [signal-loom](https://sparkainlp-x.github.io/signal-loom/) is linked as an art skin only.
+A classical software simulation on generated numbers. It is not a medical device, control software or field evidence. Items in multi-quantum-oes are exact classical toy simulations and never enter the audit. [signal-loom](https://sparkainlp-x.github.io/signal-loom/) is linked as an art skin only.
 
 ## Architecture: five planes
 
