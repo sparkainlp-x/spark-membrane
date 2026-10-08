@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below. Everything it computes is SYNTHETIC, classical software simulation with UNCALIBRATED placeholder thresholds; it is not field evidence and makes no superiority claims. Cite via the concept DOI 10.5281/zenodo.23175490 (v0.2.0: 10.5281/zenodo.23186985; v0.1.0: 10.5281/zenodo.23175491)."
+message: "If you use this software, please cite it as below. Everything it computes is SYNTHETIC, classical software simulation with UNCALIBRATED placeholder thresholds; it is not field evidence and makes no superiority claims. Cite via the concept DOI 10.5281/zenodo.23175490 (v0.2.1: 10.5281/zenodo.23241695; v0.2.0: 10.5281/zenodo.23186985; v0.1.0: 10.5281/zenodo.23175491)."
 title: "spark-membrane: a fail-closed console that orchestrates pinned OES repositories without merging them"
 type: software
 authors:
@@ -17,6 +17,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.23175490"
     description: "Concept DOI (all versions)"
+  - type: doi
+    value: "10.5281/zenodo.23241695"
+    description: "Version DOI for v0.2.1"
   - type: doi
     value: "10.5281/zenodo.23186985"
     description: "Version DOI for v0.2.0"
